@@ -23,7 +23,9 @@ Or add it by hand: in HACS, open the menu, choose **Custom repositories**, and
 add `https://github.com/adamringer/ha-firmware-watch` with category
 **Integration**.
 
-Then install **Firmware Watch** and restart Home Assistant.
+On the Firmware Watch page in HACS, click **Download** (and **Download** again
+in the dialog), then restart Home Assistant (**Settings > System > ⋮ > Restart
+Home Assistant**). Refresh your browser before adding the integration.
 
 ## Configuration
 
