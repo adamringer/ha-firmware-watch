@@ -1,0 +1,47 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Firmware Watch",
+        "description": "Choose a built-in firmware page, or a custom page of your own.",
+        "data": {
+          "source": "Source"
+        }
+      },
+      "custom": {
+        "title": "Custom firmware page",
+        "description": "The pattern is a regular expression with exactly one capture group around the version. It is matched against the page's visible text.",
+        "data": {
+          "name": "Name",
+          "url": "Page URL",
+          "pattern": "Pattern"
+        }
+      },
+      "confirm": {
+        "title": "Confirm",
+        "description": "Found version {version} on {name}. Add it? The first version seen becomes the baseline; you'll be alerted when it changes."
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not download the page.",
+      "version_not_found": "The page was downloaded, but the pattern did not match.",
+      "invalid_url": "The URL must start with http:// or https://.",
+      "invalid_pattern": "The pattern must be a valid regular expression with exactly one capture group.",
+      "unknown": "Unexpected error."
+    },
+    "abort": {
+      "already_configured": "This source is already being watched."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Notifications",
+        "description": "Choose the notify services to alert when a new firmware version appears.",
+        "data": {
+          "notify_services": "Notify services"
+        }
+      }
+    }
+  }
+}
