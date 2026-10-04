@@ -7,7 +7,7 @@ integration; this gives them an `update` entity and an alert anyway.
 ## Install (HACS)
 
 1. In HACS, open the menu, choose **Custom repositories**, and add
-   `https://github.com/OWNER/ha-firmware-watch` with category **Integration**.
+   `https://github.com/adamringer/ha-firmware-watch` with category **Integration**.
 2. Install **Firmware Watch** and restart Home Assistant.
 3. Go to **Settings > Devices & services > Add integration > Firmware Watch**.
 

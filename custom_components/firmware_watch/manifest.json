@@ -1,13 +1,15 @@
 {
   "domain": "firmware_watch",
   "name": "Firmware Watch",
-  "codeowners": [],
+  "codeowners": [
+    "@adamringer"
+  ],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/OWNER/ha-firmware-watch",
+  "documentation": "https://github.com/adamringer/ha-firmware-watch",
   "integration_type": "service",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/OWNER/ha-firmware-watch/issues",
+  "issue_tracker": "https://github.com/adamringer/ha-firmware-watch/issues",
   "requirements": [],
   "version": "0.1.0"
 }
