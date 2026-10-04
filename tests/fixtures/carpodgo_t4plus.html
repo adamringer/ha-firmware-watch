@@ -1,0 +1,2193 @@
+<!doctype html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="theme-color" content="#f7f7f7">
+
+    <title>Firmware - T4 Plus</title><meta name="description" content="T4 Plus Firmware Update: Version 0.0.22 Release Highlights: Optimized CarPlay Swipe SmoothnessRefined CarPlay touch interaction performance to deliver a smoother and more fluid swipe experience during daily use. Improved Rear-View Camera ResponseEnhanced the response speed of the rear-view camera screen to ensure a fas"><link rel="canonical" href="https://www.carpodgo.com/pages/firmware-t4-plus"><link rel="shortcut icon" href="//www.carpodgo.com/cdn/shop/files/icon.png?v=1723866863&width=96">
+      <link rel="apple-touch-icon" href="//www.carpodgo.com/cdn/shop/files/icon.png?v=1723866863&width=180"><link rel="preconnect" href="https://cdn.shopify.com">
+    <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    <link rel="dns-prefetch" href="https://productreviews.shopifycdn.com"><link rel="preload" href="//www.carpodgo.com/cdn/fonts/barlow/barlow_n7.691d1d11f150e857dcbc1c10ef03d825bc378d81.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="//www.carpodgo.com/cdn/fonts/barlow/barlow_n5.a193a1990790eba0cc5cca569d23799830e90f07.woff2" as="font" type="font/woff2" crossorigin><meta property="og:type" content="website">
+  <meta property="og:title" content="Firmware - T4 Plus"><meta property="og:image" content="http://www.carpodgo.com/cdn/shop/files/social_share_image.jpg?v=1723884311&width=2048">
+  <meta property="og:image:secure_url" content="https://www.carpodgo.com/cdn/shop/files/social_share_image.jpg?v=1723884311&width=2048">
+  <meta property="og:image:width" content="2118">
+  <meta property="og:image:height" content="1108"><meta property="og:description" content="T4 Plus Firmware Update: Version 0.0.22 Release Highlights: Optimized CarPlay Swipe SmoothnessRefined CarPlay touch interaction performance to deliver a smoother and more fluid swipe experience during daily use. Improved Rear-View Camera ResponseEnhanced the response speed of the rear-view camera screen to ensure a fas"><meta property="og:url" content="https://www.carpodgo.com/pages/firmware-t4-plus">
+<meta property="og:site_name" content="CarpodGo"><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Firmware - T4 Plus">
+  <meta name="twitter:description" content="T4 Plus Firmware Update: Version 0.0.22 Release Highlights: Optimized CarPlay Swipe SmoothnessRefined CarPlay touch interaction performance to deliver a smoother and more fluid swipe experience during daily use. Improved Rear-View Camera ResponseEnhanced the response speed of the rear-view camera screen to ensure a fas"><meta name="twitter:image" content="https://www.carpodgo.com/cdn/shop/files/social_share_image.jpg?crop=center&height=1200&v=1723884311&width=1200">
+  <meta name="twitter:image:alt" content=""><script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.carpodgo.com"
+      },{
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Firmware - T4 Plus",
+            "item": "https://www.carpodgo.com/pages/firmware-t4-plus"
+          }]
+  }
+</script><style>/* Typography (heading) */
+  @font-face {
+  font-family: Barlow;
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+  src: url("//www.carpodgo.com/cdn/fonts/barlow/barlow_n7.691d1d11f150e857dcbc1c10ef03d825bc378d81.woff2") format("woff2"),
+       url("//www.carpodgo.com/cdn/fonts/barlow/barlow_n7.4fdbb1cb7da0e2c2f88492243ffa2b4f91924840.woff") format("woff");
+}
+
+@font-face {
+  font-family: Barlow;
+  font-weight: 700;
+  font-style: italic;
+  font-display: fallback;
+  src: url("//www.carpodgo.com/cdn/fonts/barlow/barlow_i7.50e19d6cc2ba5146fa437a5a7443c76d5d730103.woff2") format("woff2"),
+       url("//www.carpodgo.com/cdn/fonts/barlow/barlow_i7.47e9f98f1b094d912e6fd631cc3fe93d9f40964f.woff") format("woff");
+}
+
+/* Typography (body) */
+  @font-face {
+  font-family: Barlow;
+  font-weight: 500;
+  font-style: normal;
+  font-display: fallback;
+  src: url("//www.carpodgo.com/cdn/fonts/barlow/barlow_n5.a193a1990790eba0cc5cca569d23799830e90f07.woff2") format("woff2"),
+       url("//www.carpodgo.com/cdn/fonts/barlow/barlow_n5.ae31c82169b1dc0715609b8cc6a610b917808358.woff") format("woff");
+}
+
+@font-face {
+  font-family: Barlow;
+  font-weight: 500;
+  font-style: italic;
+  font-display: fallback;
+  src: url("//www.carpodgo.com/cdn/fonts/barlow/barlow_i5.714d58286997b65cd479af615cfa9bb0a117a573.woff2") format("woff2"),
+       url("//www.carpodgo.com/cdn/fonts/barlow/barlow_i5.0120f77e6447d3b5df4bbec8ad8c2d029d87fb21.woff") format("woff");
+}
+
+@font-face {
+  font-family: Barlow;
+  font-weight: 700;
+  font-style: normal;
+  font-display: fallback;
+  src: url("//www.carpodgo.com/cdn/fonts/barlow/barlow_n7.691d1d11f150e857dcbc1c10ef03d825bc378d81.woff2") format("woff2"),
+       url("//www.carpodgo.com/cdn/fonts/barlow/barlow_n7.4fdbb1cb7da0e2c2f88492243ffa2b4f91924840.woff") format("woff");
+}
+
+@font-face {
+  font-family: Barlow;
+  font-weight: 700;
+  font-style: italic;
+  font-display: fallback;
+  src: url("//www.carpodgo.com/cdn/fonts/barlow/barlow_i7.50e19d6cc2ba5146fa437a5a7443c76d5d730103.woff2") format("woff2"),
+       url("//www.carpodgo.com/cdn/fonts/barlow/barlow_i7.47e9f98f1b094d912e6fd631cc3fe93d9f40964f.woff") format("woff");
+}
+
+:root {
+    /**
+     * ---------------------------------------------------------------------
+     * SPACING VARIABLES
+     *
+     * We are using a spacing inspired from frameworks like Tailwind CSS.
+     * ---------------------------------------------------------------------
+     */
+    --spacing-0-5: 0.125rem; /* 2px */
+    --spacing-1: 0.25rem; /* 4px */
+    --spacing-1-5: 0.375rem; /* 6px */
+    --spacing-2: 0.5rem; /* 8px */
+    --spacing-2-5: 0.625rem; /* 10px */
+    --spacing-3: 0.75rem; /* 12px */
+    --spacing-3-5: 0.875rem; /* 14px */
+    --spacing-4: 1rem; /* 16px */
+    --spacing-4-5: 1.125rem; /* 18px */
+    --spacing-5: 1.25rem; /* 20px */
+    --spacing-5-5: 1.375rem; /* 22px */
+    --spacing-6: 1.5rem; /* 24px */
+    --spacing-6-5: 1.625rem; /* 26px */
+    --spacing-7: 1.75rem; /* 28px */
+    --spacing-7-5: 1.875rem; /* 30px */
+    --spacing-8: 2rem; /* 32px */
+    --spacing-8-5: 2.125rem; /* 34px */
+    --spacing-9: 2.25rem; /* 36px */
+    --spacing-9-5: 2.375rem; /* 38px */
+    --spacing-10: 2.5rem; /* 40px */
+    --spacing-11: 2.75rem; /* 44px */
+    --spacing-12: 3rem; /* 48px */
+    --spacing-14: 3.5rem; /* 56px */
+    --spacing-16: 4rem; /* 64px */
+    --spacing-18: 4.5rem; /* 72px */
+    --spacing-20: 5rem; /* 80px */
+    --spacing-24: 6rem; /* 96px */
+    --spacing-28: 7rem; /* 112px */
+    --spacing-32: 8rem; /* 128px */
+    --spacing-36: 9rem; /* 144px */
+    --spacing-40: 10rem; /* 160px */
+    --spacing-44: 11rem; /* 176px */
+    --spacing-48: 12rem; /* 192px */
+    --spacing-52: 13rem; /* 208px */
+    --spacing-56: 14rem; /* 224px */
+    --spacing-60: 15rem; /* 240px */
+    --spacing-64: 16rem; /* 256px */
+    --spacing-72: 18rem; /* 288px */
+    --spacing-80: 20rem; /* 320px */
+    --spacing-96: 24rem; /* 384px */
+
+    /* Container */
+    --container-max-width: 1600px;
+    --container-narrow-max-width: 1350px;
+    --container-gutter: var(--spacing-5);
+    --section-outer-spacing-block: var(--spacing-12);
+    --section-inner-max-spacing-block: var(--spacing-10);
+    --section-inner-spacing-inline: var(--container-gutter);
+    --section-stack-spacing-block: var(--spacing-8);
+
+    /* Grid gutter */
+    --grid-gutter: var(--spacing-5);
+
+    /* Product list settings */
+    --product-list-row-gap: var(--spacing-8);
+    --product-list-column-gap: var(--grid-gutter);
+
+    /* Form settings */
+    --input-gap: var(--spacing-2);
+    --input-height: 2.625rem;
+    --input-padding-inline: var(--spacing-4);
+
+    /* Other sizes */
+    --sticky-area-height: calc(var(--sticky-announcement-bar-enabled, 0) * var(--announcement-bar-height, 0px) + var(--sticky-header-enabled, 0) * var(--header-height, 0px));
+
+    /* RTL support */
+    --transform-logical-flip: 1;
+    --transform-origin-start: left;
+    --transform-origin-end: right;
+
+    /**
+     * ---------------------------------------------------------------------
+     * TYPOGRAPHY
+     * ---------------------------------------------------------------------
+     */
+
+    /* Font properties */
+    --heading-font-family: Barlow, sans-serif;
+    --heading-font-weight: 700;
+    --heading-font-style: normal;
+    --heading-text-transform: normal;
+    --heading-letter-spacing: -0.02em;
+    --text-font-family: Barlow, sans-serif;
+    --text-font-weight: 500;
+    --text-font-style: normal;
+    --text-letter-spacing: 0.0em;
+
+    /* Font sizes */
+    --text-h0: 3rem;
+    --text-h1: 2.5rem;
+    --text-h2: 2rem;
+    --text-h3: 1.5rem;
+    --text-h4: 1.375rem;
+    --text-h5: 1.125rem;
+    --text-h6: 1rem;
+    --text-xs: 0.6875rem;
+    --text-sm: 0.75rem;
+    --text-base: 0.875rem;
+    --text-lg: 1.125rem;
+
+    /**
+     * ---------------------------------------------------------------------
+     * COLORS
+     * ---------------------------------------------------------------------
+     */
+
+    /* Color settings */--accent: 26 26 26;
+    --text-primary: 26 26 26;
+    --background-primary: 247 247 247;
+    --dialog-background: 255 255 255;
+    --border-color: var(--text-color, var(--text-primary)) / 0.12;
+
+    /* Button colors */
+    --button-background-primary: 26 26 26;
+    --button-text-primary: 255 255 255;
+    --button-background-secondary: 240 196 23;
+    --button-text-secondary: 26 26 26;
+
+    /* Status colors */
+    --success-background: 224 244 232;
+    --success-text: 0 163 65;
+    --warning-background: 255 246 233;
+    --warning-text: 255 183 74;
+    --error-background: 254 231 231;
+    --error-text: 248 58 58;
+
+    /* Product colors */
+    --on-sale-text: 248 58 58;
+    --on-sale-badge-background: 248 58 58;
+    --on-sale-badge-text: 255 255 255;
+    --sold-out-badge-background: 0 0 0;
+    --sold-out-badge-text: 255 255 255;
+    --primary-badge-background: 128 60 238;
+    --primary-badge-text: 255 255 255;
+    --star-color: 255 183 74;
+    --product-card-background: 255 255 255;
+    --product-card-text: 26 26 26;
+
+    /* Header colors */
+    --header-background: 247 247 247;
+    --header-text: 39 39 39;
+
+    /* Footer colors */
+    --footer-background: 39 39 39;
+    --footer-text: 255 255 255;
+
+    /* Rounded variables (used for border radius) */
+    --rounded-xs: 0.25rem;
+    --rounded-sm: 0.375rem;
+    --rounded: 0.75rem;
+    --rounded-lg: 1.5rem;
+    --rounded-full: 9999px;
+
+    --rounded-button: 3.75rem;
+    --rounded-input: 0.5rem;
+
+    /* Box shadow */
+    --shadow-sm: 0 2px 8px rgb(var(--text-primary) / 0.1);
+    --shadow: 0 5px 15px rgb(var(--text-primary) / 0.1);
+    --shadow-md: 0 5px 30px rgb(var(--text-primary) / 0.1);
+    --shadow-block: 0px 18px 50px rgb(var(--text-primary) / 0.1);
+
+    /**
+     * ---------------------------------------------------------------------
+     * OTHER
+     * ---------------------------------------------------------------------
+     */
+
+    --stagger-products-reveal-opacity: 0;
+    --cursor-close-svg-url: url(//www.carpodgo.com/cdn/shop/t/11/assets/cursor-close.svg?v=147174565022153725511734364339);
+    --cursor-zoom-in-svg-url: url(//www.carpodgo.com/cdn/shop/t/11/assets/cursor-zoom-in.svg?v=154953035094101115921734364340);
+    --cursor-zoom-out-svg-url: url(//www.carpodgo.com/cdn/shop/t/11/assets/cursor-zoom-out.svg?v=16155520337305705181734364340);
+    --checkmark-svg-url: url(//www.carpodgo.com/cdn/shop/t/11/assets/checkmark.svg?v=77552481021870063511734364339);
+  }
+
+  [dir="rtl"]:root {
+    /* RTL support */
+    --transform-logical-flip: -1;
+    --transform-origin-start: right;
+    --transform-origin-end: left;
+  }
+
+  @media screen and (min-width: 700px) {
+    :root {
+      /* Typography (font size) */
+      --text-h0: 4rem;
+      --text-h1: 3rem;
+      --text-h2: 2.5rem;
+      --text-h3: 2rem;
+      --text-h4: 1.625rem;
+      --text-h5: 1.25rem;
+      --text-h6: 1.125rem;
+
+      --text-xs: 0.75rem;
+      --text-sm: 0.875rem;
+      --text-base: 1.0rem;
+      --text-lg: 1.25rem;
+
+      /* Spacing */
+      --container-gutter: 2rem;
+      --section-outer-spacing-block: var(--spacing-16);
+      --section-inner-max-spacing-block: var(--spacing-12);
+      --section-inner-spacing-inline: var(--spacing-12);
+      --section-stack-spacing-block: var(--spacing-12);
+
+      /* Grid gutter */
+      --grid-gutter: var(--spacing-6);
+
+      /* Product list settings */
+      --product-list-row-gap: var(--spacing-12);
+
+      /* Form settings */
+      --input-gap: 1rem;
+      --input-height: 3.125rem;
+      --input-padding-inline: var(--spacing-5);
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    :root {
+      /* Spacing settings */
+      --container-gutter: var(--spacing-12);
+      --section-outer-spacing-block: var(--spacing-18);
+      --section-inner-max-spacing-block: var(--spacing-16);
+      --section-inner-spacing-inline: var(--spacing-16);
+      --section-stack-spacing-block: var(--spacing-12);
+    }
+  }
+
+  @media screen and (min-width: 1150px) {
+    :root {
+      /* Spacing settings */
+      --container-gutter: var(--spacing-12);
+      --section-outer-spacing-block: var(--spacing-20);
+      --section-inner-max-spacing-block: var(--spacing-16);
+      --section-inner-spacing-inline: var(--spacing-16);
+      --section-stack-spacing-block: var(--spacing-12);
+    }
+  }
+
+  @media screen and (min-width: 1400px) {
+    :root {
+      /* Typography (font size) */
+      --text-h0: 5rem;
+      --text-h1: 3.75rem;
+      --text-h2: 3rem;
+      --text-h3: 2.25rem;
+      --text-h4: 2rem;
+      --text-h5: 1.5rem;
+      --text-h6: 1.25rem;
+
+      --section-outer-spacing-block: var(--spacing-24);
+      --section-inner-max-spacing-block: var(--spacing-18);
+      --section-inner-spacing-inline: var(--spacing-18);
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    :root {
+      --section-outer-spacing-block: var(--spacing-24);
+      --section-inner-max-spacing-block: var(--spacing-20);
+      --section-inner-spacing-inline: var(--spacing-20);
+    }
+  }
+
+  /**
+   * ---------------------------------------------------------------------
+   * LIQUID DEPENDANT CSS
+   *
+   * Our main CSS is Liquid free, but some very specific features depend on
+   * theme settings, so we have them here
+   * ---------------------------------------------------------------------
+   */@media screen and (pointer: fine) {
+        .button:not([disabled]):hover, .btn:not([disabled]):hover, .shopify-payment-button__button--unbranded:not([disabled]):hover {
+          --button-background-opacity: 0.85;
+        }
+
+        .button--subdued:not([disabled]):hover {
+          --button-background: var(--text-color) / .05 !important;
+        }
+      }</style><script>
+  // This allows to expose several variables to the global scope, to be used in scripts
+  window.themeVariables = {
+    settings: {
+      showPageTransition: null,
+      staggerProductsApparition: true,
+      reduceDrawerAnimation: false,
+      reduceMenuAnimation: false,
+      headingApparition: "split_fade",
+      pageType: "page",
+      moneyFormat: "\u003cspan class=trans-money\u003e${{amount}}\u003c\/span\u003e",
+      moneyWithCurrencyFormat: "\u003cspan class=trans-money\u003e${{amount}} USD\u003c\/span\u003e",
+      currencyCodeEnabled: false,
+      cartType: "popover",
+      showDiscount: false,
+      discountMode: "saving",
+      pageBackground: "#f7f7f7",
+      textColor: "#1a1a1a"
+    },
+
+    strings: {
+      accessibilityClose: "Close",
+      accessibilityNext: "Next",
+      accessibilityPrevious: "Previous",
+      closeGallery: "Close gallery",
+      zoomGallery: "Zoom",
+      errorGallery: "Image cannot be loaded",
+      searchNoResults: "No results could be found.",
+      addOrderNote: "Add order note",
+      editOrderNote: "Edit order note",
+      shippingEstimatorNoResults: "Sorry, we do not ship to your address.",
+      shippingEstimatorOneResult: "There is one shipping rate for your address:",
+      shippingEstimatorMultipleResults: "There are several shipping rates for your address:",
+      shippingEstimatorError: "One or more error occurred while retrieving shipping rates:"
+    },
+
+    breakpoints: {
+      'sm': 'screen and (min-width: 700px)',
+      'md': 'screen and (min-width: 1000px)',
+      'lg': 'screen and (min-width: 1150px)',
+      'xl': 'screen and (min-width: 1400px)',
+
+      'sm-max': 'screen and (max-width: 699px)',
+      'md-max': 'screen and (max-width: 999px)',
+      'lg-max': 'screen and (max-width: 1149px)',
+      'xl-max': 'screen and (max-width: 1399px)'
+    }
+  };
+
+  // For detecting native share
+  document.documentElement.classList.add(`native-share--${navigator.share ? 'enabled' : 'disabled'}`);</script><script>
+      if (!(HTMLScriptElement.supports && HTMLScriptElement.supports('importmap'))) {
+        const importMapPolyfill = document.createElement('script');
+        importMapPolyfill.async = true;
+        importMapPolyfill.src = "//www.carpodgo.com/cdn/shop/t/11/assets/es-module-shims.min.js?v=98603786603752121101734364315";
+
+        document.head.appendChild(importMapPolyfill);
+      }
+    </script>
+
+    <script async crossorigin fetchpriority="high" src="/cdn/shopifycloud/importmap-polyfill/es-modules-shim.2.4.0.js"></script>
+<script type="importmap">{
+        "imports": {
+          "vendor": "//www.carpodgo.com/cdn/shop/t/11/assets/vendor.min.js?v=37127808935879722241734364315",
+          "theme": "//www.carpodgo.com/cdn/shop/t/11/assets/theme.js?v=52388010713111981741734364315",
+          "photoswipe": "//www.carpodgo.com/cdn/shop/t/11/assets/photoswipe.min.js?v=13374349288281597431734364315"
+        }
+      }
+    </script>
+
+    <script type="module" src="//www.carpodgo.com/cdn/shop/t/11/assets/vendor.min.js?v=37127808935879722241734364315"></script>
+    <script type="module" src="//www.carpodgo.com/cdn/shop/t/11/assets/theme.js?v=52388010713111981741734364315"></script>
+
+    <script>window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.start');</script><meta id="shopify-digital-wallet" name="shopify-digital-wallet" content="/82391793969/digital_wallets/dialog">
+<meta id="in-context-paypal-metadata" data-shop-id="82391793969" data-venmo-supported="false" data-environment="production" data-locale="en_US" data-paypal-v4="true" data-currency="USD">
+<link rel="ucp" href="/.well-known/ucp" version="2026-08-25"><link rel="alternate" hreflang="x-default" href="https://www.carpodgo.com/pages/firmware-t4-plus">
+<link rel="alternate" hreflang="en" href="https://www.carpodgo.com/pages/firmware-t4-plus">
+<link rel="alternate" hreflang="fr" href="https://www.carpodgo.com/fr/pages/firmware-t4-plus">
+<link rel="alternate" hreflang="pl" href="https://www.carpodgo.com/pl/pages/firmware-t4-plus">
+<link rel="alternate" hreflang="it" href="https://www.carpodgo.com/it/pages/firmware-t4-plus">
+<link rel="alternate" hreflang="es" href="https://www.carpodgo.com/es/pages/firmware-t4-plus">
+<link rel="alternate" hreflang="pt" href="https://www.carpodgo.com/pt/pages/firmware-t4-plus">
+<link rel="alternate" hreflang="el" href="https://www.carpodgo.com/el/pages/firmware-t4-plus">
+<link rel="alternate" hreflang="cs" href="https://www.carpodgo.com/cs/pages/firmware-t4-plus">
+<link rel="alternate" hreflang="nl" href="https://www.carpodgo.com/nl/pages/firmware-t4-plus">
+<link rel="alternate" hreflang="no" href="https://www.carpodgo.com/no/pages/firmware-t4-plus">
+<link rel="alternate" hreflang="ga" href="https://www.carpodgo.com/ga/pages/firmware-t4-plus">
+<link rel="alternate" hreflang="de" href="https://www.carpodgo.com/de/pages/firmware-t4-plus">
+<link rel="alternate" hreflang="ja" href="https://www.carpodgo.com/ja/pages/firmware-t4-plus">
+<script async="async" src="/checkouts/internal/preloads.js?locale=en-HK"></script>
+<script id="shopify-features" type="application/json">{"accessToken":"cb92692b2d1ba5d14bcf544c9cd7107e","betas":["rich-media-storefront-analytics"],"domain":"www.carpodgo.com","predictiveSearch":true,"shopId":82391793969,"locale":"en"}</script>
+<script>var Shopify = Shopify || {};
+Shopify.shop = "89271a.myshopify.com";
+Shopify.locale = "en";
+Shopify.currency = {"active":"USD","rate":"1.0"};
+Shopify.country = "HK";
+Shopify.theme = {"name":"Carpodgo-2025","id":173992182065,"schema_name":"Impact","schema_version":"6.5.0","theme_store_id":1190,"role":"main"};
+Shopify.theme.handle = "null";
+Shopify.theme.style = {"id":null,"handle":null};
+Shopify.cdnHost = "www.carpodgo.com/cdn";
+Shopify.routes = Shopify.routes || {};
+Shopify.routes.root = "/";
+Shopify.shopJsCdnBaseUrl = "https://cdn.shopify.com/shopifycloud/shop-js";
+Shopify.SignInWithShop = Shopify.SignInWithShop || {};
+Shopify.SignInWithShop.User = Shopify.SignInWithShop.User || {};
+Shopify.SignInWithShop.User.recognized = false;</script>
+<script type="module">!function(o){(o.Shopify=o.Shopify||{}).modules=!0}(window);</script>
+<script>!function(o){function n(){var o=[];function n(){o.push(Array.prototype.slice.apply(arguments))}return n.q=o,n}var t=o.Shopify=o.Shopify||{};t.loadFeatures=n(),t.autoloadFeatures=n()}(window);</script>
+<script>
+  window.Shopify = window.Shopify || {};
+  window.Shopify.SignInWithShop = window.Shopify.SignInWithShop || {};
+  window.Shopify.SignInWithShop.assetMetrics = { sampleRate: 0.25 };
+  window.Shopify.SignInWithShop.eligible = true;
+</script>
+<script id="shop-js-analytics" type="application/json">{"pageType":"page"}</script>
+<script defer="defer" async type="module" src="https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.en.esm.js"></script>
+<script type="module">
+  await import("https://cdn.shopify.com/shopifycloud/shop-js/modules/v2/loader.init-shop-cart-sync.en.esm.js");
+
+  window.Shopify.SignInWithShop?.initShopCartSync?.({"fedCMEnabled":true,"windoidEnabled":true});
+
+</script>
+<script>
+  window.Shopify = window.Shopify || {};
+  if (!window.Shopify.featureAssets) window.Shopify.featureAssets = {};
+  window.Shopify.featureAssets['shop-js'] = {"avatar":["modules/v2/loader.avatar.en.esm.js"],"checkout-modal":["modules/v2/loader.checkout-modal.en.esm.js"],"init-customer-accounts-sign-up":["modules/v2/loader.init-customer-accounts-sign-up.en.esm.js"],"init-customer-accounts":["modules/v2/loader.init-customer-accounts.en.esm.js"],"init-fed-cm":["modules/v2/loader.init-fed-cm.en.esm.js"],"init-shop-cart-sync":["modules/v2/loader.init-shop-cart-sync.en.esm.js"],"init-shop-email-lookup-coordinator":["modules/v2/loader.init-shop-email-lookup-coordinator.en.esm.js"],"init-shop-for-new-customer-accounts":["modules/v2/loader.init-shop-for-new-customer-accounts.en.esm.js"],"init-shop-user-recognition":["modules/v2/loader.init-shop-user-recognition.en.esm.js"],"init-windoid":["modules/v2/loader.init-windoid.en.esm.js"],"lead-capture":["modules/v2/loader.lead-capture.en.esm.js"],"listener":["modules/v2/loader.listener.en.esm.js"],"pay-button":["modules/v2/loader.pay-button.en.esm.js"],"payment-terms":["modules/v2/loader.payment-terms.en.esm.js"],"shop-button":["modules/v2/loader.shop-button.en.esm.js"],"shop-cart-sync":["modules/v2/loader.shop-cart-sync.en.esm.js"],"shop-cash-offers":["modules/v2/loader.shop-cash-offers.en.esm.js"],"shop-follow-button":["modules/v2/loader.shop-follow-button.en.esm.js"],"shop-login-button":["modules/v2/loader.shop-login-button.en.esm.js"],"shop-login":["modules/v2/loader.shop-login.en.esm.js"],"shop-toast-manager":["modules/v2/loader.shop-toast-manager.en.esm.js"],"shop-user-recognition":["modules/v2/loader.shop-user-recognition.en.esm.js"]};
+</script>
+<script>(function() {
+  var isLoaded = false;
+  function asyncLoad() {
+    if (isLoaded) return;
+    isLoaded = true;
+    var urls = ["\/\/cdn.shopify.com\/proxy\/4f7bd44c0d79bc4247bcb820b8215b85c6bd81682f462d2a045ab61e6215e670\/api.goaffpro.com\/loader.js?shop=89271a.myshopify.com\u0026sp-cache-control=cHVibGljLCBtYXgtYWdlPTkwMA","https:\/\/sdks.automizely.com\/conversions\/v1\/conversions.js?app_connection_id=b663c0c6efdf4b73a4f844f6968202b1\u0026mapped_org_id=6acabbd9c2bd540c38de87663c94d9e1_v1\u0026shop=89271a.myshopify.com","https:\/\/loox.io\/widget\/Vc_AlJk3wk\/loox.1721746217489.js?shop=89271a.myshopify.com"];
+    for (var i = 0; i < urls.length; i++) {
+      var s = document.createElement('script');
+      s.type = 'text/javascript';
+      s.async = true;
+      s.src = urls[i];
+      var x = document.getElementsByTagName('script')[0];
+      x.parentNode.insertBefore(s, x);
+    }
+  };
+  if(window.attachEvent) {
+    window.attachEvent('onload', asyncLoad);
+  } else {
+    window.addEventListener('load', asyncLoad, false);
+  }
+})();</script>
+<script id="__st">var __st={"a":82391793969,"offset":-25200,"reqid":"7ba5fc0a-1b2d-4a36-8451-ff9bdfa36b01-1791151234","pageurl":"www.carpodgo.com\/pages\/firmware-t4-plus","s":"pages-159110922545","u":"bd63df7bf6f8","p":"page","rtyp":"page","rid":159110922545};</script>
+<script>window.ShopifyPaypalV4VisibilityTracking = true;</script>
+<script id="captcha-bootstrap">!function(){'use strict';const t='contact',e='account',n='new_comment',o=[[t,t],['blogs',n],['comments',n],[t,'customer']],c=[[e,'customer_login'],[e,'guest_login'],[e,'recover_customer_password'],[e,'create_customer']],r=t=>t.map((([t,e])=>`form[action*='/${t}']:not([data-nocaptcha='true']) input[name='form_type'][value='${e}']`)).join(','),a=t=>()=>t?[...document.querySelectorAll(t)].map((t=>t.form)):[];function s(){const t=[...o],e=r(t);return a(e)}const i='password',u='form_key',d=['recaptcha-v3-token','g-recaptcha-response','h-captcha-response',i],f=()=>{try{return window.sessionStorage}catch{return}},m='__shopify_v',_=t=>t.elements[u];function p(t,e,n=!1){try{const o=window.sessionStorage,c=JSON.parse(o.getItem(e)),{data:r}=function(t){const{data:e,action:n}=t;return t[m]||n?{data:e,action:n}:{data:t,action:n}}(c);for(const[e,n]of Object.entries(r))t.elements[e]&&(t.elements[e].value=n);n&&o.removeItem(e)}catch(o){console.error('form repopulation failed',{error:o})}}const l='form_type',E='cptcha';function T(t){t.dataset[E]=!0}const w=window,h=w.document,L='Shopify',v='ce_forms',y='captcha';let A=!1;((t,e)=>{const n=(g='f06e6c50-85a8-45c8-87d0-21a2b65856fe',I='https://cdn.shopify.com/shopifycloud/storefront-forms-hcaptcha/ce_storefront_forms_captcha_hcaptcha.v1.5.3.iife.js',D={infoText:'Protected by hCaptcha',privacyText:'Privacy',termsText:'Terms'},(t,e,n)=>{const o=w[L][v],c=o.bindForm;if(c)return c(t,g,e,D).then(n);var r;o.q.push([[t,g,e,D],n]),r=I,A||(h.body.append(Object.assign(h.createElement('script'),{id:'captcha-provider',async:!0,src:r})),A=!0)});var g,I,D;w[L]=w[L]||{},w[L][v]=w[L][v]||{},w[L][v].q=[],w[L][y]=w[L][y]||{},w[L][y].protect=function(t,e){n(t,void 0,e),T(t)},Object.freeze(w[L][y]),function(t,e,n,w,h,L){const[v,y,A,g]=function(t,e,n){const i=e?o:[],u=t?c:[],d=[...i,...u],f=r(d),m=r(i),_=r(d.filter((([t,e])=>n.includes(e))));return[a(f),a(m),a(_),s()]}(w,h,L),I=t=>{const e=t.target;return e instanceof HTMLFormElement?e:e&&e.form},D=t=>v().includes(t);t.addEventListener('submit',(t=>{const e=I(t);if(!e)return;const n=D(e)&&!e.dataset.hcaptchaBound&&!e.dataset.recaptchaBound,o=_(e),c=g().includes(e)&&(!o||!o.value);(n||c)&&t.preventDefault(),c&&!n&&(function(t){try{if(!f())return;!function(t){const e=f();if(!e)return;const n=_(t);if(!n)return;const o=n.value;o&&e.removeItem(o)}(t);const e=Array.from(Array(32),(()=>Math.random().toString(36)[2])).join('');!function(t,e){_(t)||t.append(Object.assign(document.createElement('input'),{type:'hidden',name:u})),t.elements[u].value=e}(t,e),function(t,e){const n=f();if(!n)return;const o=[...t.querySelectorAll(`input[type='${i}']`)].map((({name:t})=>t)),c=[...d,...o],r={};for(const[a,s]of new FormData(t).entries())c.includes(a)||(r[a]=s);n.setItem(e,JSON.stringify({[m]:1,action:t.action,data:r}))}(t,e)}catch(e){console.error('failed to persist form',e)}}(e),e.submit())}));const S=(t,e)=>{t&&!t.dataset[E]&&(n(t,e.some((e=>e===t))),T(t))};for(const o of['focusin','change'])t.addEventListener(o,(t=>{const e=I(t);D(e)&&S(e,y())}));const B=e.get('form_key'),M=e.get(l),P=B&&M;t.addEventListener('DOMContentLoaded',(()=>{const t=y();if(P)for(const e of t)e.elements[l].value===M&&p(e,B);[...new Set([...A(),...v().filter((t=>'true'===t.dataset.shopifyCaptcha))])].forEach((e=>S(e,t)))}))}(h,new URLSearchParams(w.location.search),n,t,e,['guest_login'])})(!0,!0)}();</script>
+<script integrity="sha256-JjoPp5ZfB1sSAs5SQaol1x1GgvveM+BgmRzyDexInEQ=" data-source-attribution="shopify.loadfeatures" defer="defer" src="//www.carpodgo.com/cdn/shopifycloud/storefront/assets/storefront/load_feature-1bd60354.js" crossorigin="anonymous"></script>
+<script>(function () {var userAgent = navigator.userAgent;var platform = navigator.platform;var maxTouchPoints = navigator.maxTouchPoints || 0;var isIOS = /iPad|iPhone|iPod/.test(platform) || (platform === 'MacIntel' && maxTouchPoints > 1);var isMacSafari = platform.indexOf('Mac') === 0 && /Safari/.test(userAgent) && !/Chrome|Chromium|CriOS|FxiOS|Edg|OPR|Android/.test(userAgent);var isAppleSafari = isIOS || isMacSafari;if (isAppleSafari) {fetch('/sf_private_access_tokens' + location.search).catch(function () {});}function browserMajorVersion(pattern) {var match = userAgent.match(pattern);return match ? parseInt(match[1], 10) : null;}function shouldLoadAutosizesPolyfill() {if (!window.PerformanceObserver?.supportedEntryTypes?.includes('paint')) {return false;}var chromeVersion = browserMajorVersion(/Chrome\/(\d+)/);if (chromeVersion !== null) {return chromeVersion < 126;}var firefoxVersion = browserMajorVersion(/Firefox\/(\d+)/);if (firefoxVersion !== null) {return firefoxVersion < 150;}var safariVersion = isAppleSafari ? browserMajorVersion(/Version\/(\d+).*Safari\//) : null;if (safariVersion !== null) {return safariVersion < 27;}return true;}if (shouldLoadAutosizesPolyfill()) {var autosizesScript = document.createElement('script');autosizesScript.async = true;autosizesScript.crossOrigin = 'anonymous';autosizesScript.src = "//www.carpodgo.com/cdn/shopifycloud/storefront/assets/storefront/autosizes-84416378.js";(document.head || document.documentElement).appendChild(autosizesScript);}window.ShopifyAnalytics = window.ShopifyAnalytics || {};window.ShopifyAnalytics.performance = window.ShopifyAnalytics.performance || {};(function () {var LONG_FRAME_THRESHOLD = 50;var longAnimationFrames = [];var activeRafId = null;function collectLongFrames() {var previousTime = null;function rafMonitor(now) {if (activeRafId === null) {return;}var delta = now - previousTime;if (delta > LONG_FRAME_THRESHOLD) {longAnimationFrames.push({startTime: previousTime,endTime: now,});}previousTime = now;activeRafId = requestAnimationFrame(rafMonitor);}previousTime = performance.now();activeRafId = requestAnimationFrame(rafMonitor);}if (!window.PerformanceObserver?.supportedEntryTypes?.includes('long-animation-frame')) {collectLongFrames();var timeoutId = setTimeout(function () {cancelAnimationFrame(activeRafId);}, 10000);window.ShopifyAnalytics.performance.getLongAnimationFrames = function (stopCollection) {if (stopCollection === undefined) {stopCollection = false;}if (stopCollection) {clearTimeout(timeoutId);cancelAnimationFrame(activeRafId);}return longAnimationFrames;};}})();})();</script><script id="shopify-origin-trials" async="async" integrity="sha256-qJbe/jEZBHtr5W/BlA2cKAz3vkXu6vJQyLjgvgCC86g=" src="//cdn.shopify.com/shopifycloud/storefront/assets/storefront/origin_trials-318ab40a.js" crossorigin="anonymous" onload="window.__shopifyOriginTrialsDone = true" onerror="window.__shopifyOriginTrialsDone = true"></script>
+<script>
+  window.Shopify = window.Shopify || {};
+  window.Shopify.MCP = window.Shopify.MCP || {};
+  window.Shopify.MCP.enabled = true;
+  window.Shopify.MCP.shop = "89271a.myshopify.com";
+  window.Shopify.MCP.mcpEndpoint = "https:\/\/www.carpodgo.com\/api\/mcp";
+  window.Shopify.MCP.tools = [{"name":"search_shop_policies_and_faqs","description":"Used to get facts about the stores policies, products, or services.\nSome examples of questions you can ask are:\n  - What is your return policy?\n  - What is your shipping policy?\n  - What is your phone number?\n  - What are your hours of operation?\"\n","inputSchema":{"$schema":"https:\/\/json-schema.org\/draft\/2020-12\/schema","type":"object","properties":{"query":{"type":"string","description":"A natural language query."},"context":{"type":"string","description":"Additional information about the request such as user demographics, mood, location, or other relevant details that could help in tailoring the response appropriately."}},"required":["query"]}}];
+</script>
+<script>(()=>{var d="shopify:webmcp_adapter_loaded",n=Symbol.for("shopify.webmcp_adapter_loading");function s(c,a,{win:r=window,doc:o=document}={}){function p(){try{return r.localStorage.getItem(d)==="true"}catch{return!1}}function l(){try{r.localStorage.setItem(d,"true")}catch{}}function u(){return typeof(o.modelContext||r.navigator?.modelContext)?.registerTool=="function"}function f(){if(r[n]||!u())return;let t=o.head||o.getElementsByTagName("head")[0];if(!t)return;let e=o.createElement("script");e.type="module",e.crossOrigin="anonymous",a&&(e.integrity=a),e.src=c,e.addEventListener("load",l,{once:!0}),e.addEventListener("error",()=>{r[n]=!1},{once:!0}),t.appendChild(e),r[n]=!0}function _(t){let e=o.getElementById("shopify-origin-trials");if(!e||r.__shopifyOriginTrialsDone){t();return}e.addEventListener("load",t,{once:!0}),e.addEventListener("error",t,{once:!0})}function i(){_(()=>r.setTimeout(f,0))}function m(){o.addEventListener("DOMContentLoaded",i,{once:!0})}p()?i():m()}s("\/\/www.carpodgo.com\/cdn\/shopifycloud\/storefront\/assets\/storefront\/webmcp-c6b62ece.js","sha256-ke4DDuBjdvea3vxLWxHc9E9nq8zihuG4IfYEGbb77ys=");})();
+</script>
+<script data-source-attribution="shopify.dynamic_checkout.dynamic.init">var Shopify=Shopify||{};Shopify.PaymentButton=Shopify.PaymentButton||{isStorefrontPortableWallets:!0,init:function(){window.Shopify.PaymentButton.init=function(){};var t=document.createElement("script");t.src="https://www.carpodgo.com/cdn/shopifycloud/portable-wallets/latest/portable-wallets.en.js",t.type="module",document.head.appendChild(t)}};
+</script>
+<script data-source-attribution="shopify.dynamic_checkout.buyer_consent">
+  function portableWalletsHideBuyerConsent(e){var t=document.getElementById("shopify-buyer-consent"),n=document.getElementById("shopify-subscription-policy-button");t&&n&&(t.classList.add("hidden"),t.setAttribute("aria-hidden","true"),n.removeEventListener("click",e))}function portableWalletsShowBuyerConsent(e){var t=document.getElementById("shopify-buyer-consent"),n=document.getElementById("shopify-subscription-policy-button");t&&n&&(t.classList.remove("hidden"),t.removeAttribute("aria-hidden"),n.addEventListener("click",e))}window.Shopify?.PaymentButton&&(window.Shopify.PaymentButton.hideBuyerConsent=portableWalletsHideBuyerConsent,window.Shopify.PaymentButton.showBuyerConsent=portableWalletsShowBuyerConsent);
+</script>
+<script data-source-attribution="shopify.dynamic_checkout.cart.bootstrap">document.addEventListener("DOMContentLoaded",(function(){function t(){return document.querySelector("shopify-accelerated-checkout-cart, shopify-accelerated-checkout")}if(t())Shopify.PaymentButton.init();else{new MutationObserver((function(e,n){t()&&(Shopify.PaymentButton.init(),n.disconnect())})).observe(document.body,{childList:!0,subtree:!0})}}));
+</script>
+<link id="shopify-accelerated-checkout-styles" rel="stylesheet" media="screen" href="https://www.carpodgo.com/cdn/shopifycloud/portable-wallets/latest/accelerated-checkout-backwards-compat.css" crossorigin="anonymous">
+<style id="shopify-accelerated-checkout-cart">
+        #shopify-buyer-consent {
+  margin-top: 1em;
+  display: inline-block;
+  width: 100%;
+}
+
+#shopify-buyer-consent.hidden {
+  display: none;
+}
+
+#shopify-subscription-policy-button {
+  background: none;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+#shopify-subscription-policy-button::before {
+  box-shadow: none;
+}
+
+      </style>
+
+<script id="shopify-cfh-end">window.performance && window.performance.mark && window.performance.mark('shopify.content_for_header.end');</script>
+<link href="//www.carpodgo.com/cdn/shop/t/11/assets/theme.css?v=110512027186893488421734364315" rel="stylesheet" type="text/css" media="all" />
+
+<!-- BEGIN app block: shopify://apps/pagefly-ai-page-builder/blocks/app-embed/83e179f7-59a0-4589-8c66-c0dddf959200 -->
+
+<!-- BEGIN app snippet: pagefly-cro-ab-testing-main -->
+
+
+
+
+
+
+
+<script>
+  ;(function () {
+    const url = new URL(window.location)
+    const viewParam = url.searchParams.get('view')
+    if (viewParam && viewParam.includes('variant-pf-')) {
+      url.searchParams.set('pf_v', viewParam)
+      url.searchParams.delete('view')
+      window.history.replaceState({}, '', url)
+    }
+  })()
+</script>
+
+
+
+<script type='module'>
+  
+  window.PAGEFLY_CRO = window.PAGEFLY_CRO || {}
+
+  window.PAGEFLY_CRO['data_debug'] = {
+    original_template_suffix: "",
+    allow_ab_test: false,
+    ab_test_start_time: 0,
+    ab_test_end_time: 0,
+    today_date_time: 1791151234000,
+  }
+  window.PAGEFLY_CRO['GA4'] = { enabled: false}
+</script>
+
+<!-- END app snippet -->
+
+
+
+
+
+
+
+
+  <script src='https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-helper.js' defer='defer'></script>
+
+  <script src='https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-general-helper.js' defer='defer'></script>
+
+  <script src='https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-snap-slider.js' defer='defer'></script>
+
+  <script src='https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-slideshow-v3.js' defer='defer'></script>
+
+  <script src='https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-slideshow-v4.js' defer='defer'></script>
+
+  <script src='https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-glider.js' defer='defer'></script>
+
+  <script src='https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-slideshow-v1-v2.js' defer='defer'></script>
+
+  <script src='https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-product-media.js' defer='defer'></script>
+
+  <script src='https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-product.js' defer='defer'></script>
+
+
+<script id='pagefly-helper-data' type='application/json'>
+  {
+    "page_optimization": {
+      "assets_prefetching": false
+    },
+    "elements_asset_mapper": {
+      "Accordion": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-accordion.js",
+      "Accordion3": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-accordion3.js",
+      "CountDown": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-countdown.js",
+      "GMap1": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-gmap.js",
+      "GMap2": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-gmap.js",
+      "GMapBasicV2": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-gmap.js",
+      "GMapAdvancedV2": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-gmap.js",
+      "HTML.Video": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-htmlvideo.js",
+      "HTML.Video2": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-htmlvideo2.js",
+      "HTML.Video3": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-htmlvideo2.js",
+      "BackgroundVideo": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-htmlvideo2.js",
+      "Instagram": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-instagram.js",
+      "Instagram2": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-instagram.js",
+      "Insta3": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-instagram3.js",
+      "Tabs": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-tab.js",
+      "Tabs3": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-tab3.js",
+      "ProductBox": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-cart.js",
+      "FBPageBox2": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-facebook.js",
+      "FBLikeButton2": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-facebook.js",
+      "TwitterFeed2": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-twitter.js",
+      "Paragraph4": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-paragraph4.js",
+
+      "AliReviews": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-3rd-elements.js",
+      "BackInStock": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-3rd-elements.js",
+      "GloboBackInStock": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-3rd-elements.js",
+      "GrowaveWishlist": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-3rd-elements.js",
+      "InfiniteOptionsShopPad": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-3rd-elements.js",
+      "InkybayProductPersonalizer": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-3rd-elements.js",
+      "LimeSpot": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-3rd-elements.js",
+      "Loox": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-3rd-elements.js",
+      "Opinew": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-3rd-elements.js",
+      "Powr": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-3rd-elements.js",
+      "ProductReviews": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-3rd-elements.js",
+      "PushOwl": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-3rd-elements.js",
+      "ReCharge": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-3rd-elements.js",
+      "Rivyo": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-3rd-elements.js",
+      "TrackingMore": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-3rd-elements.js",
+      "Vitals": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-3rd-elements.js",
+      "Wiser": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-3rd-elements.js"
+    },
+    "custom_elements_mapper": {
+      "pf-click-action-element": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-click-action-element.js",
+      "pf-dialog-element": "https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-dialog-element.js"
+    }
+  }
+</script>
+
+<script id='pagefly-heatmap-config' type='application/json'>
+  {}
+</script>
+<script>
+  (function () {
+    var el = document.getElementById('pagefly-heatmap-config')
+    if (!el) { window.__pagefly_heatmap_config__ = {}; return }
+    try {
+      window.__pagefly_heatmap_config__ = JSON.parse(el.textContent || '{}') || {}
+    } catch (e) {
+      window.__pagefly_heatmap_config__ = {}
+    }
+  })()
+</script>
+<script>
+  // Heatmap overlay loader. Three gates, all of them cheap, none of them trusting the URL:
+  // the visitor must have arrived on a pf_heatmap link, the SERVER must have published an
+  // overlay path in the metafield, and this page must already be one the merchant enabled
+  // tracking for. The last gate is what stops a crafted link pulling the asset onto an
+  // arbitrary storefront page. Everything else is decided inside the asset, and by the server.
+  (function () {
+    var cfg = window.__pagefly_heatmap_config__ || {}
+    var id = (window.__pagefly_page_setting__ || {}).pageId
+    if (!/[#&]pf_heatmap=/.test(window.location.hash || '')) return
+    if (!cfg.overlay_data_path || !Array.isArray(cfg.enabled_page_ids)) return
+    if (!id || cfg.enabled_page_ids.indexOf(id) === -1) return
+    var s = document.createElement('script')
+    s.src = 'https://cdn.shopify.com/extensions/01a0f807-168f-7fcf-a3d0-e91e9a539d12/pagefly-ai-page-builder-363/assets/pagefly-heatmap-overlay.js'
+    s.defer = true
+    document.head.appendChild(s)
+  })()
+</script>
+
+<!-- BEGIN app snippet: pf-ai-schema -->
+<!-- END app snippet -->
+
+
+<!-- END app block --><!-- BEGIN app block: shopify://apps/uppush-email-marketing/blocks/push-notification/89fcbaff-b715-4dc6-a755-6fdb7b790bee --><script
+  defer
+  async
+  type="module"
+  type="text/javascript"
+>
+  window.uppushExtVer = '1.40'
+  console.log('Uppush launching...', window.uppushExtVer)
+
+  window.uppushResource = 'https://cdn.shopify.com/extensions/01a0c9aa-fffb-7e65-baec-ada9640f9dc4/uppush-429/assets/uppush-notification.min.js'
+  window.uppushAppCore = 'https://cdn.shopify.com/extensions/01a0c9aa-fffb-7e65-baec-ada9640f9dc4/uppush-429/assets/push-app.js'
+  window.uppushMessagingCore = 'https://cdn.shopify.com/extensions/01a0c9aa-fffb-7e65-baec-ada9640f9dc4/uppush-429/assets/push-messaging.js'
+  window.uppushExtension = {"automation":{"Abandoned cart recovery":true,"Back in stock":false,"Browse abandonment":false,"Price drop":false,"Shipping notifications":false},"browseAbandonedAutomation":{"_id":"696ccb4ee44d2f59865532c4","status":false,"type":"Browse abandonment","items":[{"status":true,"defer":"20 minutes","_id":"696ccb4ee44d2f59865532c5"},{"status":true,"defer":"2 hours","_id":"696ccb4ee44d2f59865532c6"},{"status":true,"defer":"1 day","_id":"696ccb4ee44d2f59865532c7"}],"minViewProductTime":15},"browseAbandonmentEmailTemplates":[{"_id":"696ccb4ee44d2f59865532e8","status":true,"defer":"30 minutes"},{"_id":"696ccb4ee44d2f59865532e9","status":true,"defer":"2 hours"},{"_id":"696ccb4ee44d2f59865532ea","status":true,"defer":"2 days"}],"popup":{"_id":"69761d0d951fa42273410d1b","published":true,"name":"Email popup with hero banner","deferRule":{"option":"Show with a timer","desktopDeferTimer":0,"mobileDeferTimer":0,"desktopDeferScroll":40,"mobileDeferScroll":20},"pageRule":{"option":"Show on any pages","type":"Match any","items":[]},"locationRule":{"option":"Show in any location","includes":[],"excludes":[]},"frequencyRule":{"option":"Limit frequency","limitValue":3,"limitUnit":"Day","deferValue":2,"deferUnit":"Minute"},"primaryButton":{"enabled":true,"action":"Submit form","title":{"cs":"Claim discount","de":"Rabatt einlösen","el":"Claim discount","en":"Claim discount","es":"Reclamar descuento","fr":"Réclamez la réduction","ga":"Claim discount","it":"Richiedi sconto","ja":"割引を請求する","nl":"Claim korting","no":"Claim discount","pl":"Odbierz zniżkę","pt_PT":"Claim discount"},"redirectUrl":"","isTargetBlank":true},"secondaryButton":{"enabled":true,"action":"Close popup","title":{"cs":"No, thanks","de":"Nein, danke","el":"No, thanks","en":"No, thanks","es":"No, gracias","fr":"Non, merci","ga":"No, thanks","it":"No, grazie","ja":"いいえ、結構です","nl":"Nee, bedankt","no":"No, thanks","pl":"Nie, dziękuję","pt_PT":"No, thanks"},"redirectUrl":"","isTargetBlank":true},"emailSetting":{"enabled":true,"required":false,"placeholder":{"cs":"Email address","de":"E-Mail-Adresse","el":"Email address","en":"Email address","es":"Correo electrónico","fr":"Adresse e-mail","ga":"Email address","it":"Indirizzo email","ja":"メールアドレス","nl":"E-mailadres","no":"Email address","pl":"Adres e-mail","pt_PT":"Email address"}},"nameSetting":{"enabled":false,"option":"Both first name and last name","layout":"Vertical","firstNamePlaceholder":{"cs":"First name","de":"Vorname","el":"First name","en":"First name","es":"Nombre","fr":"Prénom","ga":"First name","it":"Nome","ja":"名","nl":"Voornaam","no":"First name","pl":"Imię","pt_PT":"First name"},"firstNameRequired":true,"lastNamePlaceholder":{"cs":"Last name","de":"Nachname","el":"Last name","en":"Last name","es":"Apellido","fr":"Nom de famille","ga":"Last name","it":"Cognome","ja":"姓","nl":"Achternaam","no":"Last name","pl":"Nazwisko","pt_PT":"Last name"},"lastNameRequired":true},"phoneSetting":{"enabled":false,"required":true,"default":"us","placeholder":{"cs":"Phone number","de":"Telefonnummer","el":"Phone number","en":"Phone number","es":"Número de teléfono","fr":"Numéro de téléphone","ga":"Phone number","it":"Numero di telefono","ja":"電話番号","nl":"Telefoonnummer","no":"Phone number","pl":"Numer telefonu","pt_PT":"Phone number"}},"gdprSetting":{"enabled":false,"content":{"cs":"I agree to receive marketing emails","de":"Ich stimme zu, Marketing-E-Mails zu erhalten","el":"I agree to receive marketing emails","en":"I agree to receive marketing emails","es":"Acepto recibir correos electrónicos de marketing","fr":"J'accepte de recevoir des e-mails marketing","ga":"I agree to receive marketing emails","it":"Accetto di ricevere email di marketing","ja":"マーケティングメールを受け取ることに同意します","nl":"Ik ga akkoord met het ontvangen van marketing e-mails","no":"I agree to receive marketing emails","pl":"Zgadzam się na otrzymywanie e-maili marketingowych","pt_PT":"I agree to receive marketing emails"}},"tcpaSetting":{"enabled":false,"content":{"cs":"By signing up, you agree to receive recurring automated marketing messages at the phone number provided. Consent is not a condition of purchase. Reply STOP to unsubscribe. Msg frequency varies. Msg \u0026 data rates may apply. View Privacy Policy \u0026 Terms.","de":"Mit der Anmeldung stimmen Sie zu, wiederkehrende automatisierte Marketingnachrichten an die angegebene Telefonnummer zu erhalten. Die Zustimmung ist keine Bedingung für den Kauf. Antworten Sie mit STOP, um sich abzumelden. Die Nachrichtenfrequenz variiert. Nachrichten- und Datengebühren können anfallen. Datenschutzrichtlinie und Nutzungsbedingungen anzeigen.","el":"By signing up, you agree to receive recurring automated marketing messages at the phone number provided. Consent is not a condition of purchase. Reply STOP to unsubscribe. Msg frequency varies. Msg \u0026 data rates may apply. View Privacy Policy \u0026 Terms.","en":"By signing up, you agree to receive recurring automated marketing messages at the phone number provided. Consent is not a condition of purchase. Reply STOP to unsubscribe. Msg frequency varies. Msg \u0026 data rates may apply. View Privacy Policy \u0026 Terms.","es":"Al registrarte, aceptas recibir mensajes de marketing automatizados recurrentes en el número de teléfono proporcionado. El consentimiento no es una condición de compra. Responde STOP para darte de baja. La frecuencia de los mensajes varía. Pueden aplicarse tarifas de mensajes y datos. Consulta la Política de Privacidad y los Términos.","fr":"En vous inscrivant, vous acceptez de recevoir des messages marketing automatisés récurrents au numéro de téléphone fourni. Le consentement n'est pas une condition d'achat. Répondez STOP pour vous désabonner. La fréquence des messages varie. Des frais de message et de données peuvent s'appliquer. Voir la politique de confidentialité et les conditions.","ga":"By signing up, you agree to receive recurring automated marketing messages at the phone number provided. Consent is not a condition of purchase. Reply STOP to unsubscribe. Msg frequency varies. Msg \u0026 data rates may apply. View Privacy Policy \u0026 Terms.","it":"Iscrivendoti, accetti di ricevere messaggi di marketing automatici ricorrenti al numero di telefono fornito. Il consenso non è una condizione di acquisto. Rispondi STOP per annullare l'iscrizione. La frequenza dei messaggi varia. Possono essere applicate tariffe per messaggi e dati. Visualizza l'Informativa sulla privacy e i Termini.","ja":"サインアップすることで、提供された電話番号に定期的な自動マーケティングメッセージを受け取ることに同意します。購入の条件ではありません。停止するにはSTOPと返信してください。メッセージの頻度は異なります。メッセージおよびデータ料金が適用される場合があります。プライバシーポリシーと利用規約を表示してください。","nl":"Door u aan te melden, gaat u akkoord met het ontvangen van terugkerende geautomatiseerde marketingberichten op het opgegeven telefoonnummer. Toestemming is geen voorwaarde voor aankoop. Antwoord STOP om u af te melden. Berichtfrequentie varieert. Bericht- en datakosten kunnen van toepassing zijn. Bekijk Privacybeleid \u0026 Voorwaarden.","no":"By signing up, you agree to receive recurring automated marketing messages at the phone number provided. Consent is not a condition of purchase. Reply STOP to unsubscribe. Msg frequency varies. Msg \u0026 data rates may apply. View Privacy Policy \u0026 Terms.","pl":"Rejestrując się, zgadzasz się na otrzymywanie cyklicznych automatycznych wiadomości marketingowych na podany numer telefonu. Zgoda nie jest warunkiem zakupu. Odpowiedz STOP, aby zrezygnować z subskrypcji. Częstotliwość wiadomości może się różnić. Mogą obowiązywać opłaty za wiadomości i dane. Zobacz Politykę Prywatności i Warunki.","pt_PT":"By signing up, you agree to receive recurring automated marketing messages at the phone number provided. Consent is not a condition of purchase. Reply STOP to unsubscribe. Msg frequency varies. Msg \u0026 data rates may apply. View Privacy Policy \u0026 Terms."}},"title":{"cs":"Exclusive updates await you","de":"Exklusive Updates erwarten Sie","el":"Exclusive updates await you","en":"Get 20 USD OFF your order","es":"Te esperan actualizaciones exclusivas","fr":"Des mises à jour exclusives vous attendent","ga":"Exclusive updates await you","it":"Aggiornamenti esclusivi ti aspettano","ja":"独占更新があなたを待っています","nl":"Exclusieve updates wachten op u","no":"Exclusive updates await you","pl":"Czekają na Ciebie ekskluzywne aktualizacje","pt_PT":"Exclusive updates await you"},"message":{"cs":"Subscribe to receive our exclusive deals","de":"Abonnieren Sie, um unsere exklusiven Angebote zu erhalten","el":"Subscribe to receive our exclusive deals","en":"Sign up and unlock your instant discount.","es":"Suscríbete para recibir nuestras ofertas exclusivas","fr":"Abonnez-vous pour recevoir nos offres exclusives","ga":"Subscribe to receive our exclusive deals","it":"Iscriviti per ricevere le nostre offerte esclusive","ja":"独占取引を受け取るために購読してください","nl":"Abonneer u om onze exclusieve aanbiedingen te ontvangen","no":"Subscribe to receive our exclusive deals","pl":"Zapisz się, aby otrzymywać nasze ekskluzywne oferty","pt_PT":"Subscribe to receive our exclusive deals"},"subscribedTitle":{"cs":"Thank you for subscribing!","de":"Vielen Dank für Ihr Abonnement!","el":"Thank you for subscribing!","en":"Discount unlocked 🎉","es":"¡Gracias por suscribirte!","fr":"Merci pour votre abonnement !","ga":"Thank you for subscribing!","it":"Grazie per esserti iscritto!","ja":"購読していただきありがとうございます！","nl":"Bedankt voor uw inschrijving!","no":"Thank you for subscribing!","pl":"Dziękujemy za zapisanie się!","pt_PT":"Thank you for subscribing!"},"subscribedMessage":{"cs":"Your information has been successfully registered. We will keep you updated on the latest promotions.","de":"Ihre Informationen wurden erfolgreich registriert. Wir halten Sie über die neuesten Aktionen auf dem Laufenden.","el":"Your information has been successfully registered. We will keep you updated on the latest promotions.","en":"Thanks for subscribing. Copy your discount code and apply to your next order.","es":"Tu información ha sido registrada con éxito. Te mantendremos informado sobre las últimas promociones.","fr":"Vos informations ont été enregistrées avec succès. Nous vous tiendrons informé des dernières promotions.","ga":"Your information has been successfully registered. We will keep you updated on the latest promotions.","it":"Le tue informazioni sono state registrate con successo. Ti terremo aggiornato sulle ultime promozioni.","ja":"情報が正常に登録されました。最新のプロモーションについてお知らせします。","nl":"Uw informatie is succesvol geregistreerd. We houden u op de hoogte van de nieuwste promoties.","no":"Your information has been successfully registered. We will keep you updated on the latest promotions.","pl":"Twoje informacje zostały pomyślnie zarejestrowane. Będziemy Cię informować o najnowszych promocjach.","pt_PT":"Your information has been successfully registered. We will keep you updated on the latest promotions."},"subscribedButton":{"enabled":true,"action":"Close popup","title":{"cs":"Shop now","de":"Jetzt einkaufen","el":"Shop now","en":"Shop now","es":"Compra ahora","fr":"Achetez maintenant","ga":"Shop now","it":"Acquista ora","ja":"今すぐ購入","nl":"Winkel nu","no":"Shop now","pl":"Kup teraz","pt_PT":"Shop now"},"redirectUrl":"","isTargetBlank":true},"footer":{"cs":"You are subscribing to receive communication via email and can opt out at any time.","de":"Sie abonnieren, um Kommunikation per E-Mail zu erhalten und können sich jederzeit abmelden.","el":"You are subscribing to receive communication via email and can opt out at any time.","en":"You are subscribing to receive communication via email and can opt out at any time.","es":"Te estás suscribiendo para recibir comunicaciones por correo electrónico y puedes darte de baja en cualquier momento.","fr":"Vous vous abonnez pour recevoir des communications par e-mail et pouvez vous désabonner à tout moment.","ga":"You are subscribing to receive communication via email and can opt out at any time.","it":"Ti stai iscrivendo per ricevere comunicazioni via email e puoi annullare l'iscrizione in qualsiasi momento.","ja":"メールを介して通信を受け取るために購読しており、いつでもオプトアウトできます。","nl":"U abonneert zich om communicatie via e-mail te ontvangen en kunt zich op elk moment afmelden.","no":"You are subscribing to receive communication via email and can opt out at any time.","pl":"Zapisujesz się, aby otrzymywać komunikację e-mailową i możesz zrezygnować w dowolnym momencie.","pt_PT":"You are subscribing to receive communication via email and can opt out at any time."},"firstNameError":{"cs":"Please enter a valid first name","de":"Bitte geben Sie einen gültigen Vornamen ein","el":"Please enter a valid first name","en":"Please enter a valid first name","es":"Por favor, introduce un nombre válido","fr":"Veuillez entrer un prénom valide","ga":"Please enter a valid first name","it":"Per favore inserisci un nome valido","ja":"有効な名を入力してください","nl":"Voer een geldige voornaam in","no":"Please enter a valid first name","pl":"Proszę podać prawidłowe imię","pt_PT":"Please enter a valid first name"},"lastNameError":{"cs":"Please enter a valid last name","de":"Bitte geben Sie einen gültigen Nachnamen ein","el":"Please enter a valid last name","en":"Please enter a valid last name","es":"Por favor, introduce un apellido válido","fr":"Veuillez entrer un nom de famille valide","ga":"Please enter a valid last name","it":"Per favore inserisci un cognome valido","ja":"有効な姓を入力してください","nl":"Voer een geldige achternaam in","no":"Please enter a valid last name","pl":"Proszę podać prawidłowe nazwisko","pt_PT":"Please enter a valid last name"},"emailError":{"cs":"Please enter a valid email address","de":"Bitte geben Sie eine gültige E-Mail-Adresse ein","el":"Please enter a valid email address","en":"Please enter a valid email address","es":"Por favor, introduce una dirección de correo electrónico válida","fr":"Veuillez entrer une adresse e-mail valide","ga":"Please enter a valid email address","it":"Per favore inserisci un indirizzo email valido","ja":"有効なメールアドレスを入力してください","nl":"Voer een geldig e-mailadres in","no":"Please enter a valid email address","pl":"Proszę podać prawidłowy adres e-mail","pt_PT":"Please enter a valid email address"},"birthdayError":{"cs":"Please enter a valid birthday","de":"Bitte geben Sie ein gültiges Geburtsdatum ein","el":"Please enter a valid birthday","en":"Please enter a valid birthday","es":"Por favor, introduce una fecha de cumpleaños válida","fr":"Veuillez entrer une date d'anniversaire valide","ga":"Please enter a valid birthday","it":"Per favore inserisci una data di nascita valida","ja":"有効な誕生日を入力してください","nl":"Voer een geldige verjaardag in","no":"Please enter a valid birthday","pl":"Proszę podać prawidłową datę urodzenia","pt_PT":"Please enter a valid birthday"},"phoneError":{"cs":"Please enter a valid phone number","de":"Bitte geben Sie eine gültige Telefonnummer ein","el":"Please enter a valid phone number","en":"Please enter a valid phone number","es":"Por favor, introduce un número de teléfono válido","fr":"Veuillez entrer un numéro de téléphone valide","ga":"Please enter a valid phone number","it":"Per favore inserisci un numero di telefono valido","ja":"有効な電話番号を入力してください","nl":"Voer een geldig telefoonnummer in","no":"Please enter a valid phone number","pl":"Proszę podać prawidłowy numer telefonu","pt_PT":"Please enter a valid phone number"},"policyError":{"cs":"Please agree to the privacy policy","de":"Bitte stimmen Sie der Datenschutzrichtlinie zu","el":"Please agree to the privacy policy","en":"Please agree to the privacy policy","es":"Por favor, acepta la política de privacidad","fr":"Veuillez accepter la politique de confidentialité","ga":"Please agree to the privacy policy","it":"Per favore accetta la politica sulla privacy","ja":"プライバシーポリシーに同意してください","nl":"Ga akkoord met het privacybeleid","no":"Please agree to the privacy policy","pl":"Proszę zaakceptować politykę prywatności","pt_PT":"Please agree to the privacy policy"},"alreadySubscribedError":{"cs":"Your email is already subscribed","de":"Ihre E-Mail ist bereits abonniert","el":"Your email is already subscribed","en":"Your email is already subscribed","es":"Tu correo electrónico ya está suscrito","fr":"Votre e-mail est déjà abonné","ga":"Your email is already subscribed","it":"La tua email è già iscritta","ja":"あなたのメールはすでに購読されています","nl":"Uw e-mail is al geabonneerd","no":"Your email is already subscribed","pl":"Twój e-mail jest już zapisany","pt_PT":"Your email is already subscribed"},"logo":{"enabled":true,"size":83,"url":"https:\/\/cdn.shopify.com\/s\/files\/1\/0823\/9179\/3969\/files\/f52756eaad2f9f7f4d9730b60b468a01829347ff9cb49fbf88bd4f07fbe86eb51769348100489.png?v=1769348102"},"rounded":"Medium","size":"Medium","alignment":"Center","layout":"Left","triggerButton":{"option":"Show icon and label","iconType":"Bell","backgroundColor":"#3b82f6","color":"#ffffff","title":{"cs":"Get promotion","de":"Aktion erhalten","el":"Get promotion","en":"Get promotion","es":"Obtener promoción","fr":"Obtenez une promotion","ga":"Get promotion","it":"Ottieni promozione","ja":"プロモーションを受ける","nl":"Krijg promotie","no":"Get promotion","pl":"Uzyskaj promocję","pt_PT":"Get promotion"},"position":"Center-Right"},"iosGuide":{"enabled":false,"title":{"cs":"Never miss a sale 🛍️","de":"Verpassen Sie keinen Verkauf 🛍️","el":"Never miss a sale 🛍️","en":"Never miss a sale 🛍️","es":"Nunca te pierdas una oferta 🛍️","fr":"Ne manquez jamais une vente 🛍️","ga":"Never miss a sale 🛍️","it":"Non perdere mai una vendita 🛍️","ja":"セールを見逃さないでください 🛍️","nl":"Mis nooit een uitverkoop 🛍️","no":"Never miss a sale 🛍️","pl":"Nigdy nie przegap wyprzedaży 🛍️","pt_PT":"Never miss a sale 🛍️"},"message":{"cs":"Get notified about offers, new products, discounts...by adding our website to your home screen. Click {shareIcon} icon and tap \"Add to Home Screen\"","de":"Erhalten Sie Benachrichtigungen über Angebote, neue Produkte, Rabatte... indem Sie unsere Website zu Ihrem Startbildschirm hinzufügen. Klicken Sie auf das {shareIcon}-Symbol und tippen Sie auf \"Zum Startbildschirm hinzufügen\"","el":"Get notified about offers, new products, discounts...by adding our website to your home screen. Click {shareIcon} icon and tap \"Add to Home Screen\"","en":"Get notified about offers, new products, discounts...by adding our website to your home screen. Click {shareIcon} icon and tap \"Add to Home Screen\"","es":"Recibe notificaciones sobre ofertas, nuevos productos, descuentos... añadiendo nuestro sitio web a tu pantalla de inicio. Haz clic en el icono {shareIcon} y toca \"Agregar a la pantalla de inicio\"","fr":"Soyez informé des offres, nouveaux produits, réductions... en ajoutant notre site à votre écran d'accueil. Cliquez sur l'icône {shareIcon} et appuyez sur \"Ajouter à l'écran d'accueil\"","ga":"Get notified about offers, new products, discounts...by adding our website to your home screen. Click {shareIcon} icon and tap \"Add to Home Screen\"","it":"Ricevi notifiche su offerte, nuovi prodotti, sconti... aggiungendo il nostro sito web alla schermata principale. Clicca sull'icona {shareIcon} e tocca \"Aggiungi alla schermata principale\"","ja":"オファー、新製品、割引について通知を受け取るには、当社のウェブサイトをホーム画面に追加してください。 {shareIcon} アイコンをクリックして「ホーム画面に追加」をタップしてください。","nl":"Ontvang meldingen over aanbiedingen, nieuwe producten, kortingen... door onze website aan uw startscherm toe te voegen. Klik op het {shareIcon} pictogram en tik op \"Toevoegen aan startscherm\"","no":"Get notified about offers, new products, discounts...by adding our website to your home screen. Click {shareIcon} icon and tap \"Add to Home Screen\"","pl":"Otrzymuj powiadomienia o ofertach, nowych produktach, zniżkach... dodając naszą stronę do ekranu głównego. Kliknij ikonę {shareIcon} i wybierz \"Dodaj do ekranu głównego\"","pt_PT":"Get notified about offers, new products, discounts...by adding our website to your home screen. Click {shareIcon} icon and tap \"Add to Home Screen\""},"buttonTitle":{"cs":"Detail","de":"Detail","el":"Detail","en":"Detail","es":"Detalle","fr":"Détail","ga":"Detail","it":"Dettaglio","ja":"詳細","nl":"Detail","no":"Detail","pl":"Szczegóły","pt_PT":"Detail"}},"grantPermissionGuide":{"enabled":false,"title":{"cs":"Never miss a sale 🛍️","de":"Verpassen Sie keinen Verkauf 🛍️","el":"Never miss a sale 🛍️","en":"Never miss a sale 🛍️","es":"Nunca te pierdas una oferta 🛍️","fr":"Ne manquez jamais une vente 🛍️","ga":"Never miss a sale 🛍️","it":"Non perdere mai una vendita 🛍️","ja":"セールを見逃さないでください 🛍️","nl":"Mis nooit een uitverkoop 🛍️","no":"Never miss a sale 🛍️","pl":"Nigdy nie przegap wyprzedaży 🛍️","pt_PT":"Never miss a sale 🛍️"},"message":{"cs":"Subscribe to get updates on our new products and exclusive promotions","de":"Abonnieren Sie, um Updates zu unseren neuen Produkten und exklusiven Aktionen zu erhalten","el":"Subscribe to get updates on our new products and exclusive promotions","en":"Subscribe to get updates on our new products and exclusive promotions","es":"Suscríbete para recibir actualizaciones sobre nuestros nuevos productos y promociones exclusivas","fr":"Abonnez-vous pour recevoir des mises à jour sur nos nouveaux produits et promotions exclusives","ga":"Subscribe to get updates on our new products and exclusive promotions","it":"Iscriviti per ricevere aggiornamenti sui nostri nuovi prodotti e promozioni esclusive","ja":"新製品と独占プロモーションの更新を受け取るために購読してください","nl":"Abonneer u om updates te ontvangen over onze nieuwe producten en exclusieve promoties","no":"Subscribe to get updates on our new products and exclusive promotions","pl":"Zapisz się, aby otrzymywać aktualizacje o naszych nowych produktach i ekskluzywnych promocjach","pt_PT":"Subscribe to get updates on our new products and exclusive promotions"},"blockTitle":{"cs":"Your browser has blocked Push Notifications!","de":"Ihr Browser hat Push-Benachrichtigungen blockiert!","el":"Your browser has blocked Push Notifications!","en":"Your browser has blocked Push Notifications!","es":"¡Tu navegador ha bloqueado las notificaciones push!","fr":"Votre navigateur a bloqué les notifications push !","ga":"Your browser has blocked Push Notifications!","it":"Il tuo browser ha bloccato le notifiche push!","ja":"ブラウザがプッシュ通知をブロックしました！","nl":"Uw browser heeft pushmeldingen geblokkeerd!","no":"Your browser has blocked Push Notifications!","pl":"Twoja przeglądarka zablokowała powiadomienia Push!","pt_PT":"Your browser has blocked Push Notifications!"},"blockMessage":{"cs":"Change your setting to allow to receive to receive updates on promotions and discounts from us. Always secure and no spam notifications.","de":"Ändern Sie Ihre Einstellungen, um Updates zu Aktionen und Rabatten von uns zu erhalten. Immer sicher und keine Spam-Benachrichtigungen.","el":"Change your setting to allow to receive to receive updates on promotions and discounts from us. Always secure and no spam notifications.","en":"Change your setting to allow to receive to receive updates on promotions and discounts from us. Always secure and no spam notifications.","es":"Cambia tu configuración para permitir recibir actualizaciones sobre promociones y descuentos de nosotros. Siempre seguro y sin notificaciones de spam.","fr":"Modifiez vos paramètres pour recevoir des mises à jour sur les promotions et réductions de notre part. Toujours sécurisé et sans notifications de spam.","ga":"Change your setting to allow to receive to receive updates on promotions and discounts from us. Always secure and no spam notifications.","it":"Modifica le impostazioni per consentire di ricevere aggiornamenti su promozioni e sconti da noi. Sempre sicuro e senza notifiche spam.","ja":"設定を変更して、当社からのプロモーションと割引の更新を受け取ることを許可してください。常に安全でスパム通知はありません。","nl":"Wijzig uw instelling om updates over promoties en kortingen van ons te ontvangen. Altijd veilig en geen spam meldingen.","no":"Change your setting to allow to receive to receive updates on promotions and discounts from us. Always secure and no spam notifications.","pl":"Zmień ustawienia, aby otrzymywać aktualizacje o promocjach i zniżkach od nas. Zawsze bezpieczne i bez spamu.","pt_PT":"Change your setting to allow to receive to receive updates on promotions and discounts from us. Always secure and no spam notifications."}},"customCss":"\/* Add your custom CSS here *\/\r\n.up-modal-content-title {\r\n    font-size: 32px !important;\r\n}\r\n\r\n.up-modal-content-message {\r\n   font-size: 17px !important; \r\n   margin-top: 10px !important;\r\n}\r\n\r\n.up-footer {\r\n    font-size: 15px !important;\r\n}\r\n\r\n@media (max-width: 768px) {\r\n  .up-modal-banner {\r\n    display: none !important;\r\n  }\r\n}","mainBackgroundColor":"#ffffff","headingColor":"#030712","messageColor":"#6b7280","inputColor":"#1e293b","consentColor":"#71717a","footerColor":"#71717a","errorColor":"#ef4444","primaryButtonBackgroundColor":"#020617","primaryButtonTextColor":"#ffffff","secondaryButtonTextColor":"#ef4444","banner":{"url":"https:\/\/cdn.shopify.com\/s\/files\/1\/0823\/9179\/3969\/files\/2bd28056eadea9fa5d943b4790960155759658e80e034e067c72412640c5910f1770963264560.png?v=1770963266"},"desktopPosition":"Top-Center","mobilePosition":"Top","onlyWebPush":false,"customizeWebPushPopup":true,"views":75255,"type":"Opt-in form","birthdaySetting":{"enabled":false,"required":false,"placeholder":{"cs":"Birthday","de":"Geburtstag","el":"Birthday","en":"Birthday","es":"Cumpleaños","fr":"Anniversaire","ga":"Birthday","it":"Compleanno","ja":"誕生日","nl":"Verjaardag","no":"Birthday","pl":"Data urodzenia","pt_PT":"Birthday"}},"visibility":"All devices","spinWheelFontSize":12,"metafields":[],"tags":[],"hasEmailSms":true,"hasWebPush":true,"clickOutsideToClose":true,"exitIntentToOpen":false,"exitIntentOnlyForAbandonedCart":false,"rewards":[],"discount":{"option":"Manual discount","type":"Fixed amount","amount":20,"discountCode":"Carpo20","expire":false,"expiresInDays":2,"combineWithProductDiscount":false,"combineWithShippingDiscount":false,"combineWithOrderDiscount":false,"isIndividualDiscount":false,"collections":[],"excludedCollections":[],"products":[],"excludedProducts":[]}},"isOlder1":false,"plan":"Pro","pwa":{"appColor":"#01B14F","enabled":true},"appName":"CarpodGo","brandingRemoved":true,"logo":"https:\/\/cdn.shopify.com\/s\/files\/1\/0823\/9179\/3969\/files\/f52756eaad2f9f7f4d9730b60b468a01829347ff9cb49fbf88bd4f07fbe86eb51769348100489.png?v=1769348102"}
+
+  // A published popup carries every text in every locale of the shop, so the popups
+  // after the first one are stored in their own metafield to stay under the value limit
+  window.uppushExtraPopups = [
+    null,
+    null
+  ]
+  
+  window.pushupCustomer = {
+    email: '',
+    phone: '',
+    firstName: '',
+    lastName: '',
+    name: '',
+    tags: null,
+    id: '',
+    address: null
+  }
+  window.pushupProduct = null
+  if (pushupProduct) {
+    pushupProduct.variants = []
+    
+    window.pushupProduct = pushupProduct
+  }
+</script>
+
+
+<!-- END app block --><!-- BEGIN app block: shopify://apps/transtore/blocks/switcher_embed_block/afeffe82-e563-4f78-90f4-f1e3d96286c3 --><script>
+    (function(){
+        let logChangesTSTimer = null;
+        const observerTS = new MutationObserver(function(mutations, observer) {
+          clearTimeout(logChangesTSTimer);
+          logChangesTSTimer = setTimeout(function() {
+              logChangesTS();
+          }, 100);
+        });
+
+        function logChangesTS(mutations, observer) {
+            let evaluateTS = document.evaluate('//*[text()[contains(.,"trans-money")]]',document,null,XPathResult.ORDERED_NODE_SNAPSHOT_TYPE,null);
+            for (let iTS = 0; iTS < evaluateTS.snapshotLength; iTS++) {
+                let elTS = evaluateTS.snapshotItem(iTS);
+                let innerHtmlTS = elTS?.innerHTML ? elTS.innerHTML : "";
+                if(!innerHtmlTS || ["SCRIPT", "LINK", "STYLE", "NOSCRIPT"].includes(elTS.nodeName)){
+                    continue;
+                }
+
+                let decodedTS = innerHtmlTS.replaceAll("&lt;", "<").replaceAll("&gt;", ">");
+                if(decodedTS !== innerHtmlTS){
+                    elTS.innerHTML = decodedTS;
+                }
+            }
+        }
+        observerTS.observe(document.documentElement, { subtree : true, childList: true });
+    })();
+
+    window._transtoreStore = {
+        ...(window._transtoreStore || {}),
+        pageType: "page",
+        cartType: "popover",
+        currenciesEnabled: [],
+        currency: {
+            code: "USD",
+            symbol: "$",
+            name: "United States Dollar",
+            active: "USD",
+            rate: ''
+        },
+        product: {
+            id: null,
+        },
+        moneyWithCurrencyFormat: "\u003cspan class=trans-money\u003e${{amount}} USD\u003c\/span\u003e",
+        moneyFormat: "\u003cspan class=trans-money\u003e${{amount}}\u003c\/span\u003e",
+        currencyCodeEnabled: false,
+        shop: "www.carpodgo.com",
+        permanentDomainShop: "89271a.myshopify.com",
+        locale: "en",
+        country: "HK",
+        designMode: false,
+        theme: {
+          id: null,
+          name: null
+        },
+        cdnHost: "",
+        routes: { "root": "\/" },
+        market: {
+            id: 72918466865,
+            handle: "aisa"
+        },
+        enabledLocales: [{"shop_locale":{"locale":"en","enabled":true,"primary":true,"published":true}},{"shop_locale":{"locale":"fr","enabled":true,"primary":false,"published":true}},{"shop_locale":{"locale":"pl","enabled":true,"primary":false,"published":true}},{"shop_locale":{"locale":"it","enabled":true,"primary":false,"published":true}},{"shop_locale":{"locale":"es","enabled":true,"primary":false,"published":true}},{"shop_locale":{"locale":"pt-PT","enabled":true,"primary":false,"published":true}},{"shop_locale":{"locale":"el","enabled":true,"primary":false,"published":true}},{"shop_locale":{"locale":"cs","enabled":true,"primary":false,"published":true}},{"shop_locale":{"locale":"nl","enabled":true,"primary":false,"published":true}},{"shop_locale":{"locale":"no","enabled":true,"primary":false,"published":true}},{"shop_locale":{"locale":"ga","enabled":true,"primary":false,"published":true}},{"shop_locale":{"locale":"de","enabled":true,"primary":false,"published":true}},{"shop_locale":{"locale":"ja","enabled":true,"primary":false,"published":true}}],
+    };
+    
+        _transtoreStore.currenciesEnabled.push("USD");
+    
+</script>
+
+
+<!-- END app block --><script src="https://cdn.shopify.com/extensions/01a0c9aa-fffb-7e65-baec-ada9640f9dc4/uppush-429/assets/uppush-loader.js" type="text/javascript" defer="defer"></script>
+<script src="https://cdn.shopify.com/extensions/01a0f06d-5370-7f1d-9b93-bb85913a1ae2/transtore-445/assets/transtore.js" type="text/javascript" defer="defer"></script>
+<link href="https://cdn.shopify.com/extensions/01a0f06d-5370-7f1d-9b93-bb85913a1ae2/transtore-445/assets/transtore.css" rel="stylesheet" type="text/css" media="all">
+<link href="https://monorail-edge.shopifysvc.com" rel="dns-prefetch">
+<script>(function(){if ("sendBeacon" in navigator && "performance" in window) {try {var session_token_from_headers = performance.getEntriesByType('navigation')[0].serverTiming.find(x => x.name == '_s').description;} catch {var session_token_from_headers = undefined;}var session_cookie_matches = document.cookie.match(/_shopify_s=([^;]*)/);var session_token_from_cookie = session_cookie_matches && session_cookie_matches.length === 2 ? session_cookie_matches[1] : "";var session_token = session_token_from_headers || session_token_from_cookie || "";function handle_abandonment_event(e) {var entries = performance.getEntries().filter(function(entry) {return /monorail-edge.shopifysvc.com/.test(entry.name);});if (!window.abandonment_tracked && entries.length === 0) {window.abandonment_tracked = true;var currentMs = Date.now();var navigation_start = performance.timing.navigationStart;var payload = {shop_id: 82391793969,url: window.location.href,navigation_start,duration: currentMs - navigation_start,session_token,page_type: "page"};window.navigator.sendBeacon("https://monorail-edge.shopifysvc.com/v1/produce", JSON.stringify({schema_id: "online_store_buyer_site_abandonment/1.1",payload: payload,metadata: {event_created_at_ms: currentMs,event_sent_at_ms: currentMs}}));}}window.addEventListener('pagehide', handle_abandonment_event);}}());</script>
+<script>
+  window.__TREKKIE_SHIM_QUEUE = window.__TREKKIE_SHIM_QUEUE || [];
+</script>
+<script>(function(){var wpmLoader=function(){"use strict";var e=/Googlebot|Storebot-Google|bingbot|Baiduspider|YandexBot|DuckDuckBot|Slurp|facebookexternalhit|Twitterbot|LinkedInBot|Applebot|AdsBot-Google|Mediapartners-Google|APIs-Google|PetalBot|SemrushBot|AhrefsBot|MJ12bot|DotBot|Acunetix|PerplexityBot|Perplexity-User/i,t=/bytedance/i;function i(){try{var e=document.cookie;if(!e||"string"!=typeof e)return;for(var t=0,i=e.split(";");t<i.length;t++){var n=i[t],r=n.indexOf("=");if(-1!==r){var o=n.slice(0,r).trim();if(o){var a=void 0;try{a=decodeURIComponent(o)}catch(e){a=o}if("_shopify_s"===a){var d=n.slice(r+1).trim();try{return decodeURIComponent(d)}catch(e){return d}}}}}return}catch(e){return}}function n(e){try{"undefined"!=typeof console&&"function"==typeof console.warn&&console.warn(e)}catch(e){}}function r(e,t){return"string"==typeof e&&e.length>0&&e.length<=t?e:void 0}function o(e){var t;switch(null==(t=null==e?void 0:e.navigation)?void 0:t.type){case 0:return"navigate";case 1:return"reload";case 2:return"back_forward";default:return}}function a(){var e,t,i;try{var n=null==(i=null==(t=null==(e=self.ShopifyAnalytics)?void 0:e.lib)?void 0:t.trekkie)?void 0:i.state;return"awaiting-consent"===n||"initialized"===n?n:void 0}catch(e){return}}return function(d,s,u,l){var c=arguments.length>4&&void 0!==arguments[4]?arguments[4]:{};try{var p=c.trekkieShim;!0!==p&&"true"!==p||null!=window.__TREKKIE_SHIM_QUEUE||(window.__TREKKIE_SHIM_QUEUE=[])}catch(e){}var f,v,h,y,g=(v=(f={modern:/Edge?\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Firefox\/(1{2}[4-9]|1[2-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Chrom(ium|e)\/(9{2}|\d{3,})\.\d+(\.\d+|)|(Maci|X1{2}).+ Version\/(15\.\d+|(1[6-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(9{2}|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(15[._]\d+|(1[6-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](14[89]|1[5-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Android.+Firefox\/(15\d|1[6-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(14[89]|1[5-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|SamsungBrowser\/([2-9]\d|\d{3,})\.\d+/,legacy:/Edge?\/(1[6-9]|[2-9]\d|\d{3,})\.\d+(\.\d+|)|Firefox\/(5[4-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)|Chrom(ium|e)\/(5[1-9]|[6-9]\d|\d{3,})\.\d+(\.\d+|)([\d.]+$|.*Safari\/(?![\d.]+ Edge\/[\d.]+$))|(Maci|X1{2}).+ Version\/(10\.\d+|(1[1-9]|[2-9]\d|\d{3,})\.\d+)([,.]\d+|)( \(\w+\)|)( Mobile\/\w+|) Safari\/|Chrome.+OPR\/(3[89]|[4-9]\d|\d{3,})\.\d+\.\d+|(CPU[ +]OS|iPhone[ +]OS|CPU[ +]iPhone|CPU IPhone OS|CPU iPad OS)[ +]+(10[._]\d+|(1[1-9]|[2-9]\d|\d{3,})[._]\d+)([._]\d+|)|Android:?[ /-](14[89]|1[5-9]\d|[2-9]\d{2}|\d{4,})(\.\d+|)(\.\d+|)|Mobile Safari.+OPR\/([89]\d|\d{3,})\.\d+\.\d+|Android.+Firefox\/(15\d|1[6-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+Chrom(ium|e)\/(14[89]|1[5-9]\d|[2-9]\d{2}|\d{4,})\.\d+(\.\d+|)|Android.+(UC? ?Browser|UCWEB|U3)[ /]?(15\.([5-9]|\d{2,})|(1[6-9]|[2-9]\d|\d{3,})\.\d+)\.\d+|SamsungBrowser\/(5\.\d+|([6-9]|\d{2,})\.\d+)|Android.+MQ{2}Browser\/(14(\.(9|\d{2,})|)|(1[5-9]|[2-9]\d|\d{3,})(\.\d+|))(\.\d+|)|K[Aa][Ii]OS\/(3\.\d+|([4-9]|\d{2,})\.\d+)(\.\d+|)/}).modern,h=f.legacy,(y=navigator.userAgent).match(e)?"bot":y.match(v)?"modern":y.match(h)?"legacy":y.match(t)?"bot":"unknown"),m=function(e){var t,i,n=r(e,128);try{var a=window.performance,d=null==(t=null==a?void 0:a.getEntriesByType)?void 0:t.call(a,"navigation")[0];if(!d)return{requestId:n,navigationType:o(a)};var s="type"in d?r(d.type,64):void 0,u="serverTiming"in d&&Array.isArray(d.serverTiming)?d.serverTiming:[];return{requestId:null!=n?n:r(null==(i=u.find(function(e){return"requestID"===e.name}))?void 0:i.description,128),navigationType:s}}catch(e){return{requestId:n}}}(c.requestId),w=function(e){var t=e.version,r=e.browserTarget,o=e.surface,a=e.shopId,d=e.monorailEndpoint,s=window.location.href;return{emit:function(e){var u=e.status,l=e.errorMsg,c=e.failureReason,p=e.useKeepaliveFallback,f=void 0!==p&&p,v=e.navigationType,h=e.pagehidePersisted,y=e.requestId,g=e.trekkieState;if(d){var m,w;try{var b=(new Date).getTime();m=JSON.stringify({metadata:{event_sent_at_ms:b},events:[{schema_id:"web_pixels_manager_load/3.3",payload:{version:t,bundle_target:r,page_url:s,status:u,surface:o,error_msg:l,failure_reason:c,navigation_type:v,pagehide_persisted:h,request_id:y,trekkie_state:g,shop_id:a,visit_token:i()},metadata:{event_created_at_ms:b}}]})}catch(e){return}try{if("function"==typeof window.navigator.sendBeacon&&-1===(w=window.navigator.userAgent).indexOf("iPhone; CPU iPhone OS 12_")&&-1===w.indexOf("iPad; CPU OS 12_")&&-1===w.indexOf("iPod touch; CPU iPhone OS 12_")&&window.navigator.sendBeacon.bind(window.navigator)(d,m))return}catch(e){}if(f)try{"function"==typeof window.fetch&&window.fetch(d,{method:"POST",headers:{"Content-Type":"text/plain"},body:m,keepalive:!0}).catch(function(){})}catch(e){}else try{var _=new XMLHttpRequest;_.open("POST",d,!0),_.setRequestHeader("Content-Type","text/plain"),_.send(m)}catch(e){n("[Web Pixels Manager] Got an unhandled error while logging to Monorail.")}}else n("[Web Pixels Manager] No Monorail endpoint provided, skipping logging.")}}}({version:u,browserTarget:g,surface:d.surface,shopId:d.shopId,monorailEndpoint:d.monorailEndpoint});if(Boolean(null==(_=null==(b=window.Shopify)?void 0:b.analytics)?void 0:_.replayQueue))w.emit({status:"setup-skipped",errorMsg:"replay queue already initialized."});else{var b,_;w.emit({status:"setup-started"}),window.Shopify=window.Shopify||{};var S=window.Shopify;S.analytics=S.analytics||{};var P=S.analytics;P.replayQueue=[],P.publish=function(e,t,i){return P.replayQueue.push([e,t,i]),!0};try{self.performance.mark("wpm:start")}catch(e){}var k,C="modern"===g?"modern":"legacy",E=(null!=l?l:{modern:"",legacy:""})[C],I=[(k={baseUrl:s,hashVersion:u,buildTarget:C}).baseUrl,"/wpm","/b",k.hashVersion,"modern"===k.buildTarget?"m":"l",".js"].join(""),O=!1,T=!1;try{c.browserTarget=g,function(){O=!0;try{window.addEventListener("pagehide",M)}catch(e){O=!1}}(),R(function(){try{R(x)}catch(e){D(e)}}),w.emit({status:"loading",requestId:m.requestId,navigationType:m.navigationType,trekkieState:a()})}catch(e){D(e)}}function U(){var e;if(q(),!function(){var e,t;return Boolean(null==(t=null==(e=window.Shopify)?void 0:e.analytics)?void 0:t.initialized)}()){var t,i,n;try{if("function"!=typeof(null==(e=window.webPixelsManager)?void 0:e.init))return void A();if(!(null!==(n=i=t=window.webPixelsManager.init(d))&&"function"!=typeof n&&Object(n)===n&&"publish"in i&&"function"==typeof i.publish&&"publishCustomEvent"in i&&"function"==typeof i.publishCustomEvent&&"visitor"in i&&"function"==typeof i.visitor))return void A()}catch(e){return void A(e)}var r=window.Shopify.analytics;r.replayQueue.forEach(function(e){var i=e[0],n=e[1],r=e[2];t.publishCustomEvent(i,n,r)}),r.replayQueue=[],r.publish=t.publishCustomEvent,r.visitor=t.visitor,r.initialized=!0}}function A(e){B("manager_api_unavailable",void 0===e?void 0:Q(e))}function x(){B("script_load_failed","".concat(I," has failed to load"))}function B(e,t){T||(T=!0,q(),w.emit({status:"failed",errorMsg:t,failureReason:e,requestId:m.requestId,navigationType:m.navigationType,trekkieState:a()}))}function M(e){O&&(q(),w.emit({status:"pagehide-while-loading",useKeepaliveFallback:!0,pagehidePersisted:e.persisted,requestId:m.requestId,navigationType:m.navigationType,trekkieState:a()}))}function q(){O=!1;try{window.removeEventListener("pagehide",M)}catch(e){}}function R(e){var t;!function(e){var t=e.src,i=e.async,n=void 0===i||i,r=e.onload,o=e.onerror,a=e.sri,d=e.scriptDataAttributes,s=void 0===d?{}:d,u=document.createElement("script"),l=document.querySelector("head"),c=document.querySelector("body");if(u.async=n,u.src=t,a&&(u.integrity=a,u.crossOrigin="anonymous"),s)for(var p in s)if(Object.prototype.hasOwnProperty.call(s,p))try{u.dataset[p]=String(s[p])}catch(e){}if(r&&u.addEventListener("load",r),o&&u.addEventListener("error",o),l)l.appendChild(u);else{if(!c)throw new Error("Did not find a head or body element to append the script");c.appendChild(u)}}({src:I,async:!0,onload:U,onerror:e,sri:(t=E,"string"==typeof t&&/^sha384-[A-Za-z0-9+/=]+$/.test(t)?E:""),scriptDataAttributes:c})}function D(e){B("script_append_failed",Q(e))}function Q(e){return e instanceof Error?e.message:"Unknown error"}}}();wpmLoader({shopId: 82391793969,storefrontBaseUrl: "https://www.carpodgo.com",extensionsBaseUrl: "https://extensions.shopifycdn.com/cdn/shopifycloud/web-pixels-manager",monorailEndpoint: "https://www.carpodgo.com/.well-known/shopify/monorail/unstable/produce_batch",surface: "storefront-renderer",enabledBetaFlags: ["4c64608a","16072cab","8450a54b","7ee89bf1"],webPixelsConfigList: [{"id":"2235597105","configuration":"{\"storeId\":\"696ccb4d97c8ea6af093138f\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"5732d961bca91bcd30d5cdf32c783ecc","type":"APP","apiClientId":44284542977,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized"},{"id":"2037973297","configuration":"{\"accountID\":\"89271a\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"4f82d0323b06a4642fbff9b42c9979eb","type":"APP","apiClientId":12388204545,"privacyPurposes":["ANALYTICS","MARKETING"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized"},{"id":"1340899633","configuration":"{\"hashed_organization_id\":\"6acabbd9c2bd540c38de87663c94d9e1_v1\",\"app_key\":\"89271a\",\"allow_collect_personal_data\":\"true\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"653baec8563a6cf1ada385270373426a","type":"APP","apiClientId":2814809,"privacyPurposes":["ANALYTICS","MARKETING","SALE_OF_DATA"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized"},{"id":"1178960177","configuration":"{\"shop\":\"89271a.myshopify.com\",\"cookie_duration\":\"604800\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"a2e7513c3708f34b1f617d7ce88f9697","type":"APP","apiClientId":2744533,"privacyPurposes":["ANALYTICS","MARKETING"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized"},{"id":"1152385329","configuration":"{\"endpoint\":\"https:\\\/\\\/api.parcelpanel.com\",\"debugMode\":\"false\"}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"97b5be1756c17e4819e71893a005b595","type":"APP","apiClientId":2681387,"privacyPurposes":["ANALYTICS"],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"unrestricted"},{"id":"809042225","configuration":"{\"config\":\"{\\\"google_tag_ids\\\":[\\\"G-PB7RSERMQF\\\",\\\"AW-16576501585\\\",\\\"GT-NGWVCQQ9\\\"],\\\"target_country\\\":\\\"US\\\",\\\"gtag_events\\\":[{\\\"type\\\":\\\"begin_checkout\\\",\\\"action_label\\\":[\\\"G-PB7RSERMQF\\\",\\\"AW-16576501585\\\/O0UBCP7Q57IZENGupeA9\\\"]},{\\\"type\\\":\\\"search\\\",\\\"action_label\\\":[\\\"G-PB7RSERMQF\\\",\\\"AW-16576501585\\\/95ppCPjQ57IZENGupeA9\\\"]},{\\\"type\\\":\\\"remove_from_cart\\\",\\\"action_label\\\":\\\"G-PB7RSERMQF\\\"},{\\\"type\\\":\\\"view_item\\\",\\\"action_label\\\":[\\\"G-PB7RSERMQF\\\",\\\"AW-16576501585\\\/kNzcCPXQ57IZENGupeA9\\\",\\\"MC-36FDEDE249\\\"]},{\\\"type\\\":\\\"add_shipping_info\\\",\\\"action_label\\\":\\\"G-PB7RSERMQF\\\"},{\\\"type\\\":\\\"purchase\\\",\\\"action_label\\\":[\\\"G-PB7RSERMQF\\\",\\\"AW-16576501585\\\/RzxiCO_Q57IZENGupeA9\\\",\\\"MC-36FDEDE249\\\"]},{\\\"type\\\":\\\"page_view\\\",\\\"action_label\\\":[\\\"G-PB7RSERMQF\\\",\\\"AW-16576501585\\\/z4DLCPLQ57IZENGupeA9\\\",\\\"MC-36FDEDE249\\\"]},{\\\"type\\\":\\\"view_item_list\\\",\\\"action_label\\\":\\\"G-PB7RSERMQF\\\"},{\\\"type\\\":\\\"add_payment_info\\\",\\\"action_label\\\":[\\\"G-PB7RSERMQF\\\",\\\"AW-16576501585\\\/BEMpCPnR57IZENGupeA9\\\"]},{\\\"type\\\":\\\"add_to_cart\\\",\\\"action_label\\\":[\\\"G-PB7RSERMQF\\\",\\\"AW-16576501585\\\/iFRWCPvQ57IZENGupeA9\\\"]},{\\\"type\\\":\\\"view_cart\\\",\\\"action_label\\\":\\\"G-PB7RSERMQF\\\"}],\\\"enable_monitoring_mode\\\":false}\"}","eventPayloadVersion":"v1","runtimeContext":"OPEN","scriptVersion":"a3321ca85cf5aaf6b57585fcd8d67b3a","type":"APP","apiClientId":1780363,"privacyPurposes":[],"dataSharingAdjustments":{"protectedCustomerApprovalScopes":["read_customer_address","read_customer_email","read_customer_name","read_customer_personal_data","read_customer_phone"],"dataSharingControls":["share_all_events"]},"dataSharingState":"optimized","enabledFlags":["9a3ed68a"]},{"id":"shopify-app-pixel","configuration":"{}","eventPayloadVersion":"v1","runtimeContext":"STRICT","scriptVersion":"0530","apiClientId":"shopify-pixel","type":"APP","privacyPurposes":["ANALYTICS","MARKETING"]},{"id":"shopify-custom-pixel","eventPayloadVersion":"v1","runtimeContext":"LAX","scriptVersion":"0530","apiClientId":"shopify-pixel","type":"CUSTOM","privacyPurposes":["ANALYTICS","MARKETING"]}],isMerchantRequest: false,initData: {"shop":{"name":"CarpodGo","paymentSettings":{"currencyCode":"USD"},"myshopifyDomain":"89271a.myshopify.com","countryCode":"HK","storefrontUrl":"https:\/\/www.carpodgo.com"},"customer":null,"cart":null,"checkout":null,"productVariants":[],"products":[{"id":"8928605045041","handle":"t3pro","isCollective":null,"title":null,"type":null,"untranslatedTitle":null,"url":null,"vendor":null,"remoteShopId":null,"variants":[{"id":"48323045654833","image":null,"price":null,"sku":null,"title":null,"untranslatedTitle":null}]},{"id":"9956483432753","handle":"2024-newest-car-stand-works-with-modely-and-older-model3","isCollective":null,"title":null,"type":null,"untranslatedTitle":null,"url":null,"vendor":null,"remoteShopId":null,"variants":[{"id":"49838097629489","image":null,"price":null,"sku":null,"title":null,"untranslatedTitle":null}]}],"purchasingCompany":null},},"https://www.carpodgo.com/cdn","5982071ew7ea472e3p69b68784m2150dfea",{"modern":"","legacy":""},{"trekkieShim":true,"agentContext":true,"apiClientId":"580111","facebookCapiEnabled":"false","themeId":"173992182065","themeStoreId":"1190","themePublished":"true","eventMetadataId":"ec48ac39-9613-46a2-bbde-086db894a04f","pageType":"page","resourceId":"159110922545","shopId":"82391793969","storefrontBaseUrl":"https:\/\/www.carpodgo.com","extensionBaseUrl":"https:\/\/extensions.shopifycdn.com\/cdn\/shopifycloud\/web-pixels-manager","surface":"storefront-renderer","enabledBetaFlags":"[\"4c64608a\", \"16072cab\", \"8450a54b\", \"7ee89bf1\"]","isMerchantRequest":"false","hashVersion":"5982071ew7ea472e3p69b68784m2150dfea","publish":"custom","events":"[[\"page_viewed\",{}]]"});})();</script><script>
+  window.ShopifyAnalytics = window.ShopifyAnalytics || {};
+  window.ShopifyAnalytics.meta = window.ShopifyAnalytics.meta || {};
+  window.ShopifyAnalytics.meta.currency = 'USD';
+  var meta = {"page":{"pageType":"page","resourceType":"page","resourceId":159110922545,"requestId":"7ba5fc0a-1b2d-4a36-8451-ff9bdfa36b01-1791151234"}};
+  for (var attr in meta) {
+    window.ShopifyAnalytics.meta[attr] = meta[attr];
+  }
+</script>
+<script class="analytics">
+  (function () {
+    var customDocumentWrite = function(content) {
+      var jquery = null;
+
+      if (window.jQuery) {
+        jquery = window.jQuery;
+      } else if (window.Checkout && window.Checkout.$) {
+        jquery = window.Checkout.$;
+      }
+
+      if (jquery) {
+        jquery('body').append(content);
+      }
+    };
+
+    var hasLoggedConversion = function(token) {
+      if (token) {
+        return document.cookie.indexOf('loggedConversion=' + token) !== -1;
+      }
+      return false;
+    }
+
+    var setCookieIfConversion = function(token) {
+      if (token) {
+        var twoMonthsFromNow = new Date(Date.now());
+        twoMonthsFromNow.setMonth(twoMonthsFromNow.getMonth() + 2);
+
+        document.cookie = 'loggedConversion=' + token + '; expires=' + twoMonthsFromNow;
+      }
+    }
+
+    var trekkie = window.ShopifyAnalytics.lib = window.trekkie = window.trekkie || [];
+    window.ShopifyAnalytics.lib.trekkie = window.trekkie;
+    if (trekkie.integrations) {
+      return;
+    }
+    trekkie.methods = [
+      'identify',
+      'page',
+      'ready',
+      'track',
+      'trackForm',
+      'trackLink'
+    ];
+    trekkie.factory = function(method) {
+      return function() {
+        var args = Array.prototype.slice.call(arguments);
+        args.unshift(method);
+        trekkie.push(args);
+        if (method == 'track' || method == 'page') {
+          var pageUrl;
+          try {
+            pageUrl = window.location.href;
+          } catch (e) {}
+          var pageReferrer;
+          try {
+            pageReferrer = document.referrer;
+          } catch (e) {}
+          try {
+            if (window.__TREKKIE_SHIM_QUEUE == null) {
+              window.__TREKKIE_SHIM_QUEUE = [];
+            }
+            window.__TREKKIE_SHIM_QUEUE.push({
+              from: 'trekkie-stub',
+              method: method,
+              args: args.slice(1),
+              pageContext: {
+                url: pageUrl,
+                referrer: pageReferrer
+              }
+            });
+          } catch (e) {
+            // no-op
+          }
+        }
+        return trekkie;
+      };
+    };
+    for (var i = 0; i < trekkie.methods.length; i++) {
+      var key = trekkie.methods[i];
+      trekkie[key] = trekkie.factory(key);
+    }
+    trekkie.load = function(config) {
+      trekkie.config = config || {};
+      trekkie.config.initialDocumentCookie = document.cookie;
+      var first = document.getElementsByTagName('script')[0];
+var script = document.createElement('script');
+script.type = 'text/javascript';
+script.onerror = function(e) {
+  var scriptFallback = document.createElement('script');
+  scriptFallback.type = 'text/javascript';
+  scriptFallback.onerror = function(error) {
+          var Monorail = {
+      produce: function produce(monorailDomain, schemaId, payload) {
+        var currentMs = new Date().getTime();
+        var event = {
+          schema_id: schemaId,
+          payload: payload,
+          metadata: {
+            event_created_at_ms: currentMs,
+            event_sent_at_ms: currentMs
+          }
+        };
+        return Monorail.sendRequest("https://" + monorailDomain + "/v1/produce", JSON.stringify(event));
+      },
+      sendRequest: function sendRequest(endpointUrl, payload) {
+        // Try the sendBeacon API
+        if (window && window.navigator && typeof window.navigator.sendBeacon === 'function' && typeof window.Blob === 'function' && !Monorail.isIos12()) {
+          var blobData = new window.Blob([payload], {
+            type: 'text/plain'
+          });
+
+          if (window.navigator.sendBeacon(endpointUrl, blobData)) {
+            return true;
+          } // sendBeacon was not successful
+
+        } // XHR beacon
+
+        var xhr = new XMLHttpRequest();
+
+        try {
+          xhr.open('POST', endpointUrl);
+          xhr.setRequestHeader('Content-Type', 'text/plain');
+          xhr.send(payload);
+        } catch (e) {
+          console.log(e);
+        }
+
+        return false;
+      },
+      isIos12: function isIos12() {
+        return window.navigator.userAgent.lastIndexOf('iPhone; CPU iPhone OS 12_') !== -1 || window.navigator.userAgent.lastIndexOf('iPad; CPU OS 12_') !== -1;
+      }
+    };
+    Monorail.produce('monorail-edge.shopifysvc.com',
+      'trekkie_storefront_load_errors/1.1',
+      {shop_id: 82391793969,
+      theme_id: 173992182065,
+      app_name: "storefront",
+      context_url: window.location.href,
+      source_url: "//www.carpodgo.com/cdn/s/trekkie.storefront.2f6d7d7ede7d24234881a9cd5f47e679642fa1f6.min.js"});
+
+  };
+  scriptFallback.async = true;
+  scriptFallback.src = '//www.carpodgo.com/cdn/s/trekkie.storefront.2f6d7d7ede7d24234881a9cd5f47e679642fa1f6.min.js';
+  first.parentNode.insertBefore(scriptFallback, first);
+};
+script.async = true;
+script.src = '//www.carpodgo.com/cdn/s/trekkie.storefront.2f6d7d7ede7d24234881a9cd5f47e679642fa1f6.min.js';
+first.parentNode.insertBefore(script, first);
+
+    };
+    trekkie.load(
+      {"Trekkie":{"appName":"storefront","development":false,"defaultAttributes":{"shopId":82391793969,"isMerchantRequest":null,"themeId":173992182065,"themeCityHash":"17665738202923608059","contentLanguage":"en","currency":"USD","eventMetadataId":"ec48ac39-9613-46a2-bbde-086db894a04f"},"isServerSideCookieWritingEnabled":true,"monorailRegion":"shop_domain","enabledBetaFlags":["764d78cb","8450a54b","7ee89bf1","4c64608a"]},"Session Attribution":{},"S2S":{"facebookCapiEnabled":false,"source":"trekkie-storefront-renderer","apiClientId":580111}}
+    );
+
+    var loaded = false;
+    trekkie.ready(function() {
+      if (loaded) return;
+      loaded = true;
+
+      window.ShopifyAnalytics.lib = window.trekkie;
+
+      var originalDocumentWrite = document.write;
+      document.write = customDocumentWrite;
+      try { window.ShopifyAnalytics.merchantGoogleAnalytics.call(this); } catch(error) {};
+      document.write = originalDocumentWrite;
+
+      var match = window.location.pathname.match(/checkouts\/(.+)\/(thank_you|post_purchase)/)
+      var token = match? match[1]: undefined;
+      if (!hasLoggedConversion(token)) {
+        setCookieIfConversion(token);
+        
+      }
+    });
+
+    window.ShopifyAnalytics.lib.page(null,{"pageType":"page","resourceType":"page","resourceId":159110922545,"requestId":"7ba5fc0a-1b2d-4a36-8451-ff9bdfa36b01-1791151234","shopifyEmitted":true});
+
+    var eventsListenerScript = document.createElement('script');
+    eventsListenerScript.async = true;
+    eventsListenerScript.src = "//www.carpodgo.com/cdn/shopifycloud/storefront/assets/shop_events_listener-4e26a9ce.js";
+    document.getElementsByTagName('head')[0].appendChild(eventsListenerScript);
+})();</script>
+<script
+  defer
+  src="https://www.carpodgo.com/cdn/shopifycloud/perf-kit/shopify-perf-kit-3.9.4.min.js"
+  data-application="storefront-renderer"
+  data-shop-id="82391793969"
+  data-render-region="gcp-us-east1"
+  data-page-type="page"
+  data-theme-instance-id="173992182065"
+  data-theme-name="Impact"
+  data-theme-version="6.5.0"
+  data-monorail-region="shop_domain"
+  data-resource-timing-sampling-rate="10"
+  data-shs="true"
+  data-shs-beacon="true"
+  data-shs-export-with-fetch="true"
+  data-shs-logs-sample-rate="1"
+  data-shs-beacon-endpoint="https://www.carpodgo.com/api/collect"
+></script>
+<meta name="shopify-y" content="2417d129-1337-4723-98a5-88fe1009b89b" data-expiration="1822708834000"><meta name="shopify-s" content="506a1083-419b-48f6-aa7c-f2007a1ace6c" data-expiration="1791153034000"><meta name="new-cookie-storage-activated" content="t">
+</head>
+
+  <body class="zoom-image--enabled"><!-- DRAWER -->
+<template id="drawer-default-template">
+  <style>
+    [hidden] {
+      display: none !important;
+    }
+  </style>
+
+  <button part="outside-close-button" is="close-button" aria-label="Close"><svg role="presentation" stroke-width="2" focusable="false" width="24" height="24" class="icon icon-close" viewBox="0 0 24 24">
+        <path d="M17.658 6.343 6.344 17.657M17.658 17.657 6.344 6.343" stroke="currentColor"></path>
+      </svg></button>
+
+  <div part="overlay"></div>
+
+  <div part="content">
+    <header part="header">
+      <slot name="header"></slot>
+
+      <button part="close-button" is="close-button" aria-label="Close"><svg role="presentation" stroke-width="2" focusable="false" width="24" height="24" class="icon icon-close" viewBox="0 0 24 24">
+        <path d="M17.658 6.343 6.344 17.657M17.658 17.657 6.344 6.343" stroke="currentColor"></path>
+      </svg></button>
+    </header>
+
+    <div part="body">
+      <slot></slot>
+    </div>
+
+    <footer part="footer">
+      <slot name="footer"></slot>
+    </footer>
+  </div>
+</template>
+
+<!-- POPOVER -->
+<template id="popover-default-template">
+  <button part="outside-close-button" is="close-button" aria-label="Close"><svg role="presentation" stroke-width="2" focusable="false" width="24" height="24" class="icon icon-close" viewBox="0 0 24 24">
+        <path d="M17.658 6.343 6.344 17.657M17.658 17.657 6.344 6.343" stroke="currentColor"></path>
+      </svg></button>
+
+  <div part="overlay"></div>
+
+  <div part="content">
+    <header part="title">
+      <slot name="title"></slot>
+    </header>
+
+    <div part="body">
+      <slot></slot>
+    </div>
+  </div>
+</template><a href="#main" class="skip-to-content sr-only">Skip to content</a><!-- BEGIN sections: header-group -->
+<aside id="shopify-section-sections--23778316386609__announcement-bar" class="shopify-section shopify-section-group-header-group shopify-section--announcement-bar"><style>
+    :root {
+      --sticky-announcement-bar-enabled:0;
+    }</style><height-observer variable="announcement-bar">
+    <div class="announcement-bar bg-custom text-custom"style="--background: 26 26 26; --text-color: 255 255 255;"><marquee-text scrolling-speed="10" class="announcement-bar__scrolling-list"><span class="announcement-bar__item" ><p class="bold text-base" >Free Shipping &amp; $20 Off Now
+</p>
+
+              <span class="shape-circle shape--sm"></span></span><span class="announcement-bar__item" aria-hidden="true"><p class="bold text-base" >Free Shipping &amp; $20 Off Now
+</p>
+
+              <span class="shape-circle shape--sm"></span></span><span class="announcement-bar__item" aria-hidden="true"><p class="bold text-base" >Free Shipping &amp; $20 Off Now
+</p>
+
+              <span class="shape-circle shape--sm"></span></span><span class="announcement-bar__item" aria-hidden="true"><p class="bold text-base" >Free Shipping &amp; $20 Off Now
+</p>
+
+              <span class="shape-circle shape--sm"></span></span><span class="announcement-bar__item" aria-hidden="true"><p class="bold text-base" >Free Shipping &amp; $20 Off Now
+</p>
+
+              <span class="shape-circle shape--sm"></span></span><span class="announcement-bar__item" aria-hidden="true"><p class="bold text-base" >Free Shipping &amp; $20 Off Now
+</p>
+
+              <span class="shape-circle shape--sm"></span></span><span class="announcement-bar__item" aria-hidden="true"><p class="bold text-base" >Free Shipping &amp; $20 Off Now
+</p>
+
+              <span class="shape-circle shape--sm"></span></span><span class="announcement-bar__item" aria-hidden="true"><p class="bold text-base" >Free Shipping &amp; $20 Off Now
+</p>
+
+              <span class="shape-circle shape--sm"></span></span><span class="announcement-bar__item" aria-hidden="true"><p class="bold text-base" >Free Shipping &amp; $20 Off Now
+</p>
+
+              <span class="shape-circle shape--sm"></span></span><span class="announcement-bar__item" aria-hidden="true"><p class="bold text-base" >Free Shipping &amp; $20 Off Now
+</p>
+
+              <span class="shape-circle shape--sm"></span></span></marquee-text></div>
+  </height-observer>
+
+  <script>
+    document.documentElement.style.setProperty('--announcement-bar-height', Math.round(document.getElementById('shopify-section-sections--23778316386609__announcement-bar').clientHeight) + 'px');
+  </script></aside><header id="shopify-section-sections--23778316386609__header" class="shopify-section shopify-section-group-header-group shopify-section--header"><style>
+  :root {
+    --sticky-header-enabled:1;
+  }
+
+  #shopify-section-sections--23778316386609__header {
+    --header-grid-template: "main-nav logo secondary-nav" / minmax(0, 1fr) auto minmax(0, 1fr);
+    --header-padding-block: var(--spacing-4-5);
+    --header-background-opacity: 1.0;
+    --header-background-blur-radius: 0px;
+    --header-transparent-text-color: 255 255 255;--header-logo-width: 145px;
+      --header-logo-height: 26px;position: sticky;
+    top: 0;
+    z-index: 10;
+  }.shopify-section--announcement-bar ~ #shopify-section-sections--23778316386609__header {
+      top: calc(var(--sticky-announcement-bar-enabled, 0) * var(--announcement-bar-height, 0px));
+    }@media screen and (min-width: 700px) {
+    #shopify-section-sections--23778316386609__header {--header-logo-width: 175px;
+        --header-logo-height: 31px;--header-padding-block: var(--spacing-8-5);
+    }
+  }@media screen and (min-width: 1150px) {#shopify-section-sections--23778316386609__header {
+        --header-grid-template: "logo main-nav secondary-nav" / minmax(0, 1fr) fit-content(55%) minmax(0, 1fr);
+      }
+    }</style>
+
+<height-observer variable="header">
+  <store-header class="header"  sticky>
+    <div class="header__wrapper"><div class="header__main-nav">
+        <div class="header__icon-list">
+          <button type="button" class="tap-area lg:hidden" aria-controls="header-sidebar-menu">
+            <span class="sr-only">Menu</span><svg role="presentation" stroke-width="2" focusable="false" width="22" height="22" class="icon icon-hamburger" viewBox="0 0 22 22">
+        <path d="M1 5h20M1 11h20M1 17h20" stroke="currentColor" stroke-linecap="round"></path>
+      </svg></button>
+
+          <a href="/search" class="tap-area sm:hidden" aria-controls="search-drawer">
+            <span class="sr-only">Search</span><svg role="presentation" stroke-width="2" focusable="false" width="22" height="22" class="icon icon-search" viewBox="0 0 22 22">
+        <circle cx="11" cy="10" r="7" fill="none" stroke="currentColor"></circle>
+        <path d="m16 15 3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg></a><nav class="header__link-list justify-center wrap" role="navigation">
+              <ul class="contents" role="list">
+
+                  <li><details is="mega-menu-disclosure" trigger="click" >
+                            <summary class="text-with-icon gap-2.5 bold link-faded-reverse" data-url="/collections/products">Products<svg role="presentation" focusable="false" width="10" height="7" class="icon icon-chevron-bottom" viewBox="0 0 10 7">
+        <path d="m1 1 4 4 4-4" fill="none" stroke="currentColor" stroke-width="2"></path>
+      </svg></summary><style>
+    @media screen and (min-width: 1150px) {
+      #mega-menu-mega_menu_MM9Ygg {
+        --mega-menu-nav-column-max-width: 180px;
+        --mega-menu-justify-content: space-between;
+        --mega-menu-nav-gap: var(--spacing-8);
+
+        
+      }
+    }
+
+    @media screen and (min-width: 1400px) {
+      #mega-menu-mega_menu_MM9Ygg {
+        --mega-menu-nav-column-max-width: 200px;
+        --mega-menu-nav-gap: var(--spacing-16);
+
+        
+          --column-list-max-width: max-content;
+        
+      }
+    }
+
+    @media screen and (min-width: 1600px) {
+      #mega-menu-mega_menu_MM9Ygg {
+        --mega-menu-nav-gap: var(--spacing-16);
+      }
+    }
+
+    @media screen and (min-width: 1800px) {
+      #mega-menu-mega_menu_MM9Ygg {
+        --mega-menu-nav-gap: var(--spacing-20);
+      }
+    }
+  </style><div id="mega-menu-mega_menu_MM9Ygg" class="mega-menu "><ul class="mega-menu__nav" role="list"><li class="v-stack gap-4 justify-items-start">
+          <a href="/collections/carplay" class="h5" >
+            <span class="reversed-link hover:show">CarPlay</span>
+          </a><ul class="v-stack gap-2 justify-items-start" role="list"><li>
+                  <a href="/products/t3pro" class="link-faded">
+                    <span >CarpodGo T3 Pro</span>
+                  </a>
+                </li><li>
+                  <a href="/products/mini" class="link-faded">
+                    <span >CarpodGo Mini</span>
+                  </a>
+                </li><li>
+                  <a href="/products/t4" class="link-faded">
+                    <span >T4 / T4 Plus</span>
+                  </a>
+                </li></ul></li><li class="v-stack gap-4 justify-items-start">
+          <a href="/collections/accessories" class="h5" >
+            <span class="reversed-link hover:show">Accessories</span>
+          </a></li></ul>
+
+
+
+
+
+<style>
+  #navigation-promo-mega_menu_MM9Ygg-2- {
+    --navigation-promo-grid: 
+  
+    auto / repeat(2, minmax(var(--mega-menu-promo-grid-image-min-width), var(--mega-menu-promo-grid-image-max-width)))
+
+  
+;
+    --mega-menu-promo-grid-image-max-width: 300px;
+    --mega-menu-promo-grid-image-min-width: 172px;
+    --promo-heading-font-size: var(--text-h5);
+    --content-over-media-row-gap: var(--spacing-3);
+    --content-over-media-column-gap: var(--spacing-4);--navigation-promo-gap: var(--spacing-2);
+      --panel-wrapper-justify-content: flex-start;}
+
+  #navigation-promo-mega_menu_MM9Ygg-2- .navigation-promo__carousel-controls {inset-block-end: var(--content-over-media-column-gap);}
+
+  @media screen and (min-width:700px) {
+    #navigation-promo-mega_menu_MM9Ygg-2- {--promo-heading-font-size: var(--text-h6);--mega-menu-promo-grid-image-min-width: 192px;
+      --content-over-media-row-gap: var(--spacing-4);
+      --content-over-media-column-gap: var(--spacing-5);
+    }
+  }@media screen and (min-width: 1150px) {
+      #navigation-promo-mega_menu_MM9Ygg-2- {
+        --promo-heading-font-size: var(--text-h4);
+        --promo-heading-line-height: 1.3;
+        --navigation-promo-gap: var(--spacing-4);
+        --mega-menu-promo-grid-image-min-width: 220px;
+
+        
+
+        
+      }
+
+      
+        #navigation-promo-mega_menu_MM9Ygg-2- {
+          --content-over-media-row-gap: var(--spacing-6);
+          --content-over-media-column-gap: var(--spacing-8);
+        }
+      
+    }
+
+    @media screen and (min-width: 1400px) {
+      #navigation-promo-mega_menu_MM9Ygg-2- {
+        --mega-menu-promo-grid-image-max-width: 360px;
+
+        
+      }
+
+      
+    }</style><div class="navigation-promo__wrapper  " id="navigation-promo-mega_menu_MM9Ygg-2-"><div class="navigation-promo navigation-promo--grid scroll-area bleed">
+      <a href="/products/t3pro"
+         class="content-over-media rounded-sm group "
+         style="--text-color: 255 255 255; grid-area: ;"><img src="//www.carpodgo.com/cdn/shop/files/CarpodGo_T3_Pro_f41d1564-1dfd-4d31-9eed-1cedb9d9859f.jpg?v=1722500540" alt="2024 CarpodGo T3 Pro 60FPS Carplay / Android Auto Display Screen" srcset="//www.carpodgo.com/cdn/shop/files/CarpodGo_T3_Pro_f41d1564-1dfd-4d31-9eed-1cedb9d9859f.jpg?v=1722500540&amp;width=200 200w, //www.carpodgo.com/cdn/shop/files/CarpodGo_T3_Pro_f41d1564-1dfd-4d31-9eed-1cedb9d9859f.jpg?v=1722500540&amp;width=300 300w, //www.carpodgo.com/cdn/shop/files/CarpodGo_T3_Pro_f41d1564-1dfd-4d31-9eed-1cedb9d9859f.jpg?v=1722500540&amp;width=400 400w, //www.carpodgo.com/cdn/shop/files/CarpodGo_T3_Pro_f41d1564-1dfd-4d31-9eed-1cedb9d9859f.jpg?v=1722500540&amp;width=500 500w, //www.carpodgo.com/cdn/shop/files/CarpodGo_T3_Pro_f41d1564-1dfd-4d31-9eed-1cedb9d9859f.jpg?v=1722500540&amp;width=600 600w, //www.carpodgo.com/cdn/shop/files/CarpodGo_T3_Pro_f41d1564-1dfd-4d31-9eed-1cedb9d9859f.jpg?v=1722500540&amp;width=800 800w, //www.carpodgo.com/cdn/shop/files/CarpodGo_T3_Pro_f41d1564-1dfd-4d31-9eed-1cedb9d9859f.jpg?v=1722500540&amp;width=1000 1000w" width="1600" height="1600" loading="lazy" sizes="(max-width: 699px) 172px, (max-width: 1149px) 192px,minmax(220px, 440px)
+" class="zoom-image"></a><a href="/products/2024-newest-car-stand-works-with-modely-and-older-model3"
+         class="content-over-media rounded-sm group "
+         style="--text-color: 255 255 255; grid-area: ;"><img src="//www.carpodgo.com/cdn/shop/files/71NeMDY6CxL.jpg?v=1724248057" alt="" srcset="//www.carpodgo.com/cdn/shop/files/71NeMDY6CxL.jpg?v=1724248057&amp;width=200 200w, //www.carpodgo.com/cdn/shop/files/71NeMDY6CxL.jpg?v=1724248057&amp;width=300 300w, //www.carpodgo.com/cdn/shop/files/71NeMDY6CxL.jpg?v=1724248057&amp;width=400 400w, //www.carpodgo.com/cdn/shop/files/71NeMDY6CxL.jpg?v=1724248057&amp;width=500 500w, //www.carpodgo.com/cdn/shop/files/71NeMDY6CxL.jpg?v=1724248057&amp;width=600 600w, //www.carpodgo.com/cdn/shop/files/71NeMDY6CxL.jpg?v=1724248057&amp;width=800 800w, //www.carpodgo.com/cdn/shop/files/71NeMDY6CxL.jpg?v=1724248057&amp;width=1000 1000w" width="1500" height="1500" loading="lazy" sizes="(max-width: 699px) 172px, (max-width: 1149px) 192px,minmax(220px, 440px)
+" class="zoom-image"></a>
+    </div></div></div></details></li>
+
+                  <li><a href="/pages/faq" class="bold link-faded-reverse" >FAQ</a></li>
+
+                  <li><a href="/pages/download-center" class="bold link-faded-reverse" >Downloads</a></li>
+
+                  <li><a href="/pages/contact" class="bold link-faded-reverse" >Contact</a></li>
+
+                  <li><a href="https://www.reddit.com/r/CarpodGo/s/CLnDhnjCZ0" class="bold link-faded-reverse" >User Forum</a></li>
+
+                  <li><a href="/pages/about-us" class="bold link-faded-reverse" >About Us</a></li></ul>
+            </nav></div>
+      </div>
+        <a href="/" class="header__logo"><span class="sr-only">CarpodGo</span><img src="//www.carpodgo.com/cdn/shop/files/YS-G-LOGO-CarpodGo.png?v=1694362356&amp;width=1577" alt="" srcset="//www.carpodgo.com/cdn/shop/files/YS-G-LOGO-CarpodGo.png?v=1694362356&amp;width=350 350w, //www.carpodgo.com/cdn/shop/files/YS-G-LOGO-CarpodGo.png?v=1694362356&amp;width=525 525w" width="1577" height="280" sizes="175px" class="header__logo-image"><img src="//www.carpodgo.com/cdn/shop/files/YS-G-LOGO-CarpodGo-white_logo-_563_x_100.png?v=1694615668&amp;width=563" alt="" srcset="//www.carpodgo.com/cdn/shop/files/YS-G-LOGO-CarpodGo-white_logo-_563_x_100.png?v=1694615668&amp;width=350 350w, //www.carpodgo.com/cdn/shop/files/YS-G-LOGO-CarpodGo-white_logo-_563_x_100.png?v=1694615668&amp;width=525 525w" width="563" height="100" sizes="175px" class="header__logo-image header__logo-image--transparent"></a>
+      
+<div class="header__secondary-nav"><ul class="header__icon-list"><li class="hidden md:block shrink-0"><div class="relative">
+      <button type="button" class="text-with-icon gap-2.5 group" aria-label="Change language" aria-controls="popover-localization-form-locale-end-sections--23778316386609__header" aria-expanded="false">
+        <span class="bold text-sm">English</span><svg role="presentation" focusable="false" width="10" height="7" class="icon icon-chevron-bottom" viewBox="0 0 10 7">
+        <path d="m1 1 4 4 4-4" fill="none" stroke="currentColor" stroke-width="2"></path>
+      </svg></button>
+
+      <x-popover id="popover-localization-form-locale-end-sections--23778316386609__header" initial-focus="[aria-selected='true']" anchor-horizontal="end" anchor-vertical="end" class="popover">
+        <p class="h5" slot="title">Language</p><form method="post" action="/localization" id="localization-form-locale-end-sections--23778316386609__header" accept-charset="UTF-8" class="shopify-localization-form" enctype="multipart/form-data"><input type="hidden" name="form_type" value="localization" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="return_to" value="/pages/firmware-t4-plus" /><x-listbox class="popover-listbox popover-listbox--sm" role="listbox"><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="en" aria-selected="true">English</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="fr" >Français</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="pl" >Polski</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="it" >Italiano</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="es" >Español</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="pt-PT" >Português (portugal)</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="el" >Ελληνικά</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="cs" >Čeština</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="nl" >Nederlands</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="no" >Norsk</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="ga" >Gaeilge</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="de" >Deutsch</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="ja" >日本語</button></x-listbox></form></x-popover>
+    </div></li><li>
+            <a href="/search" class="hidden tap-area sm:block" aria-controls="search-drawer">
+              <span class="sr-only">Search</span><svg role="presentation" stroke-width="2" focusable="false" width="22" height="22" class="icon icon-search" viewBox="0 0 22 22">
+        <circle cx="11" cy="10" r="7" fill="none" stroke="currentColor"></circle>
+        <path d="m16 15 3 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg></a>
+          </li><li>
+              <a href="/account/login" class="hidden tap-area sm:block">
+                <span class="sr-only">Login</span><svg role="presentation" stroke-width="2" focusable="false" width="22" height="22" class="icon icon-account" viewBox="0 0 22 22">
+        <circle cx="11" cy="7" r="4" fill="none" stroke="currentColor"></circle>
+        <path d="M3.5 19c1.421-2.974 4.247-5 7.5-5s6.079 2.026 7.5 5" fill="none" stroke="currentColor" stroke-linecap="round"></path>
+      </svg></a>
+            </li><li>
+            <a href="/cart" data-no-instant class="relative block tap-area" aria-controls="cart-drawer">
+              <span class="sr-only">Cart</span><svg role="presentation" stroke-width="2" focusable="false" width="22" height="22" class="icon icon-cart" viewBox="0 0 22 22">
+            <path d="M11 7H3.577A2 2 0 0 0 1.64 9.497l2.051 8A2 2 0 0 0 5.63 19H16.37a2 2 0 0 0 1.937-1.503l2.052-8A2 2 0 0 0 18.422 7H11Zm0 0V1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg><div class="header__cart-count">
+                <cart-count class="count-bubble opacity-0">
+                  <span class="sr-only">0 items</span>
+                  <span aria-hidden="true">0</span>
+                </cart-count>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </store-header>
+</height-observer><navigation-drawer mobile-opening="bottom" open-from="left" id="header-sidebar-menu" class="navigation-drawer drawer lg:hidden" >
+    <button is="close-button" aria-label="Close"class="sm-max:hidden"><svg role="presentation" stroke-width="2" focusable="false" width="19" height="19" class="icon icon-close" viewBox="0 0 24 24">
+        <path d="M17.658 6.343 6.344 17.657M17.658 17.657 6.344 6.343" stroke="currentColor"></path>
+      </svg></button><div class="panel-list__wrapper">
+  <div class="panel">
+    <div class="panel__wrapper" >
+      <div class="panel__scroller v-stack gap-8"><ul class="v-stack gap-4">
+<li class="h3 sm:h4"><button class="text-with-icon w-full group justify-between" aria-expanded="false" data-panel="1-0">
+                  <span>Products</span>
+                  <span class="circle-chevron group-hover:colors group-expanded:colors"><svg role="presentation" focusable="false" width="5" height="8" class="icon icon-chevron-right-small reverse-icon" viewBox="0 0 5 8">
+        <path d="m.75 7 3-3-3-3" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+      </svg></span>
+                </button></li>
+<li class="h3 sm:h4"><a href="/pages/faq" class="group block w-full">
+                  <span><span class="reversed-link">FAQ</span></span>
+                </a></li>
+<li class="h3 sm:h4"><a href="/pages/download-center" class="group block w-full">
+                  <span><span class="reversed-link">Downloads</span></span>
+                </a></li>
+<li class="h3 sm:h4"><a href="/pages/contact" class="group block w-full">
+                  <span><span class="reversed-link">Contact</span></span>
+                </a></li>
+<li class="h3 sm:h4"><a href="https://www.reddit.com/r/CarpodGo/s/CLnDhnjCZ0" class="group block w-full">
+                  <span><span class="reversed-link">User Forum</span></span>
+                </a></li>
+<li class="h3 sm:h4"><a href="/pages/about-us" class="group block w-full">
+                  <span><span class="reversed-link">About Us</span></span>
+                </a></li></ul></div><div class="panel-footer v-stack gap-5"><div class="panel-footer__localization-wrapper h-stack gap-6 border-t md:hidden"><div class="relative">
+      <button type="button" class="text-with-icon gap-2.5 group" aria-label="Change language" aria-controls="popover-localization-form-locale--sections--23778316386609__header" aria-expanded="false">
+        <span class="bold text-sm">English</span><svg role="presentation" focusable="false" width="10" height="7" class="icon icon-chevron-bottom" viewBox="0 0 10 7">
+        <path d="m1 1 4 4 4-4" fill="none" stroke="currentColor" stroke-width="2"></path>
+      </svg></button>
+
+      <x-popover id="popover-localization-form-locale--sections--23778316386609__header" initial-focus="[aria-selected='true']" anchor-horizontal="end" anchor-vertical="start" class="popover">
+        <p class="h5" slot="title">Language</p><form method="post" action="/localization" id="localization-form-locale--sections--23778316386609__header" accept-charset="UTF-8" class="shopify-localization-form" enctype="multipart/form-data"><input type="hidden" name="form_type" value="localization" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="return_to" value="/pages/firmware-t4-plus" /><x-listbox class="popover-listbox popover-listbox--sm" role="listbox"><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="en" aria-selected="true">English</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="fr" >Français</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="pl" >Polski</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="it" >Italiano</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="es" >Español</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="pt-PT" >Português (portugal)</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="el" >Ελληνικά</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="cs" >Čeština</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="nl" >Nederlands</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="no" >Norsk</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="ga" >Gaeilge</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="de" >Deutsch</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="ja" >日本語</button></x-listbox></form></x-popover>
+    </div><a href="/account" class="panel-footer__account-link bold text-sm">Account</a></div></div></div>
+  </div><div class="panel gap-8">
+      <div class="panel__wrapper" style="--panel-wrapper-justify-content: flex-start" hidden>
+                  <ul class="v-stack gap-4">
+                    <li class="lg:hidden">
+                      <button class="text-with-icon h6 text-subdued" data-panel="0"><svg role="presentation" focusable="false" width="7" height="10" class="icon icon-chevron-left reverse-icon" viewBox="0 0 7 10">
+        <path d="M6 1 2 5l4 4" fill="none" stroke="currentColor" stroke-width="2"></path>
+      </svg>Products
+                      </button>
+                    </li><li class="h3 sm:h4"><button class="text-with-icon w-full justify-between" aria-expanded="false" data-panel="2-0">
+                              <span>CarPlay</span>
+                              <span class="circle-chevron group-hover:colors group-expanded:colors"><svg role="presentation" focusable="false" width="5" height="8" class="icon icon-chevron-right-small reverse-icon" viewBox="0 0 5 8">
+        <path d="m.75 7 3-3-3-3" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+      </svg></span>
+                            </button></li><li class="h3 sm:h4"><a class="group block w-full" href="/collections/accessories"><span><span class="reversed-link">Accessories</span></span>
+                            </a></li></ul>
+
+
+
+<style>
+  #navigation-promo-mega_menu_MM9Ygg-drawer-2- {
+    --navigation-promo-grid: 
+  
+    auto / repeat(2, minmax(var(--mega-menu-promo-grid-image-min-width), var(--mega-menu-promo-grid-image-max-width)))
+
+  
+;
+    --mega-menu-promo-grid-image-max-width: 300px;
+    --mega-menu-promo-grid-image-min-width: 172px;
+    --promo-heading-font-size: var(--text-h5);
+    --content-over-media-row-gap: var(--spacing-3);
+    --content-over-media-column-gap: var(--spacing-4);--navigation-promo-gap: var(--spacing-2);
+      --panel-wrapper-justify-content: flex-start;}
+
+  #navigation-promo-mega_menu_MM9Ygg-drawer-2- .navigation-promo__carousel-controls {inset-block-end: var(--content-over-media-column-gap);}
+
+  @media screen and (min-width:700px) {
+    #navigation-promo-mega_menu_MM9Ygg-drawer-2- {--promo-heading-font-size: var(--text-h6);--mega-menu-promo-grid-image-min-width: 192px;
+      --content-over-media-row-gap: var(--spacing-4);
+      --content-over-media-column-gap: var(--spacing-5);
+    }
+  }@media screen and (min-width: 1150px) {
+      #navigation-promo-mega_menu_MM9Ygg-drawer-2- {
+        --promo-heading-font-size: var(--text-h5);
+        --content-over-media-row-gap: var(--spacing-5);
+        --content-over-media-column-gap: var(--spacing-7);
+        --mega-menu-promo-grid-image-min-width: 220px;
+
+      
+      }
+    }</style><div class="navigation-promo__wrapper  " id="navigation-promo-mega_menu_MM9Ygg-drawer-2-"><div class="navigation-promo navigation-promo--grid scroll-area bleed">
+      <a href="/products/t3pro"
+         class="content-over-media rounded-sm group "
+         style="--text-color: 255 255 255; grid-area: ;"><img src="//www.carpodgo.com/cdn/shop/files/CarpodGo_T3_Pro_f41d1564-1dfd-4d31-9eed-1cedb9d9859f.jpg?v=1722500540" alt="2024 CarpodGo T3 Pro 60FPS Carplay / Android Auto Display Screen" srcset="//www.carpodgo.com/cdn/shop/files/CarpodGo_T3_Pro_f41d1564-1dfd-4d31-9eed-1cedb9d9859f.jpg?v=1722500540&amp;width=200 200w, //www.carpodgo.com/cdn/shop/files/CarpodGo_T3_Pro_f41d1564-1dfd-4d31-9eed-1cedb9d9859f.jpg?v=1722500540&amp;width=300 300w, //www.carpodgo.com/cdn/shop/files/CarpodGo_T3_Pro_f41d1564-1dfd-4d31-9eed-1cedb9d9859f.jpg?v=1722500540&amp;width=400 400w, //www.carpodgo.com/cdn/shop/files/CarpodGo_T3_Pro_f41d1564-1dfd-4d31-9eed-1cedb9d9859f.jpg?v=1722500540&amp;width=500 500w, //www.carpodgo.com/cdn/shop/files/CarpodGo_T3_Pro_f41d1564-1dfd-4d31-9eed-1cedb9d9859f.jpg?v=1722500540&amp;width=600 600w, //www.carpodgo.com/cdn/shop/files/CarpodGo_T3_Pro_f41d1564-1dfd-4d31-9eed-1cedb9d9859f.jpg?v=1722500540&amp;width=800 800w, //www.carpodgo.com/cdn/shop/files/CarpodGo_T3_Pro_f41d1564-1dfd-4d31-9eed-1cedb9d9859f.jpg?v=1722500540&amp;width=1000 1000w" width="1600" height="1600" loading="lazy" sizes="(max-width: 699px) 172px, (max-width: 1149px) 192px,220px
+" class="zoom-image"></a><a href="/products/2024-newest-car-stand-works-with-modely-and-older-model3"
+         class="content-over-media rounded-sm group "
+         style="--text-color: 255 255 255; grid-area: ;"><img src="//www.carpodgo.com/cdn/shop/files/71NeMDY6CxL.jpg?v=1724248057" alt="" srcset="//www.carpodgo.com/cdn/shop/files/71NeMDY6CxL.jpg?v=1724248057&amp;width=200 200w, //www.carpodgo.com/cdn/shop/files/71NeMDY6CxL.jpg?v=1724248057&amp;width=300 300w, //www.carpodgo.com/cdn/shop/files/71NeMDY6CxL.jpg?v=1724248057&amp;width=400 400w, //www.carpodgo.com/cdn/shop/files/71NeMDY6CxL.jpg?v=1724248057&amp;width=500 500w, //www.carpodgo.com/cdn/shop/files/71NeMDY6CxL.jpg?v=1724248057&amp;width=600 600w, //www.carpodgo.com/cdn/shop/files/71NeMDY6CxL.jpg?v=1724248057&amp;width=800 800w, //www.carpodgo.com/cdn/shop/files/71NeMDY6CxL.jpg?v=1724248057&amp;width=1000 1000w" width="1500" height="1500" loading="lazy" sizes="(max-width: 699px) 172px, (max-width: 1149px) 192px,220px
+" class="zoom-image"></a>
+    </div></div></div>
+    </div>
+    <div class="panel">
+      <div class="panel__wrapper" hidden>
+                              <ul class="v-stack gap-4">
+                                <li class="text-with-icon lg:hidden">
+                                  <button class="text-with-icon h6 text-subdued" data-panel="1"><svg role="presentation" focusable="false" width="7" height="10" class="icon icon-chevron-left reverse-icon" viewBox="0 0 7 10">
+        <path d="M6 1 2 5l4 4" fill="none" stroke="currentColor" stroke-width="2"></path>
+      </svg>CarPlay
+                                  </button>
+                                </li><li class="h5 sm:h5">
+                                    <a class="group block w-full"
+                                       href="/products/t3pro"><span><span class="reversed-link">CarpodGo T3 Pro</span></span>
+                                    </a>
+                                  </li><li class="h5 sm:h5">
+                                    <a class="group block w-full"
+                                       href="/products/mini"><span><span class="reversed-link">CarpodGo Mini</span></span>
+                                    </a>
+                                  </li><li class="h5 sm:h5">
+                                    <a class="group block w-full"
+                                       href="/products/t4"><span><span class="reversed-link">T4 / T4 Plus</span></span>
+                                    </a>
+                                  </li></ul>
+                            </div>
+    </div></div></navigation-drawer><script>
+  document.documentElement.style.setProperty('--header-height', Math.round(document.getElementById('shopify-section-sections--23778316386609__header').clientHeight) + 'px');
+</script>
+
+</header>
+<!-- END sections: header-group --><!-- BEGIN sections: overlay-group -->
+<div id="shopify-section-sections--23778316419377__privacy-banner" class="shopify-section shopify-section-group-overlay-group shopify-section--privacy-banner"><privacy-bar class="privacy-bar" hidden>
+  <div class="privacy-bar__inner">
+    <button type="button" class="privacy-bar__close" data-action="close">
+      <span class="sr-only">Close</span><svg role="presentation" stroke-width="2" focusable="false" width="10" height="10" class="icon icon-delete" viewBox="0 0 10 10">
+        <path d="m.757.757 8.486 8.486m-8.486 0L9.243.757" stroke="currentColor"></path>
+      </svg></button>
+
+    <div class="v-stack gap-4">
+      <div class="v-stack gap-2"><p class="bold">Cookie policy</p><div class="prose text-xs"><p>We use cookies and similar technologies to provide the best experience on our website. Refer to our Privacy Policy for more information.</p></div></div>
+
+      <div class="h-stack gap-2">
+        <button type="button" class="button button--sm" data-action="accept">Accept</button>
+        <button type="button" class="button button--sm button--subdued" data-action="decline">Decline</button>
+      </div>
+    </div>
+  </div>
+</privacy-bar>
+
+</div><div id="shopify-section-sections--23778316419377__cart-drawer" class="shopify-section shopify-section-group-overlay-group"><cart-drawer  class="cart-drawer drawer drawer--lg" id="cart-drawer"><button is="close-button" aria-label="Close"><svg role="presentation" stroke-width="2" focusable="false" width="24" height="24" class="icon icon-close" viewBox="0 0 24 24">
+        <path d="M17.658 6.343 6.344 17.657M17.658 17.657 6.344 6.343" stroke="currentColor"></path>
+      </svg></button>
+
+    <div class="empty-state align-self-center">
+      <div class="empty-state__icon-wrapper"><svg role="presentation" stroke-width="1" focusable="false" width="32" height="32" class="icon icon-cart" viewBox="0 0 22 22">
+            <path d="M11 7H3.577A2 2 0 0 0 1.64 9.497l2.051 8A2 2 0 0 0 5.63 19H16.37a2 2 0 0 0 1.937-1.503l2.052-8A2 2 0 0 0 18.422 7H11Zm0 0V1" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg><span class="count-bubble count-bubble--lg">0</span>
+      </div>
+
+      <div class="prose">
+        <p class="h5">Your cart is empty</p>
+<a class="button button--xl"
+  
+  
+  
+  
+  
+  href="/collections/all"
+  
+  
+ >Continue shopping</a></div>
+    </div></cart-drawer>
+
+
+</div><div id="shopify-section-sections--23778316419377__search-drawer" class="shopify-section shopify-section-group-overlay-group"><search-drawer  class="search-drawer  drawer drawer--lg" id="search-drawer">
+  <form action="/search" method="get" class="v-stack gap-5 sm:gap-8" role="search">
+    <div class="search-input">
+      <input type="search" name="q" placeholder="Search for..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" aria-label="Search">
+      <button type="reset" class="text-subdued">Clear</button>
+      <button type="button" is="close-button">
+        <span class="sr-only">Close</span><svg role="presentation" stroke-width="2" focusable="false" width="24" height="24" class="icon icon-close" viewBox="0 0 24 24">
+        <path d="M17.658 6.343 6.344 17.657M17.658 17.657 6.344 6.343" stroke="currentColor"></path>
+      </svg></button>
+    </div>
+
+    <style>
+      #shopify-section-sections--23778316419377__search-drawer {
+        --predictive-search-column-count: 3;
+      }
+    </style>
+
+    <input type="hidden" name="type" value="product">
+
+    <predictive-search class="predictive-search" section-id="sections--23778316419377__search-drawer"><div slot="results"></div>
+
+      <div slot="loading">
+        <div class="v-stack gap-5 sm:gap-6 ">
+          <div class="h-stack gap-4 sm:gap-5"><span class="skeleton skeleton--tab"></span><span class="skeleton skeleton--tab"></span><span class="skeleton skeleton--tab"></span></div>
+
+          <div class="v-stack gap-4 sm:gap-6"><div class="h-stack align-center gap-5 sm:gap-6">
+                <span class="skeleton skeleton--thumbnail"></span>
+
+                <div class="v-stack gap-3 w-full">
+                  <span class="skeleton skeleton--text" style="--skeleton-text-width: 20%"></span>
+                  <span class="skeleton skeleton--text" style="--skeleton-text-width: 80%"></span>
+                  <span class="skeleton skeleton--text" style="--skeleton-text-width: 40%"></span>
+                </div>
+              </div><div class="h-stack align-center gap-5 sm:gap-6">
+                <span class="skeleton skeleton--thumbnail"></span>
+
+                <div class="v-stack gap-3 w-full">
+                  <span class="skeleton skeleton--text" style="--skeleton-text-width: 20%"></span>
+                  <span class="skeleton skeleton--text" style="--skeleton-text-width: 80%"></span>
+                  <span class="skeleton skeleton--text" style="--skeleton-text-width: 40%"></span>
+                </div>
+              </div><div class="h-stack align-center gap-5 sm:gap-6">
+                <span class="skeleton skeleton--thumbnail"></span>
+
+                <div class="v-stack gap-3 w-full">
+                  <span class="skeleton skeleton--text" style="--skeleton-text-width: 20%"></span>
+                  <span class="skeleton skeleton--text" style="--skeleton-text-width: 80%"></span>
+                  <span class="skeleton skeleton--text" style="--skeleton-text-width: 40%"></span>
+                </div>
+              </div><div class="h-stack align-center gap-5 sm:gap-6">
+                <span class="skeleton skeleton--thumbnail"></span>
+
+                <div class="v-stack gap-3 w-full">
+                  <span class="skeleton skeleton--text" style="--skeleton-text-width: 20%"></span>
+                  <span class="skeleton skeleton--text" style="--skeleton-text-width: 80%"></span>
+                  <span class="skeleton skeleton--text" style="--skeleton-text-width: 40%"></span>
+                </div>
+              </div></div>
+        </div></div>
+    </predictive-search>
+  </form>
+</search-drawer>
+
+</div>
+<!-- END sections: overlay-group --><cart-notification-drawer open-from="bottom" class="quick-buy-drawer drawer"></cart-notification-drawer><main role="main" id="main" class="anchor">
+      <section id="shopify-section-template--23778315927857__main" class="shopify-section shopify-section--main-page"><style>
+  #shopify-section-template--23778315927857__main {
+    --page-max-width: 80ch;
+  }
+</style>
+
+<div class="container">
+  <div class="page-spacer">
+    <div class="page">
+      <h1 class="h1 text-center">Firmware - T4 Plus</h1><div class="prose">
+          <p class="isSelectedEnd"><strong>T4 Plus Firmware Update: Version 0.0.22</strong></p>
+<p class="isSelectedEnd"><strong>Release Highlights:</strong></p>
+<ul>
+<li class="isSelectedEnd">
+<strong>Optimized CarPlay Swipe Smoothness</strong><br><span>Refined CarPlay touch interaction performance to deliver a smoother and more fluid swipe experience during daily use.</span>
+</li>
+<li class="isSelectedEnd">
+<strong>Improved Rear-View Camera Response</strong><br><span>Enhanced the response speed of the rear-view camera screen to ensure a faster and more immediate visual transition when reversing.</span>
+</li>
+<li class="isSelectedEnd">
+<strong>Known Issues Fixed</strong><br><span>Fixed other known issues to improve overall system stability and user experience.</span>
+</li>
+</ul>
+<p><span><strong>Firmware download link</strong>: <a href="https://drive.google.com/file/d/1ffN0nh86hBp556EUxKjh_8wFN5D3TTsG/view?usp=sharing">Download Firmware Version 0.0.22</a></span></p>
+<p><strong>T4 Plus Firmware Update: Version 0.016</strong></p>
+<p><b>Release Highlights:</b></p>
+<ul>
+<li>
+<b>Optimized Reverse Camera Response</b> Refined the display timing for the rearview camera to ensure a faster and more immediate visual response when reversing.</li>
+<li>
+<b>Enhanced UI Display</b> Optimized the user interface elements to provide a more polished, fluid, and visually cohesive experience.</li>
+<li>
+<b>Improved Connection Stability</b> Strengthened core connectivity protocols to ensure a more reliable and consistent link between devices.</li>
+</ul>
+<p><b>Firmware download link:</b> <a href="https://drive.google.com/file/d/1gNEIp-_TI9dy1PV5lYAF_RiD9Mi7lMb3/view?usp=drive_link">Download Firmware Version 0.016</a></p>
+<p><b>Step-by-Step Installation:</b></p>
+<ol>
+<li>
+<b>Prepare a TF (MicroSD) card:</b> Ensure the card is formatted and ready for use.</li>
+<li>
+<b>Download and Unzip:</b> Download the firmware package and unzip it to locate the <b>3 required files</b>.</li>
+<li>
+<b>Copy to Card:</b> Transfer all 3 files directly to the <b>root directory</b> of the empty TF card.</li>
+<li>
+<b>Insert Card:</b> Power on the screen, then insert the TF card into the device's card slot.</li>
+<li>
+<b>Execute Upgrade:</b> Once the TF card icon appears in the top-right corner of the screen, navigate to <b>Settings</b> and tap <b>“Firmware Upgrade”</b> to begin.</li>
+</ol>
+<p> </p>
+        </div></div>
+  </div>
+</div>
+
+</section>
+<!-- BEGIN sections: footer-group -->
+<section id="shopify-section-sections--23778316353841__text-with-icons" class="shopify-section shopify-section-group-footer-group shopify-section--text-with-icons"><style>
+  #shopify-section-sections--23778316353841__text-with-icons {
+    --section-background-hash: 0;
+  }
+
+  #shopify-section-sections--23778316353841__text-with-icons + * {
+    --previous-section-background-hash: 0;
+  }</style><style>
+    #shopify-section-sections--23778316353841__text-with-icons {
+      --text-with-icons-template: auto-flow 100%;
+      --text-with-icons-justify: center;
+      --text-with-icons-text-align: center;
+      --text-with-icons-gap: var(--spacing-6);
+    }@media screen and (min-width: 1150px) {
+      #shopify-section-sections--23778316353841__text-with-icons {
+        --text-with-icons-gap: var(--spacing-6);
+      }
+    }@media screen and (min-width: 1150px) {
+        #shopify-section-sections--23778316353841__text-with-icons {
+          --text-with-icons-template: repeat(4, 1fr);
+          --text-with-icons-justify: center;
+          --text-with-icons-text-align: center;
+        }
+      }</style>
+
+  <div class="section   section-blends section-full">
+    <div class="section-stack"><div class="text-with-icons">
+        <scroll-carousel class="text-with-icons__list scroll-area full-bleed lg:unbleed" id="carousel-sections--23778316353841__text-with-icons" role="region"><div id="block-sections--23778316353841__text-with-icons-free-shipping" class="text-with-icons__item snap-center" role="group" aria-label="Item 1 of 4" ><div ><svg role="presentation" fill="none" focusable="false" stroke-width="2" width="24" height="24" class="sm:hidden icon icon-picto-box" viewBox="0 0 24 24">
+        <path d="M2.22 5.472a.742.742 0 0 0-.33.194.773.773 0 0 0-.175.48c-.47 4.515-.48 7.225 0 11.707a.792.792 0 0 0 .505.737l9.494 3.696.285.079.286-.08 9.494-3.694a.806.806 0 0 0 .505-.737c.5-4.537.506-7.153 0-11.648a.765.765 0 0 0-.175-.542.739.739 0 0 0-.33-.257v.002" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22.269 5.997a.771.771 0 0 0-.16-.335.744.744 0 0 0-.33-.257l-9.494-3.629a.706.706 0 0 0-.571 0L6.967 3.623 2.22 5.47a.742.742 0 0 0-.33.192.771.771 0 0 0-.16.336.806.806 0 0 0 .49.592l9.494 3.696h.57l5.216-2.03L21.78 6.59a.794.794 0 0 0 .492-.593h-.002Z" fill="currentColor" fill-opacity=".12"/>
+        <path d="m17.5 8.255-5.215 2.03h-.571L2.22 6.59a.806.806 0 0 1-.49-.592.771.771 0 0 1 .16-.336.742.742 0 0 1 .33-.192l4.747-1.847M17.5 8.255 21.78 6.59a.794.794 0 0 0 .492-.593h-.002a.771.771 0 0 0-.16-.335.744.744 0 0 0-.33-.257l-9.494-3.629a.706.706 0 0 0-.571 0L6.967 3.623M17.5 8.255 6.967 3.623M12 22.365v-12.08M15.5 17l4-1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg><svg role="presentation" fill="none" focusable="false" stroke-width="2" width="24" height="24" class="hidden sm:block icon icon-picto-box" viewBox="0 0 24 24">
+        <path d="M2.22 5.472a.742.742 0 0 0-.33.194.773.773 0 0 0-.175.48c-.47 4.515-.48 7.225 0 11.707a.792.792 0 0 0 .505.737l9.494 3.696.285.079.286-.08 9.494-3.694a.806.806 0 0 0 .505-.737c.5-4.537.506-7.153 0-11.648a.765.765 0 0 0-.175-.542.739.739 0 0 0-.33-.257v.002" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M22.269 5.997a.771.771 0 0 0-.16-.335.744.744 0 0 0-.33-.257l-9.494-3.629a.706.706 0 0 0-.571 0L6.967 3.623 2.22 5.47a.742.742 0 0 0-.33.192.771.771 0 0 0-.16.336.806.806 0 0 0 .49.592l9.494 3.696h.57l5.216-2.03L21.78 6.59a.794.794 0 0 0 .492-.593h-.002Z" fill="currentColor" fill-opacity=".12"/>
+        <path d="m17.5 8.255-5.215 2.03h-.571L2.22 6.59a.806.806 0 0 1-.49-.592.771.771 0 0 1 .16-.336.742.742 0 0 1 .33-.192l4.747-1.847M17.5 8.255 21.78 6.59a.794.794 0 0 0 .492-.593h-.002a.771.771 0 0 0-.16-.335.744.744 0 0 0-.33-.257l-9.494-3.629a.706.706 0 0 0-.571 0L6.967 3.623M17.5 8.255 6.967 3.623M12 22.365v-12.08M15.5 17l4-1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg></div><div class="text-with-icons__text-wrapper">
+                <div class="prose"><p class="h5">Free shipping</p><p>Experience the Convenience of Free Shipping Worldwide</p></div>
+              </div>
+            </div><div id="block-sections--23778316353841__text-with-icons-customer-support" class="text-with-icons__item snap-center" role="group" aria-label="Item 2 of 4" ><div ><svg role="presentation" fill="none" focusable="false" stroke-width="2" width="24" height="24" class="sm:hidden icon icon-picto-customer-support" viewBox="0 0 24 24">
+        <path d="M1.714 14.143c0-3.919 2.613-4.898 3.92-4.898 2.35 0 2.938 1.96 2.938 2.938v3.92c0 2.35-1.96 2.938-2.939 2.938-1.306 0-3.919-.98-3.919-4.898ZM22.286 14.143c0-3.919-2.613-4.898-3.92-4.898-2.35 0-2.937 1.96-2.937 2.938v3.92c0 2.35 1.96 2.938 2.938 2.938 1.306 0 3.919-.98 3.919-4.898Z" fill="currentColor" fill-opacity=".12"/>
+        <path d="M1.714 14.143c0-3.919 2.613-4.898 3.92-4.898 2.35 0 2.938 1.96 2.938 2.938v3.92c0 2.35-1.96 2.938-2.939 2.938-1.306 0-3.919-.98-3.919-4.898ZM22.286 14.143c0-3.919-2.613-4.898-3.92-4.898-2.35 0-2.937 1.96-2.937 2.938v3.92c0 2.35 1.96 2.938 2.938 2.938 1.306 0 3.919-.98 3.919-4.898Z" stroke="currentColor"/>
+        <path d="M2.38 11.263C2.524 6.537 4.929 1.286 12 1.286c7.06 0 9.468 5.232 9.617 9.951m.106 5.666s.134 3.079-1.447 4.42c-1.58 1.336-5.57 1.31-5.57 1.31" stroke="currentColor" stroke-linecap="round"/>
+      </svg><svg role="presentation" fill="none" focusable="false" stroke-width="2" width="24" height="24" class="hidden sm:block icon icon-picto-customer-support" viewBox="0 0 24 24">
+        <path d="M1.714 14.143c0-3.919 2.613-4.898 3.92-4.898 2.35 0 2.938 1.96 2.938 2.938v3.92c0 2.35-1.96 2.938-2.939 2.938-1.306 0-3.919-.98-3.919-4.898ZM22.286 14.143c0-3.919-2.613-4.898-3.92-4.898-2.35 0-2.937 1.96-2.937 2.938v3.92c0 2.35 1.96 2.938 2.938 2.938 1.306 0 3.919-.98 3.919-4.898Z" fill="currentColor" fill-opacity=".12"/>
+        <path d="M1.714 14.143c0-3.919 2.613-4.898 3.92-4.898 2.35 0 2.938 1.96 2.938 2.938v3.92c0 2.35-1.96 2.938-2.939 2.938-1.306 0-3.919-.98-3.919-4.898ZM22.286 14.143c0-3.919-2.613-4.898-3.92-4.898-2.35 0-2.937 1.96-2.937 2.938v3.92c0 2.35 1.96 2.938 2.938 2.938 1.306 0 3.919-.98 3.919-4.898Z" stroke="currentColor"/>
+        <path d="M2.38 11.263C2.524 6.537 4.929 1.286 12 1.286c7.06 0 9.468 5.232 9.617 9.951m.106 5.666s.134 3.079-1.447 4.42c-1.58 1.336-5.57 1.31-5.57 1.31" stroke="currentColor" stroke-linecap="round"/>
+      </svg></div><div class="text-with-icons__text-wrapper">
+                <div class="prose"><p class="h5">Customer service</p><p>Email us at <br/><em>Service@carpodgo.com</em></p></div>
+              </div>
+            </div><div id="block-sections--23778316353841__text-with-icons-discount" class="text-with-icons__item snap-center" role="group" aria-label="Item 3 of 4" ><div ><svg role="presentation" fill="none" focusable="false" stroke-width="2" width="24" height="24" class="sm:hidden icon icon-picto-coupon" viewBox="0 0 24 24">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.89 21.975c-1.325.974-3.176.9-4.391-.209a131.923 131.923 0 0 1-9.792-9.94 3.17 3.17 0 0 1-.753-1.5C1.56 8.293.727 3.222 1.976 1.972c1.25-1.25 6.32-.416 8.352-.022.56.111 1.078.371 1.502.752a131.922 131.922 0 0 1 9.94 9.792c1.109 1.214 1.18 3.067.209 4.392-.701.955-1.442 1.914-2.31 2.78-.865.865-1.823 1.607-2.778 2.308ZM9.458 6.523a2.073 2.073 0 1 1-2.93 2.931 2.073 2.073 0 0 1 2.93-2.931Z" fill="currentColor" fill-opacity=".12" stroke="currentColor"/>
+      </svg><svg role="presentation" fill="none" focusable="false" stroke-width="2" width="24" height="24" class="hidden sm:block icon icon-picto-coupon" viewBox="0 0 24 24">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.89 21.975c-1.325.974-3.176.9-4.391-.209a131.923 131.923 0 0 1-9.792-9.94 3.17 3.17 0 0 1-.753-1.5C1.56 8.293.727 3.222 1.976 1.972c1.25-1.25 6.32-.416 8.352-.022.56.111 1.078.371 1.502.752a131.922 131.922 0 0 1 9.94 9.792c1.109 1.214 1.18 3.067.209 4.392-.701.955-1.442 1.914-2.31 2.78-.865.865-1.823 1.607-2.778 2.308ZM9.458 6.523a2.073 2.073 0 1 1-2.93 2.931 2.073 2.073 0 0 1 2.93-2.931Z" fill="currentColor" fill-opacity=".12" stroke="currentColor"/>
+      </svg></div><div class="text-with-icons__text-wrapper">
+                <div class="prose"><p class="h5">Refer a friend</p><p>Refer your friend to get <br/>$20 Coupon</p></div>
+              </div>
+            </div><div id="block-sections--23778316353841__text-with-icons-payment" class="text-with-icons__item snap-center" role="group" aria-label="Item 4 of 4" ><div ><svg role="presentation" fill="none" focusable="false" stroke-width="2" width="24" height="24" class="sm:hidden icon icon-picto-lock" viewBox="0 0 24 24">
+        <path d="M3.236 18.182a5.071 5.071 0 0 0 4.831 4.465 114.098 114.098 0 0 0 7.865-.001 5.07 5.07 0 0 0 4.831-4.464 23.03 23.03 0 0 0 .165-2.611c0-.881-.067-1.752-.165-2.61a5.07 5.07 0 0 0-4.83-4.465c-1.311-.046-2.622-.07-3.933-.069a109.9 109.9 0 0 0-3.933.069 5.07 5.07 0 0 0-4.83 4.466 23.158 23.158 0 0 0-.165 2.609c0 .883.067 1.754.164 2.61Z" fill="currentColor" fill-opacity=".12" stroke="currentColor"/>
+        <path d="M17 8.43V6.285A5 5 0 0 0 7 6.286V8.43" stroke="currentColor"  stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 17.714a2.143 2.143 0 1 0 0-4.286 2.143 2.143 0 0 0 0 4.286Z" stroke="currentColor"/>
+      </svg><svg role="presentation" fill="none" focusable="false" stroke-width="2" width="24" height="24" class="hidden sm:block icon icon-picto-lock" viewBox="0 0 24 24">
+        <path d="M3.236 18.182a5.071 5.071 0 0 0 4.831 4.465 114.098 114.098 0 0 0 7.865-.001 5.07 5.07 0 0 0 4.831-4.464 23.03 23.03 0 0 0 .165-2.611c0-.881-.067-1.752-.165-2.61a5.07 5.07 0 0 0-4.83-4.465c-1.311-.046-2.622-.07-3.933-.069a109.9 109.9 0 0 0-3.933.069 5.07 5.07 0 0 0-4.83 4.466 23.158 23.158 0 0 0-.165 2.609c0 .883.067 1.754.164 2.61Z" fill="currentColor" fill-opacity=".12" stroke="currentColor"/>
+        <path d="M17 8.43V6.285A5 5 0 0 0 7 6.286V8.43" stroke="currentColor"  stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M12 17.714a2.143 2.143 0 1 0 0-4.286 2.143 2.143 0 0 0 0 4.286Z" stroke="currentColor"/>
+      </svg></div><div class="text-with-icons__text-wrapper">
+                <div class="prose"><p class="h5">Secure payment</p><p>Efficient, Convenient and Safe<br/>Trusted Official Website</p></div>
+              </div>
+            </div></scroll-carousel><page-dots aria-controls="carousel-sections--23778316353841__text-with-icons" class="page-dots peer-not-scrollable:hidden"><button type="button" class="tap-area" aria-current="true">
+                <span class="sr-only">Go to item 1</span>
+              </button><button type="button" class="tap-area" aria-current="false">
+                <span class="sr-only">Go to item 2</span>
+              </button><button type="button" class="tap-area" aria-current="false">
+                <span class="sr-only">Go to item 3</span>
+              </button><button type="button" class="tap-area" aria-current="false">
+                <span class="sr-only">Go to item 4</span>
+              </button></page-dots></div>
+    </div>
+  </div></section><footer id="shopify-section-sections--23778316353841__footer" class="shopify-section shopify-section-group-footer-group shopify-section--footer"><style>
+  @media screen and (min-width: 1000px) {
+    #shopify-section-sections--23778316353841__footer {--footer-block-list-gap: var(--spacing-10);--footer-block-list-justify-content: space-between;
+    }
+  }
+</style><div class="footer">
+  <div class="container">
+    <div class="footer__wrapper"><div class="footer__block-list empty:hidden"><div class="footer__block footer__block--menu" ><p class="bold">Carpodgo</p><ul class="v-stack gap-3" role="list"><li>
+                          <a href="/pages/faqs" class="inline-block link-faded break-all">FAQs</a>
+                        </li><li>
+                          <a href="/pages/about-us" class="inline-block link-faded break-all">About Us</a>
+                        </li><li>
+                          <a href="/pages/contact" class="inline-block link-faded break-all">Contact Us</a>
+                        </li><li>
+                          <a href="/blogs/carplay-industry-blogs" class="inline-block link-faded break-all">Carplay Industry Blogs</a>
+                        </li></ul>
+                  </div><div class="footer__block footer__block--menu" ><p class="bold">Service</p><ul class="v-stack gap-3" role="list"><li>
+                          <a href="/pages/carpodgo-global-shipping-timelines" class="inline-block link-faded break-all">Shipping</a>
+                        </li><li>
+                          <a href="/pages/warranty-service" class="inline-block link-faded break-all">Warranty</a>
+                        </li><li>
+                          <a href="/policies/privacy-policy" class="inline-block link-faded break-all">Privacy Policy</a>
+                        </li><li>
+                          <a href="/policies/refund-policy" class="inline-block link-faded break-all">Refund Policy</a>
+                        </li><li>
+                          <a href="/policies/terms-of-service" class="inline-block link-faded break-all">Terms of Service</a>
+                        </li></ul>
+                  </div><div class="footer__block footer__block--text" ><p class="bold">GET IN TOUCH</p><div class="prose text-subdued"><p>We are here to listen and engage with you, eager to provide clear and concise information in the best way possible.<br/><br/>Email: <em>Service@carpodgo.com</em></p></div></div><div class="footer__block footer__block--newsletter" ><div class="v-stack gap-6"><p class="h3">NEWSLETTER</p><div class="prose text-subdued"><p>Subscribe to receive the latest updates on the website's recent activities.</p></div><form method="post" action="/contact#footer-newsletter" id="footer-newsletter" accept-charset="UTF-8" class="footer__newsletter-form form"><input type="hidden" name="form_type" value="customer" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="contact[tags]" value="newsletter"><div class="form-control" ><input id="input-sections--23778316353841__footer--contactemail" class="input is-floating" type="email" dir="ltr" name="contact[email]" placeholder=" " 
+  
+  
+  
+  
+  autocomplete="email"
+  
+  enterkeyhint="send"
+  required
+  
+><label for="input-sections--23778316353841__footer--contactemail" class="floating-label">E-mail</label><div class="self-submit-button">
+        <button type="submit" class="circle-chevron hover:colors">
+          <span class="sr-only">Subscribe</span><svg role="presentation" focusable="false" width="5" height="8" class="icon icon-chevron-right-small reverse-icon" viewBox="0 0 5 8">
+        <path d="m.75 7 3-3-3-3" fill="none" stroke="currentColor" stroke-width="1.5"></path>
+      </svg></button>
+      </div></div></form></div>
+                </div></div><div class="footer__aside empty:hidden"><div class="footer__aside-top"><div class="h-stack gap-6"><div class="relative">
+      <button type="button" class="text-with-icon gap-2.5 group" aria-label="Change language" aria-controls="popover-localization-form-locale--sections--23778316353841__footer" aria-expanded="false">
+        <span class="bold text-sm">English</span><svg role="presentation" focusable="false" width="10" height="7" class="icon icon-chevron-bottom" viewBox="0 0 10 7">
+        <path d="m1 1 4 4 4-4" fill="none" stroke="currentColor" stroke-width="2"></path>
+      </svg></button>
+
+      <x-popover id="popover-localization-form-locale--sections--23778316353841__footer" initial-focus="[aria-selected='true']" anchor-horizontal="start" anchor-vertical="start" class="popover">
+        <p class="h5" slot="title">Language</p><form method="post" action="/localization" id="localization-form-locale--sections--23778316353841__footer" accept-charset="UTF-8" class="shopify-localization-form" enctype="multipart/form-data"><input type="hidden" name="form_type" value="localization" /><input type="hidden" name="utf8" value="✓" /><input type="hidden" name="_method" value="put" /><input type="hidden" name="return_to" value="/pages/firmware-t4-plus" /><x-listbox class="popover-listbox popover-listbox--sm" role="listbox"><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="en" aria-selected="true">English</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="fr" >Français</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="pl" >Polski</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="it" >Italiano</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="es" >Español</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="pt-PT" >Português (portugal)</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="el" >Ελληνικά</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="cs" >Čeština</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="nl" >Nederlands</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="no" >Norsk</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="ga" >Gaeilge</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="de" >Deutsch</button><button type="submit" class="popover-listbox__option" name="locale_code" role="option" value="ja" >日本語</button></x-listbox></form></x-popover>
+    </div></div></div><div class="footer__aside-bottom"><ul class="footer__payment-icons h-stack wrap gap-2">
+              
+              
+                <li class="contents"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24" width="38" height="24" fill="none" aria-labelledby="pi-visa"><title id="pi-visa">Visa</title><rect x=".5" y=".5" width="37" height="23" rx="2.5" stroke="#000" stroke-opacity=".07" fill="none"/><path d="M35 0H3C1.3 0 0 1.3 0 3V21C0 22.7 1.4 24 3 24H35C36.7 24 38 22.7 38 21V3C38 1.3 36.6 0 35 0Z" fill="#142FBD" style="fill:#142FBD;fill:color(display-p3 0.0784 0.1843 0.7412);fill-opacity:1;"/><path d="M35 1C36.1 1 37 1.9 37 3V21C37 22.1 36.1 23 35 23H3C1.9 23 1 22.1 1 21V3C1 1.9 1.9 1 3 1H35Z" fill="#1532CB" style="fill:#1532CB;fill:color(display-p3 0.0824 0.1961 0.7961);fill-opacity:1;"/><path d="M29.5944 10.2167H29.2778C28.8556 11.2722 28.5389 11.8 28.2222 13.3833H30.2278C29.9111 11.8 29.9111 11.0611 29.5944 10.2167V10.2167ZM32.6556 16.4444H30.8611C30.7556 16.4444 30.7556 16.4444 30.65 16.3389L30.4389 15.3889L30.3333 15.1778H27.8C27.6944 15.1778 27.5889 15.1778 27.5889 15.3889L27.2722 16.3389C27.2722 16.4444 27.1667 16.4444 27.1667 16.4444H24.95L25.1611 15.9167L28.2222 8.73889C28.2222 8.21111 28.5389 8 29.0667 8H30.65C30.7556 8 30.8611 8 30.8611 8.21111L32.3389 15.0722C32.4444 15.4944 32.55 15.8111 32.55 16.2333C32.6556 16.3389 32.6556 16.3389 32.6556 16.4444V16.4444ZM18.5111 16.1278L18.9333 14.2278C19.0389 14.2278 19.1444 14.3333 19.1444 14.3333C19.8833 14.65 20.6222 14.8611 21.3611 14.7556C21.5722 14.7556 21.8889 14.65 22.1 14.5444C22.6278 14.3333 22.6278 13.8056 22.2056 13.3833C21.9944 13.1722 21.6778 13.0667 21.3611 12.8556C20.9389 12.6444 20.5167 12.4333 20.2 12.1167C18.9333 11.0611 19.3556 9.58333 20.0944 8.84444C20.7278 8.42222 21.0444 8 21.8889 8C23.1556 8 24.5278 8 25.1611 8.21111H25.2667C25.1611 8.84444 25.0556 9.37222 24.8444 10.0056C24.3167 9.79444 23.7889 9.58333 23.2611 9.58333C22.9444 9.58333 22.6278 9.58333 22.3111 9.68889C22.1 9.68889 21.9944 9.79444 21.8889 9.9C21.6778 10.1111 21.6778 10.4278 21.8889 10.6389L22.4167 11.0611C22.8389 11.2722 23.2611 11.4833 23.5778 11.6944C24.1056 12.0111 24.6333 12.5389 24.7389 13.1722C24.95 14.1222 24.6333 14.9667 23.7889 15.6C23.2611 16.0222 23.05 16.2333 22.3111 16.2333C20.8333 16.2333 19.6722 16.3389 18.7222 16.0222C18.6167 16.2333 18.6167 16.2333 18.5111 16.1278V16.1278ZM14.8167 16.4444C14.9222 15.7056 14.9222 15.7056 15.0278 15.3889C15.5556 13.0667 16.0833 10.6389 16.5056 8.31667C16.6111 8.10556 16.6111 8 16.8222 8H18.7222C18.5111 9.26667 18.3 10.2167 17.9833 11.3778C17.6667 12.9611 17.35 14.5444 16.9278 16.1278C16.9278 16.3389 16.8222 16.3389 16.6111 16.3389L14.8167 16.4444ZM5 8.21111C5 8.10556 5.21111 8 5.31667 8H8.90556C9.43333 8 9.85556 8.31667 9.96111 8.84444L10.9111 13.4889C10.9111 13.5944 10.9111 13.5944 11.0167 13.7C11.0167 13.5944 11.1222 13.5944 11.1222 13.5944L13.3389 8.21111C13.2333 8.10556 13.3389 8 13.4444 8H15.6611C15.6611 8.10556 15.6611 8.10556 15.5556 8.21111L12.2833 15.9167C12.1778 16.1278 12.1778 16.2333 12.0722 16.3389C11.9667 16.4444 11.7556 16.3389 11.5444 16.3389H9.96111C9.85556 16.3389 9.75 16.3389 9.75 16.1278L8.06111 9.58333C7.85 9.37222 7.53333 9.05556 7.11111 8.95C6.47778 8.63333 5.31667 8.42222 5.10556 8.42222L5 8.21111Z" fill="white" style="fill:white;fill-opacity:1;"/></svg>
+</li>
+                <li class="contents"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24" width="38" height="24" fill="none" aria-labelledby="pi-master"><title id="pi-master">Mastercard</title><rect x=".5" y=".5" width="37" height="23" rx="2.5" stroke="#000" stroke-opacity=".07" fill="none"/><path d="M35 0H3C1.3 0 0 1.3 0 3V21C0 22.7 1.4 24 3 24H35C36.7 24 38 22.7 38 21V3C38 1.3 36.6 0 35 0Z" fill="#1C1C1C" style="fill:#1C1C1C;fill:color(display-p3 0.1098 0.1098 0.1098);fill-opacity:1;"/><path d="M35 1C36.1 1 37 1.9 37 3V21C37 22.1 36.1 23 35 23H3C1.9 23 1 22.1 1 21V3C1 1.9 1.9 1 3 1H35Z" fill="#232323" style="fill:#232323;fill:color(display-p3 0.1373 0.1373 0.1373);fill-opacity:1;"/><path d="M14.6364 19.2727C18.8538 19.2727 22.2727 15.8538 22.2727 11.6364C22.2727 7.41892 18.8538 4 14.6364 4C10.4189 4 7 7.41892 7 11.6364C7 15.8538 10.4189 19.2727 14.6364 19.2727Z" fill="#EB001B" style="fill:#EB001B;fill:color(display-p3 0.9216 0.0000 0.1059);fill-opacity:1;"/><path d="M23.3637 19.2727C27.5811 19.2727 31 15.8538 31 11.6364C31 7.41892 27.5811 4 23.3637 4C19.1462 4 15.7273 7.41892 15.7273 11.6364C15.7273 15.8538 19.1462 19.2727 23.3637 19.2727Z" fill="#F79E1B" style="fill:#F79E1B;fill:color(display-p3 0.9686 0.6196 0.1059);fill-opacity:1;"/><path d="M22.2727 11.6362C22.2727 9.01797 20.9637 6.72706 19 5.41797C17.0364 6.83615 15.7273 9.12706 15.7273 11.6362C15.7273 14.1452 17.0364 16.5452 19 17.8543C20.9637 16.5452 22.2727 14.2543 22.2727 11.6362Z" fill="#FF5F00" style="fill:#FF5F00;fill:color(display-p3 1.0000 0.3725 0.0000);fill-opacity:1;"/></svg>
+</li>
+                <li class="contents"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 38 24" width="38" height="24" fill="none" aria-labelledby="pi-american_express"><title id="pi-american_express">American Express</title><rect x=".5" y=".5" width="37" height="23" rx="2.5" stroke="#000" stroke-opacity=".07" fill="none"/><path d="M35 0H3C1.3 0 0 1.3 0 3V21C0 22.7 1.4 24 3 24H35C36.7 24 38 22.7 38 21V3C38 1.3 36.6 0 35 0Z" fill="#0071CE" style="fill:#0071CE;fill:color(display-p3 0.0000 0.4431 0.8078);fill-opacity:1;"/><path d="M3 0.5H35C36.3348 0.5 37.5 1.58692 37.5 3V21C37.5 22.4239 36.4239 23.5 35 23.5H3C1.66524 23.5 0.5 22.4131 0.5 21V3C0.5 1.57614 1.57614 0.5 3 0.5Z" stroke="black" stroke-opacity="0.07" style="stroke:black;stroke-opacity:0.07;"/><path d="M25.8662 6.33203V3H31L31.8662 5.5332L32.7334 3H37V14.2002H36.7998L34.8672 16.2656L36.7998 18.3594H37V21.2666H33.5996L31.9336 19.3994L30.2002 21.2666H19.4668V12.666H16L20.2666 3H24.4004L25.8662 6.33203ZM20.5996 20.2656H27V18.5322H22.666V17.3994H26.8662V15.666H22.666V14.5322H27V12.7988H20.5996V20.2656ZM30.5332 16.5322L27 20.2656H29.5996L31.8662 17.8662L34.0664 20.2656H36.7324L33.1992 16.4658L36.7324 12.7988H34.1328L31.8662 15.1992L29.7324 12.7988H27L30.5332 16.5322ZM17.666 11.7324H19.9326L20.5332 10.1992H23.999L24.666 11.7324H26.999L23.666 4.19922H20.999L17.666 11.7324ZM33.5996 4.19922L31.9326 8.86621L30.1992 4.19922H27V11.666H29.0664V6.39941L31 11.666H32.7998L34.7324 6.39941V11.666H36.7324V4.13281L33.5996 4.19922ZM23.2656 8.46582H21.2656L22.2656 5.99902L23.2656 8.46582Z" fill="white" style="fill:white;fill-opacity:1;"/></svg>
+</li>
+                <li class="contents"><svg viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" width="38" height="24" role="img" aria-labelledby="pi-paypal"><title id="pi-paypal">PayPal</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"/><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"/><path fill="#003087" d="M23.9 8.3c.2-1 0-1.7-.6-2.3-.6-.7-1.7-1-3.1-1h-4.1c-.3 0-.5.2-.6.5L14 15.6c0 .2.1.4.3.4H17l.4-3.4 1.8-2.2 4.7-2.1z"/><path fill="#3086C8" d="M23.9 8.3l-.2.2c-.5 2.8-2.2 3.8-4.6 3.8H18c-.3 0-.5.2-.6.5l-.6 3.9-.2 1c0 .2.1.4.3.4H19c.3 0 .5-.2.5-.4v-.1l.4-2.4v-.1c0-.2.3-.4.5-.4h.3c2.1 0 3.7-.8 4.1-3.2.2-1 .1-1.8-.4-2.4-.1-.5-.3-.7-.5-.8z"/><path fill="#012169" d="M23.3 8.1c-.1-.1-.2-.1-.3-.1-.1 0-.2 0-.3-.1-.3-.1-.7-.1-1.1-.1h-3c-.1 0-.2 0-.2.1-.2.1-.3.2-.3.4l-.7 4.4v.1c0-.3.3-.5.6-.5h1.3c2.5 0 4.1-1 4.6-3.8v-.2c-.1-.1-.3-.2-.5-.2h-.1z"/></svg></li>
+                <li class="contents"><svg viewBox="0 0 38 24" width="38" height="24" role="img" aria-labelledby="pi-discover" fill="none" xmlns="http://www.w3.org/2000/svg"><title id="pi-discover">Discover</title><path fill="#000" opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"/><path d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32z" fill="#fff"/><path d="M3.57 7.16H2v5.5h1.57c.83 0 1.43-.2 1.96-.63.63-.52 1-1.3 1-2.11-.01-1.63-1.22-2.76-2.96-2.76zm1.26 4.14c-.34.3-.77.44-1.47.44h-.29V8.1h.29c.69 0 1.11.12 1.47.44.37.33.59.84.59 1.37 0 .53-.22 1.06-.59 1.39zm2.19-4.14h1.07v5.5H7.02v-5.5zm3.69 2.11c-.64-.24-.83-.4-.83-.69 0-.35.34-.61.8-.61.32 0 .59.13.86.45l.56-.73c-.46-.4-1.01-.61-1.62-.61-.97 0-1.72.68-1.72 1.58 0 .76.35 1.15 1.35 1.51.42.15.63.25.74.31.21.14.32.34.32.57 0 .45-.35.78-.83.78-.51 0-.92-.26-1.17-.73l-.69.67c.49.73 1.09 1.05 1.9 1.05 1.11 0 1.9-.74 1.9-1.81.02-.89-.35-1.29-1.57-1.74zm1.92.65c0 1.62 1.27 2.87 2.9 2.87.46 0 .86-.09 1.34-.32v-1.26c-.43.43-.81.6-1.29.6-1.08 0-1.85-.78-1.85-1.9 0-1.06.79-1.89 1.8-1.89.51 0 .9.18 1.34.62V7.38c-.47-.24-.86-.34-1.32-.34-1.61 0-2.92 1.28-2.92 2.88zm12.76.94l-1.47-3.7h-1.17l2.33 5.64h.58l2.37-5.64h-1.16l-1.48 3.7zm3.13 1.8h3.04v-.93h-1.97v-1.48h1.9v-.93h-1.9V8.1h1.97v-.94h-3.04v5.5zm7.29-3.87c0-1.03-.71-1.62-1.95-1.62h-1.59v5.5h1.07v-2.21h.14l1.48 2.21h1.32l-1.73-2.32c.81-.17 1.26-.72 1.26-1.56zm-2.16.91h-.31V8.03h.33c.67 0 1.03.28 1.03.82 0 .55-.36.85-1.05.85z" fill="#231F20"/><path d="M20.16 12.86a2.931 2.931 0 100-5.862 2.931 2.931 0 000 5.862z" fill="url(#pi-paint0_linear)"/><path opacity=".65" d="M20.16 12.86a2.931 2.931 0 100-5.862 2.931 2.931 0 000 5.862z" fill="url(#pi-paint1_linear)"/><path d="M36.57 7.506c0-.1-.07-.15-.18-.15h-.16v.48h.12v-.19l.14.19h.14l-.16-.2c.06-.01.1-.06.1-.13zm-.2.07h-.02v-.13h.02c.06 0 .09.02.09.06 0 .05-.03.07-.09.07z" fill="#231F20"/><path d="M36.41 7.176c-.23 0-.42.19-.42.42 0 .23.19.42.42.42.23 0 .42-.19.42-.42 0-.23-.19-.42-.42-.42zm0 .77c-.18 0-.34-.15-.34-.35 0-.19.15-.35.34-.35.18 0 .33.16.33.35 0 .19-.15.35-.33.35z" fill="#231F20"/><path d="M37 12.984S27.09 19.873 8.976 23h26.023a2 2 0 002-1.984l.024-3.02L37 12.985z" fill="#F48120"/><defs><linearGradient id="pi-paint0_linear" x1="21.657" y1="12.275" x2="19.632" y2="9.104" gradientUnits="userSpaceOnUse"><stop stop-color="#F89F20"/><stop offset=".25" stop-color="#F79A20"/><stop offset=".533" stop-color="#F68D20"/><stop offset=".62" stop-color="#F58720"/><stop offset=".723" stop-color="#F48120"/><stop offset="1" stop-color="#F37521"/></linearGradient><linearGradient id="pi-paint1_linear" x1="21.338" y1="12.232" x2="18.378" y2="6.446" gradientUnits="userSpaceOnUse"><stop stop-color="#F58720"/><stop offset=".359" stop-color="#E16F27"/><stop offset=".703" stop-color="#D4602C"/><stop offset=".982" stop-color="#D05B2E"/></linearGradient></defs></svg></li></ul><div class="footer__copyright v-stack gap-1">
+            <p class="text-sm text-subdued">© 2026, CarpodGo. <a target="_blank" rel="nofollow" href="https://www.shopify.com?utm_campaign=poweredby&amp;utm_medium=shopify&amp;utm_source=onlinestore">Powered by Shopify</a></p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</footer>
+<!-- END sections: footer-group --></main>
+  <div id="shopify-block-AaUY3TDlOK3J2UVAyQ__4015264832934714879" class="shopify-block shopify-app-block"><!-- BEGIN app snippet: ecomsend-app --><script type="text/javascript">
+  //SendWILL APPS COMMON JS CODE
+  window.EcomSendApps = window.EcomSendApps || {}
+
+  window.EcomSendApps.design_mode = false
+  
+
+  window.EcomSendApps.common = window.EcomSendApps.common || {}
+  window.EcomSendApps.common.shop = {
+    permanent_domain: '89271a.myshopify.com',
+    currency: "USD",
+    money_format: "\u003cspan class=trans-money\u003e${{amount}}\u003c\/span\u003e",
+    id: 82391793969,
+  }
+
+  
+  
+    window.EcomSendApps.common.customer = {
+      id: null,
+      tags: null,
+      email: null,
+      accepts_marketing: null,
+      first_name: null,
+    }
+  
+
+  
+  window.EcomSendApps.common.template = 'page'
+</script>
+<!-- END app snippet -->
+
+<script>
+  window.EcomSendApps = window.EcomSendApps || {}
+  /** @description shared localStorage key used by web-pixel sandbox to read storefront GDPR mode */
+  const ECOMSEND_GDPR_ENABLED_STORAGE_KEY = "ECOMSEND:GDPR_ENABLED"
+  /** @description storefront main bundle asset url */
+  const ECOMSEND_MAIN_SCRIPT_URL = 'https://cdn.shopify.com/extensions/01a0f197-ce1f-7a19-8adb-6b78fec4702f/ecomsend-209/assets/ecomsend.js'
+  /** @description storefront style asset url */
+  const ECOMSEND_MAIN_STYLE_URL = 'https://cdn.shopify.com/extensions/01a0f197-ce1f-7a19-8adb-6b78fec4702f/ecomsend-209/assets/style.css'
+  /** @description storefront wasm asset url for runtime signature module */
+  const ECOMSEND_WASM_ASSET_URL = 'https://cdn.shopify.com/extensions/01a0f197-ce1f-7a19-8adb-6b78fec4702f/ecomsend-209/assets/client_safe.wasm'
+  /** @description fallback delay when requestIdleCallback is unavailable */
+  const ECOMSEND_IDLE_TIMEOUT_MS = 800
+  /** @description user interaction events used to trigger lazy init earlier */
+  const ECOMSEND_INTERACTION_EVENTS = ["pointerdown", "keydown", "touchstart"]
+  /** @description global flag key for emergency immediate loading */
+  const ECOMSEND_FORCE_IMMEDIATE_FLAG = window.EcomSendApps?.forceImmediateLoad === true
+  /** @description default GDPR mode comes from block setting and can be overridden on window.EcomSendApps.GDPR */
+  const ECOMSEND_DEFAULT_GDPR_FLAG = false
+  /** @description default CWTracks mode comes from block setting and can be overridden on window.EcomSendApps.CWTracksEnabled */
+  const ECOMSEND_DEFAULT_CWTRACKS_ENABLED = false
+
+  /** @description normalize merchant-provided GDPR switch into a strict boolean value */
+  function normalizeEcomsendBooleanFlag(rawValue) {
+    if (typeof rawValue === "boolean") {
+      return rawValue
+    }
+    if (typeof rawValue === "number") {
+      return rawValue === 1
+    }
+    if (typeof rawValue === "string") {
+      const normalizedValue = rawValue.trim().toLowerCase()
+      return normalizedValue === "true" || normalizedValue === "1" || normalizedValue === "yes"
+    }
+    return false
+  }
+
+  /** @description lock runtime switch value on EcomSendApps to reduce accidental console overwrite. */
+  function lockEcomsendReadonlyFlag(flagName, flagValue) {
+    try {
+      Object.defineProperty(window.EcomSendApps, flagName, {
+        value: flagValue,
+        writable: false,
+        configurable: false,
+        enumerable: true,
+      })
+      return
+    } catch (error) {}
+    window.EcomSendApps[flagName] = flagValue
+  }
+
+  /** @description resolve storefront GDPR mode from merchant theme override */
+  function resolveEcomsendGdprMode() {
+    if (typeof window.EcomSendApps.GDPR === "undefined") {
+      window.EcomSendApps.GDPR = ECOMSEND_DEFAULT_GDPR_FLAG
+    }
+    const gdprEnabled = normalizeEcomsendBooleanFlag(window.EcomSendApps.GDPR)
+    window.EcomSendApps.GDPR = gdprEnabled
+    return gdprEnabled
+  }
+
+  /** @description resolve storefront CWTracks mode from merchant theme block setting and runtime override */
+  function resolveEcomsendCwTracksMode() {
+    if (typeof window.EcomSendApps.CWTracksEnabled === "undefined") {
+      window.EcomSendApps.CWTracksEnabled = ECOMSEND_DEFAULT_CWTRACKS_ENABLED
+    }
+    const cwTracksEnabled = normalizeEcomsendBooleanFlag(window.EcomSendApps.CWTracksEnabled)
+    window.EcomSendApps.CWTracksEnabled = cwTracksEnabled
+    return cwTracksEnabled
+  }
+
+  /** @description persist storefront GDPR mode so web-pixel sandbox can consume the same switch */
+  function syncEcomsendGdprModeToStorage(gdprEnabled) {
+    if (!window.localStorage) {
+      return
+    }
+    if (gdprEnabled) {
+      window.localStorage.setItem(ECOMSEND_GDPR_ENABLED_STORAGE_KEY, "true")
+      return
+    }
+    window.localStorage.removeItem(ECOMSEND_GDPR_ENABLED_STORAGE_KEY)
+  }
+
+  /** @description enable GDPR gating only when merchant explicitly turns on storefront GDPR mode */
+  const ECOMSEND_GDPR_ENABLED = resolveEcomsendGdprMode()
+  /** @description enable CWTracks callback/event emit only when merchant turns on CWTracks mode. */
+  const ECOMSEND_CWTRACKS_ENABLED = resolveEcomsendCwTracksMode()
+  lockEcomsendReadonlyFlag("GDPR", ECOMSEND_GDPR_ENABLED)
+  lockEcomsendReadonlyFlag("CWTracksEnabled", ECOMSEND_CWTRACKS_ENABLED)
+
+  try {
+    syncEcomsendGdprModeToStorage(ECOMSEND_GDPR_ENABLED)
+  } catch (error) {}
+
+  /** @description create main stylesheet node for storefront runtime */
+  function createEcomSendMainStyleEle() {
+    const ecomsendMainStyleEle = document.createElement("link")
+    ecomsendMainStyleEle.rel = "stylesheet"
+    ecomsendMainStyleEle.href = ECOMSEND_MAIN_STYLE_URL
+    ecomsendMainStyleEle.dataset.ecomsendTag = "main-style"
+    return ecomsendMainStyleEle
+  }
+
+  /** @description append runtime stylesheet exactly once */
+  function ensureEcomSendMainStyleLoaded() {
+    if (document.querySelector('link[data-ecomsend-tag="main-style"]')) {
+      return
+    }
+    const ecomsendMainStyleEle = createEcomSendMainStyleEle()
+    document.head.appendChild(ecomsendMainStyleEle)
+  }
+
+  /** @description remove interaction listeners after first lazy-init trigger */
+  function clearInteractionListeners() {
+    ECOMSEND_INTERACTION_EVENTS.forEach((eventName) => {
+      window.removeEventListener(eventName, scheduleMainBundleLoad)
+    })
+  }
+
+  /** @description run low-priority task via idle callback with timeout fallback */
+  function scheduleLowPriorityTask(taskRunner, timeoutMs) {
+    if (window.requestIdleCallback) {
+      window.requestIdleCallback(() => {
+        taskRunner()
+      }, { timeout: timeoutMs })
+      return
+    }
+    window.setTimeout(() => {
+      taskRunner()
+    }, timeoutMs)
+  }
+
+  /** @description load main storefront bundle once and keep rollback override */
+  function loadEcomsendMainBundle() {
+    if (window.__ecomsendMainBundleLoaded) {
+      return
+    }
+    window.__ecomsendMainBundleLoaded = true
+    clearInteractionListeners()
+    /** @description ensure storefront runtime css is loaded together with main bundle */
+    ensureEcomSendMainStyleLoaded()
+    const ecomsendMainScriptEle = document.createElement("script")
+    ecomsendMainScriptEle.src = ECOMSEND_MAIN_SCRIPT_URL
+    ecomsendMainScriptEle.async = true
+    ecomsendMainScriptEle.dataset.ecomsendTag = "main-script"
+    document.body.appendChild(ecomsendMainScriptEle)
+  }
+
+  /** @description schedule heavy bundle with idle-first strategy to reduce main-thread contention */
+  function scheduleMainBundleLoad() {
+    if (window.__ecomsendMainBundleLoadScheduled) {
+      return
+    }
+    /** @description dedupe idle scheduling from DOMContentLoaded and first interactions */
+    window.__ecomsendMainBundleLoadScheduled = true
+    if (ECOMSEND_FORCE_IMMEDIATE_FLAG) {
+      loadEcomsendMainBundle()
+      return
+    }
+    scheduleLowPriorityTask(loadEcomsendMainBundle, ECOMSEND_IDLE_TIMEOUT_MS)
+  }
+
+  /** @description cache marketing params for pixel/report flows before heavy bundle starts */
+  function cacheMarketingParams() {
+    const urlParams = new URLSearchParams(window.location.search)
+    const marketingId = urlParams.get("ec_marketing_id")
+    const ecEmailId = urlParams.get("ec_email_id")
+    const ecMarketingSign = urlParams.get("ec_marketing_sign")
+
+    if (marketingId && window.localStorage) {
+      window.localStorage.setItem("ec_marketing_id", marketingId)
+    }
+    if (ecEmailId && window.localStorage) {
+      window.localStorage.setItem("ec_email_id", ecEmailId)
+    }
+    if (ecMarketingSign && window.localStorage) {
+      window.localStorage.setItem("ec_marketing_sign", ecMarketingSign)
+    }
+  }
+
+  /** @description check whether marketing storage is allowed under Shopify customer privacy state */
+  function isMarketingStorageAllowedByCustomerPrivacy() {
+    const customerPrivacy = window?.Shopify?.customerPrivacy
+    if (!customerPrivacy) {
+      return false
+    }
+    const marketingAllowed = typeof customerPrivacy.marketingAllowed === "function" && customerPrivacy.marketingAllowed()
+    if (marketingAllowed) {
+      return true
+    }
+    if (typeof customerPrivacy.currentVisitorConsent === "function") {
+      const consent = customerPrivacy.currentVisitorConsent()
+      return consent?.marketing === "yes"
+    }
+    return false
+  }
+
+  /** @description check whether analytics storage is allowed under Shopify customer privacy state */
+  function isAnalyticsStorageAllowedByCustomerPrivacy() {
+    const customerPrivacy = window?.Shopify?.customerPrivacy
+    if (!customerPrivacy) {
+      return false
+    }
+    const analyticsAllowed = typeof customerPrivacy.analyticsProcessingAllowed === "function" && customerPrivacy.analyticsProcessingAllowed()
+    if (analyticsAllowed) {
+      return true
+    }
+    if (typeof customerPrivacy.currentVisitorConsent === "function") {
+      const consent = customerPrivacy.currentVisitorConsent()
+      return consent?.analytics === "yes"
+    }
+    return false
+  }
+
+  /** @description execute marketing param caching with GDPR guard: functional off when GDPR disabled */
+  function cacheMarketingParamsWithGdprGuard() {
+    if (!ECOMSEND_GDPR_ENABLED) {
+      cacheMarketingParams()
+      return
+    }
+    if (isMarketingStorageAllowedByCustomerPrivacy()) {
+      cacheMarketingParams()
+    }
+  }
+
+  /** @description cache shop id used by pixel report branches */
+  function cacheShopIdForPixel() {
+    if (!window.EcomSendApps?.common?.shop?.id || !window.localStorage) {
+      return
+    }
+    window.localStorage.setItem("ECOMSEND:ES_SHOP_ID", window.EcomSendApps.common.shop.id)
+  }
+
+  /**
+   * Flow client config (e.g. browserStaySeconds) is fetched by the main ecomsend.js bundle:
+   * bootstrapFlowClientConfig → POST /api/automation/v2/clientFlowConfig (API Sign)
+   * → localStorage ECOMSEND:FLOW_CLIENT_CONFIG.byEventId → read by web-pixel.
+   * Keep new C-end Flow config on this path; do not scatter fetches in liquid.
+   */
+
+  /** @description execute shop id caching with GDPR guard and shared consent policy */
+  function cacheShopIdWithGdprGuard() {
+    if (!ECOMSEND_GDPR_ENABLED) {
+      cacheShopIdForPixel()
+      return
+    }
+    if (isAnalyticsStorageAllowedByCustomerPrivacy()) {
+      cacheShopIdForPixel()
+    }
+  }
+
+  /** @description load Shopify consent-tracking API before GDPR-gated cache writes */
+  function withCustomerPrivacyApiReady(onReady) {
+    if (!ECOMSEND_GDPR_ENABLED) {
+      onReady()
+      return
+    }
+    if (window?.Shopify?.customerPrivacy) {
+      onReady()
+      return
+    }
+    if (typeof window?.Shopify?.loadFeatures !== "function") {
+      return
+    }
+    window.Shopify.loadFeatures(
+      [{ name: "consent-tracking-api", version: "0.1" }],
+      (error) => {
+        if (error) {
+          return
+        }
+        onReady()
+      }
+    )
+  }
+
+  try {
+    withCustomerPrivacyApiReady(() => {
+      cacheMarketingParamsWithGdprGuard()
+      cacheShopIdWithGdprGuard()
+    })
+    if (ECOMSEND_GDPR_ENABLED) {
+      document.addEventListener("visitorConsentCollected", () => {
+        cacheMarketingParamsWithGdprGuard()
+        cacheShopIdWithGdprGuard()
+      })
+    }
+  } catch (e) {}
+
+  /** @description inject wasm asset url into shared namespace before main bundle executes */
+  window.EcomSendApps.wasmURL = ECOMSEND_WASM_ASSET_URL
+
+  ECOMSEND_INTERACTION_EVENTS.forEach((eventName) => {
+    window.addEventListener(eventName, scheduleMainBundleLoad, { once: true, passive: true })
+  })
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", scheduleMainBundleLoad, { once: true })
+  } else {
+    scheduleMainBundleLoad()
+  }
+</script>
+
+<style id="ecomsend-custom-style"></style>
+
+<script>window.shopLocale = 'en'</script>
+
+<script>
+  /** @description timeout used for deferred discount request scheduling */
+  const ECOMSEND_DISCOUNT_IDLE_TIMEOUT_MS = 1500
+
+  /** @description apply discount code from url query only when parameter exists */
+  function applyWillDiscountCode() {
+    const urlParams = new URLSearchParams(window.location.search)
+    const willDiscountCode = urlParams.get("willDiscountCode")
+    if (!willDiscountCode || /[\u0000-\u001F\u007F]/.test(willDiscountCode)) {
+      return
+    }
+    fetch("/cart/update.js", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        discount: willDiscountCode,
+      }),
+    })
+  }
+
+  try {
+    if (!window.__ecomsendDeferredTasksScheduled) {
+      /** @description global guard to avoid duplicate deferred task scheduling */
+      window.__ecomsendDeferredTasksScheduled = true
+      if (window.requestIdleCallback) {
+        window.requestIdleCallback(() => {
+          applyWillDiscountCode()
+        }, { timeout: ECOMSEND_DISCOUNT_IDLE_TIMEOUT_MS })
+      } else {
+        window.setTimeout(() => {
+          applyWillDiscountCode()
+        }, ECOMSEND_DISCOUNT_IDLE_TIMEOUT_MS)
+      }
+    }
+  } catch (error) {}
+</script>
+
+
+
+</div><div id="shopify-block-AakNoTzR0N0NkN3Z2W__11532412952436166569" class="shopify-block shopify-app-block">
+
+
+	<!-- __LXV: 1791124492283;__LXR: https://loox.io;__LXC: Vc_AlJk3wk; --><script>var loox_global_hash = '1791124492283';
+var loox_bundle_reviews_enabled = false;</script><script>var visitor_level_referral = {"active":true,"rtl":false,"position":"right","button_text":"Get $20","button_bg_color":"000000","button_text_color":"FFFFFF","display_on_home_page":true,"display_on_product_page":true,"display_on_cart_page":true,"display_on_other_pages":true,"hide_on_mobile":false,"sidebar_visible":true,"orientation":"default","border_radius":{"key":"extraRounded","value":"16px","label":"Extra Rounded"}};
+</script><style>.loox-reviews-default { max-width: 1200px; margin: 0 auto; }.loox-rating .loox-icon { color:#ffc042; }
+:root { --lxs-rating-icon-color: #ffc042; }</style>
+
+
+
+
+
+
+
+</div><script src="https://cdn.shopify.com/storefront/standard-actions.js" type="module" data-source-attribution="shopify.standard_actions"></script>
+</body>
+</html>
