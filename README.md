@@ -10,12 +10,30 @@ integration; this gives them an `update` entity and an alert anyway.
 
 ## Install (HACS)
 
-1. In HACS, open the menu, choose **Custom repositories**, and add
-   `https://github.com/adamringer/ha-firmware-watch` with category **Integration**.
-2. Install **Firmware Watch** and restart Home Assistant.
-3. Go to **Settings > Devices & services > Add integration > Firmware Watch**.
+[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg?style=for-the-badge)](https://github.com/hacs/integration)
 
-## Adding a source
+Firmware Watch installs through [HACS](https://hacs.xyz) as a custom
+repository. Click the button below to open this repository in your Home
+Assistant's HACS (the first time, HACS asks you to add it as a custom
+repository; choose category **Integration**):
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=adamringer&repository=ha-firmware-watch&category=integration)
+
+Or add it by hand: in HACS, open the menu, choose **Custom repositories**, and
+add `https://github.com/adamringer/ha-firmware-watch` with category
+**Integration**.
+
+Then install **Firmware Watch** and restart Home Assistant.
+
+## Configuration
+
+Add each firmware page as an integration entry:
+
+[![Add Integration to your Home Assistant instance.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=firmware_watch)
+
+Or go to **Settings > Devices & services > Add integration > Firmware Watch**.
+
+### Adding a source
 
 Each watched page is one entry. Nothing is built in: you enter three things.
 
@@ -28,7 +46,7 @@ Each watched page is one entry. Nothing is built in: you enter three things.
 When you add a source, the integration downloads the page once and shows the
 version it found, so you can check the pattern before saving.
 
-## Examples
+### Examples
 
 Patterns checked against the live pages on 2026-10-04.
 
@@ -39,7 +57,7 @@ Patterns checked against the live pages on 2026-10-04.
 | Ambient Weather ObserverIP | `https://ambientweather.com/firmware-update-alerts` | `ObserverIP Firmware ([0-9.]+)` | 4.6.2 |
 | Yamaha TSR-7850 | `https://usa.yamaha.com/products/audio_visual/av_receivers_amps/tsr-7850/downloads.html` | `TSR-7850\S* Firmware Update Ver\.?\s*([0-9][0-9A-Za-z._-]*)` | 2.17 |
 
-### Writing a pattern
+#### Writing a pattern
 
 - Anchor on text unique to your product's line, so other products on the same
   page don't match.
