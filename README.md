@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="custom_components/firmware_watch/brand/icon@2x.png" alt="Firmware Watch logo" width="160">
+</p>
+
 # Firmware Watch
 
 A Home Assistant integration that checks vendor firmware web pages once a day
