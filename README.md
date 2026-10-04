@@ -69,6 +69,17 @@ Patterns checked against the live pages on 2026-10-04.
   model names.
 - `[0-9][0-9A-Za-z._-]*` captures most version strings.
 
+## Entities
+
+Each source is a device with:
+
+- **Firmware**: an update entity that shows **Update available** when the page
+  has a new version.
+- **Latest version**: the version the page shows now (unavailable while checks
+  fail).
+- **Installed version**: the version you last acknowledged (the baseline).
+- **Check now**: a button that checks the page right away.
+
 ## How "new" works
 
 - The first version read is the **baseline**.

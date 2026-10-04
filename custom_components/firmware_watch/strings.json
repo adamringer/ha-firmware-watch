@@ -47,6 +47,14 @@
       "check_now": {
         "name": "Check now"
       }
+    },
+    "sensor": {
+      "latest_version": {
+        "name": "Latest version"
+      },
+      "installed_version": {
+        "name": "Installed version"
+      }
     }
   }
 }

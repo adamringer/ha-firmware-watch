@@ -9,7 +9,7 @@ from homeassistant.core import HomeAssistant
 from .coordinator import FirmwareWatchCoordinator
 from .store import FirmwareWatchStore
 
-PLATFORMS: list[Platform] = [Platform.BUTTON, Platform.UPDATE]
+PLATFORMS: list[Platform] = [Platform.BUTTON, Platform.SENSOR, Platform.UPDATE]
 
 type FirmwareWatchConfigEntry = ConfigEntry[FirmwareWatchCoordinator]
 

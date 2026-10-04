@@ -37,6 +37,8 @@ OLD = load_fixture_text("carpodgo_t4plus.html")
 NEW = OLD.replace("0.0.22", "0.0.23")
 UPDATE = "update.carpodgo_t4_plus_firmware"
 BUTTON = "button.carpodgo_t4_plus_check_now"
+LATEST = "sensor.carpodgo_t4_plus_latest_version"
+INSTALLED = "sensor.carpodgo_t4_plus_installed_version"
 NOTIF_KEY = "persistent_notification"
 
 
@@ -101,6 +103,8 @@ async def test_setup(
     assert state.attributes["release_url"] == URL
     assert state.attributes["title"] == NAME
     assert hass.states.get(BUTTON) is not None
+    assert hass.states.get(LATEST).state == "0.0.22"
+    assert hass.states.get(INSTALLED).state == "0.0.22"
     assert er.async_get(hass).async_get(UPDATE).unique_id == f"{entry.entry_id}_firmware"
     assert await _stored(hass, entry) == {
         "baseline": "0.0.22",
@@ -166,6 +170,8 @@ async def test_install_acknowledges(
     _serve(aioclient_mock, NEW)
     await _tick(hass, freezer)
     assert hass.states.get(UPDATE).state == "on"
+    assert hass.states.get(LATEST).state == "0.0.23"
+    assert hass.states.get(INSTALLED).state == "0.0.22"
     assert f"{DOMAIN}_{entry.entry_id}" in _notifications(hass)
 
     await hass.services.async_call(
@@ -175,6 +181,8 @@ async def test_install_acknowledges(
     state = hass.states.get(UPDATE)
     assert state.state == "off"
     assert state.attributes["installed_version"] == "0.0.23"
+    assert hass.states.get(INSTALLED).state == "0.0.23"
+    assert hass.states.get(LATEST).state == "0.0.23"
     assert f"{DOMAIN}_{entry.entry_id}" not in _notifications(hass)
     assert (await _stored(hass, entry))["baseline"] == "0.0.23"
 
@@ -201,6 +209,8 @@ async def test_failures_leave_state_alone(
     await _tick(hass, freezer)
     assert hass.states.get(UPDATE).state == "unavailable"
     assert hass.states.get(BUTTON).state != "unavailable"
+    assert hass.states.get(LATEST).state == "unavailable"
+    assert hass.states.get(INSTALLED).state == "0.0.22"
     assert await _stored(hass, entry) == before
     assert not notify_calls
     assert not _notifications(hass)
