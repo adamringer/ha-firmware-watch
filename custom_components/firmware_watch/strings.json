@@ -2,15 +2,8 @@
   "config": {
     "step": {
       "user": {
-        "title": "Firmware Watch",
-        "description": "Choose a built-in firmware page, or a custom page of your own.",
-        "data": {
-          "source": "Source"
-        }
-      },
-      "custom": {
-        "title": "Custom firmware page",
-        "description": "The pattern is a regular expression with exactly one capture group around the version. It is matched against the page's visible text.",
+        "title": "Add a firmware page",
+        "description": "The pattern is a regular expression with exactly one capture group around the version. It is matched against the page's visible text. See the README for examples.",
         "data": {
           "name": "Name",
           "url": "Page URL",

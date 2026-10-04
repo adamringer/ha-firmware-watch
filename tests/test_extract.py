@@ -1,5 +1,6 @@
-"""Tests for extract.py and the built-in presets."""
+"""Tests for extract.py and the README example patterns."""
 
+from pathlib import Path
 import re
 
 import pytest
@@ -11,9 +12,21 @@ from custom_components.firmware_watch.extract import (
     extract_version,
     page_text,
 )
-from custom_components.firmware_watch.sources import PRESETS
 
 from .conftest import load_fixture_text
+
+CARPODGO = r"T4 Plus Firmware Update:\s*Version\s+([0-9][0-9A-Za-z._-]*)"
+AMBIENT_WS = r"WS-2000/WS-4000/WS-5000 Firmware ver\.?\s*([0-9][0-9A-Za-z._-]*)"
+AMBIENT_OBSERVERIP = r"ObserverIP Firmware ([0-9.]+)"
+YAMAHA = r"TSR-7850\S* Firmware Update Ver\.?\s*([0-9][0-9A-Za-z._-]*)"
+
+# (fixture file, pattern, expected version): the examples listed in README.md.
+README_EXAMPLES = [
+    ("carpodgo_t4plus.html", CARPODGO, "0.0.22"),
+    ("ambient_firmware.html", AMBIENT_WS, "2.0.4"),
+    ("ambient_firmware.html", AMBIENT_OBSERVERIP, "4.6.2"),
+    ("yamaha_tsr7850.html", YAMAHA, "2.17"),
+]
 
 
 def test_page_text_strips_script_style_tags() -> None:
@@ -37,24 +50,20 @@ def test_page_text_excludes_meta_attributes() -> None:
     assert re.search(r"Version\s+0\.0\.22", text)
 
 
-def test_carpodgo_preset() -> None:
-    html = load_fixture_text("carpodgo_t4plus.html")
-    assert extract_version(html, PRESETS["carpodgo_t4_plus"].pattern) == "0.0.22"
+@pytest.mark.parametrize(("fixture", "pattern", "expected"), README_EXAMPLES)
+def test_readme_example(fixture: str, pattern: str, expected: str) -> None:
+    assert extract_version(load_fixture_text(fixture), pattern) == expected
 
 
-def test_ambient_preset() -> None:
+def test_readme_lists_every_example_pattern() -> None:
+    readme = (Path(__file__).parents[1] / "README.md").read_text(encoding="utf-8")
+    for _, pattern, _ in README_EXAMPLES:
+        assert pattern in readme
+
+
+def test_ambient_ws_pattern_does_not_return_observerip_version() -> None:
     html = load_fixture_text("ambient_firmware.html")
-    assert extract_version(html, PRESETS["ambient_ws2000"].pattern) == "2.0.4"
-
-
-def test_ambient_observerip_not_matched_by_preset() -> None:
-    html = load_fixture_text("ambient_firmware.html")
-    assert extract_version(html, PRESETS["ambient_ws2000"].pattern) != "4.6.2"
-
-
-def test_custom_pattern() -> None:
-    html = load_fixture_text("ambient_firmware.html")
-    assert extract_version(html, r"ObserverIP Firmware ([0-9.]+)") == "4.6.2"
+    assert extract_version(html, AMBIENT_WS) != "4.6.2"
 
 
 def test_compiled_pattern_accepted() -> None:
@@ -64,7 +73,7 @@ def test_compiled_pattern_accepted() -> None:
 
 def test_version_not_found() -> None:
     with pytest.raises(VersionNotFound):
-        extract_version("<p>nothing here</p>", PRESETS["carpodgo_t4_plus"].pattern)
+        extract_version("<p>nothing here</p>", CARPODGO)
 
 
 def test_empty_group_is_not_found() -> None:
@@ -83,15 +92,10 @@ def test_case_sensitive() -> None:
         extract_version("<p>version 1</p>", r"Version (\d)")
 
 
-def test_yamaha_preset() -> None:
-    html = load_fixture_text("yamaha_tsr7850.html")
-    assert extract_version(html, PRESETS["yamaha_tsr_7850"].pattern) == "2.17"
-
-
 def test_yamaha_ignores_amazon_music_flyer() -> None:
     html = load_fixture_text("yamaha_tsr7850.html")
     assert "Amazon Music Firmware Update flyer" in page_text(html)
-    assert extract_version(html, PRESETS["yamaha_tsr_7850"].pattern) == "2.17"
+    assert extract_version(html, YAMAHA) == "2.17"
 
 
 def test_user_agent_value() -> None:

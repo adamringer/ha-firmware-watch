@@ -15,7 +15,7 @@ from custom_components.firmware_watch.extract import VersionNotFound
 from custom_components.firmware_watch.fetch import FetchError
 
 FETCH = "custom_components.firmware_watch.config_flow.async_fetch_version"
-CUSTOM = {
+SOURCE = {
     "name": "My Gadget",
     "url": "https://example.com/fw",
     "pattern": r"Firmware ([0-9.]+)",
@@ -37,41 +37,50 @@ async def _start(hass: HomeAssistant):
     )
 
 
-async def _pick(hass: HomeAssistant, flow_id: str, source: str):
-    return await hass.config_entries.flow.async_configure(
-        flow_id, {"source": source}
-    )
+async def _submit(hass: HomeAssistant, flow_id: str, user_input: dict):
+    return await hass.config_entries.flow.async_configure(flow_id, user_input)
 
 
-async def test_preset_happy_path(hass: HomeAssistant) -> None:
+async def test_happy_path(hass: HomeAssistant) -> None:
     result = await _start(hass)
     assert result["type"] is FlowResultType.FORM
     assert result["step_id"] == "user"
+    flow_id = result["flow_id"]
 
-    with patch(FETCH, return_value="0.0.22"):
-        result = await _pick(hass, result["flow_id"], "carpodgo_t4_plus")
+    with patch(FETCH, return_value="1.2.3"):
+        result = await _submit(hass, flow_id, SOURCE)
     assert result["step_id"] == "confirm"
     assert result["description_placeholders"] == {
-        "name": "CarPodGo T4 Plus",
-        "version": "0.0.22",
+        "name": "My Gadget",
+        "version": "1.2.3",
     }
 
-    result = await hass.config_entries.flow.async_configure(result["flow_id"], {})
+    result = await _submit(hass, flow_id, {})
     assert result["type"] is FlowResultType.CREATE_ENTRY
-    assert result["title"] == "CarPodGo T4 Plus"
-    assert result["data"] == {"source": "carpodgo_t4_plus"}
-    assert result["result"].unique_id == "carpodgo_t4_plus"
+    assert result["title"] == "My Gadget"
+    assert result["data"] == SOURCE
+    assert result["result"].unique_id.startswith("source_")
+    assert len(result["result"].unique_id) == len("source_") + 12
 
 
-async def test_preset_duplicate(hass: HomeAssistant) -> None:
-    MockConfigEntry(
-        domain=DOMAIN, unique_id="ambient_ws2000", data={"source": "ambient_ws2000"}
-    ).add_to_hass(hass)
+async def test_invalid_url(hass: HomeAssistant) -> None:
     result = await _start(hass)
-    with patch(FETCH, return_value="2.0.4") as fetch:
-        result = await _pick(hass, result["flow_id"], "ambient_ws2000")
-    assert result["type"] is FlowResultType.ABORT
-    assert result["reason"] == "already_configured"
+    with patch(FETCH, return_value="1") as fetch:
+        result = await _submit(
+            hass, result["flow_id"], {**SOURCE, "url": "ftp://example.com/fw"}
+        )
+    assert result["errors"] == {"url": "invalid_url"}
+    fetch.assert_not_called()
+
+
+@pytest.mark.parametrize("pattern", ["([", "no group", "(a)(b)"])
+async def test_invalid_pattern(hass: HomeAssistant, pattern: str) -> None:
+    result = await _start(hass)
+    with patch(FETCH, return_value="1") as fetch:
+        result = await _submit(
+            hass, result["flow_id"], {**SOURCE, "pattern": pattern}
+        )
+    assert result["errors"] == {"pattern": "invalid_pattern"}
     fetch.assert_not_called()
 
 
@@ -83,84 +92,41 @@ async def test_preset_duplicate(hass: HomeAssistant) -> None:
         (RuntimeError("boom"), "unknown"),
     ],
 )
-async def test_preset_errors_then_recover(hass: HomeAssistant, exc, error) -> None:
+async def test_fetch_errors(hass: HomeAssistant, exc, error) -> None:
     result = await _start(hass)
     with patch(FETCH, side_effect=exc):
-        result = await _pick(hass, result["flow_id"], "carpodgo_t4_plus")
+        result = await _submit(hass, result["flow_id"], SOURCE)
     assert result["type"] is FlowResultType.FORM
     assert result["step_id"] == "user"
     assert result["errors"] == {"base": error}
 
-    with patch(FETCH, return_value="0.0.22"):
-        result = await _pick(hass, result["flow_id"], "carpodgo_t4_plus")
-    assert result["step_id"] == "confirm"
 
-
-async def _to_custom(hass: HomeAssistant) -> str:
+async def test_entries_kept_as_defaults_after_error(hass: HomeAssistant) -> None:
     result = await _start(hass)
-    result = await _pick(hass, result["flow_id"], "custom")
-    assert result["step_id"] == "custom"
-    return result["flow_id"]
+    with patch(FETCH, side_effect=FetchError("x")):
+        result = await _submit(hass, result["flow_id"], SOURCE)
+    defaults = {
+        str(key): key.default() for key in result["data_schema"].schema
+    }
+    assert defaults == SOURCE
 
-
-async def test_custom_happy_path(hass: HomeAssistant) -> None:
-    flow_id = await _to_custom(hass)
     with patch(FETCH, return_value="1.2.3"):
-        result = await hass.config_entries.flow.async_configure(flow_id, CUSTOM)
+        result = await _submit(hass, result["flow_id"], SOURCE)
     assert result["step_id"] == "confirm"
-    assert result["description_placeholders"]["version"] == "1.2.3"
-
-    result = await hass.config_entries.flow.async_configure(flow_id, {})
-    assert result["type"] is FlowResultType.CREATE_ENTRY
-    assert result["title"] == "My Gadget"
-    assert result["data"] == {"source": "custom", **CUSTOM}
-    assert result["result"].unique_id.startswith("custom_")
-    assert len(result["result"].unique_id) == len("custom_") + 12
 
 
-async def test_custom_invalid_url(hass: HomeAssistant) -> None:
-    flow_id = await _to_custom(hass)
-    with patch(FETCH, return_value="1") as fetch:
-        result = await hass.config_entries.flow.async_configure(
-            flow_id, {**CUSTOM, "url": "ftp://example.com/fw"}
-        )
-    assert result["errors"] == {"url": "invalid_url"}
-    fetch.assert_not_called()
-
-
-@pytest.mark.parametrize("pattern", ["([", "no group", "(a)(b)"])
-async def test_custom_invalid_pattern(hass: HomeAssistant, pattern: str) -> None:
-    flow_id = await _to_custom(hass)
-    result = await hass.config_entries.flow.async_configure(
-        flow_id, {**CUSTOM, "pattern": pattern}
-    )
-    assert result["errors"] == {"pattern": "invalid_pattern"}
-
-
-@pytest.mark.parametrize(
-    ("exc", "error"),
-    [(FetchError("x"), "cannot_connect"), (VersionNotFound("x"), "version_not_found")],
-)
-async def test_custom_fetch_errors(hass: HomeAssistant, exc, error) -> None:
-    flow_id = await _to_custom(hass)
-    with patch(FETCH, side_effect=exc):
-        result = await hass.config_entries.flow.async_configure(flow_id, CUSTOM)
-    assert result["type"] is FlowResultType.FORM
-    assert result["step_id"] == "custom"
-    assert result["errors"] == {"base": error}
-
-
-async def test_custom_duplicate(hass: HomeAssistant) -> None:
-    flow_id = await _to_custom(hass)
+async def test_duplicate(hass: HomeAssistant) -> None:
+    result = await _start(hass)
     with patch(FETCH, return_value="1.2.3"):
-        await hass.config_entries.flow.async_configure(flow_id, CUSTOM)
-        await hass.config_entries.flow.async_configure(flow_id, {})
+        await _submit(hass, result["flow_id"], SOURCE)
+        await _submit(hass, result["flow_id"], {})
 
-    flow_id = await _to_custom(hass)
-    with patch(FETCH, return_value="1.2.3"):
-        result = await hass.config_entries.flow.async_configure(flow_id, CUSTOM)
+    result = await _start(hass)
+    with patch(FETCH, return_value="1.2.3") as fetch:
+        result = await _submit(hass, result["flow_id"], SOURCE)
     assert result["type"] is FlowResultType.ABORT
     assert result["reason"] == "already_configured"
+    fetch.assert_not_called()
 
 
 async def _noop(call: ServiceCall) -> None:
@@ -173,8 +139,8 @@ async def test_options_flow(hass: HomeAssistant) -> None:
 
     entry = MockConfigEntry(
         domain=DOMAIN,
-        unique_id="carpodgo_t4_plus",
-        data={"source": "carpodgo_t4_plus"},
+        unique_id="source_test",
+        data=SOURCE,
         options={"notify_services": ["gone_service"]},
     )
     entry.add_to_hass(hass)

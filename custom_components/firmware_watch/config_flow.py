@@ -16,7 +16,6 @@ from homeassistant.config_entries import (
 )
 from homeassistant.core import callback
 from homeassistant.helpers.selector import (
-    SelectOptionDict,
     SelectSelector,
     SelectSelectorConfig,
     SelectSelectorMode,
@@ -29,14 +28,11 @@ from .const import (
     CONF_NAME,
     CONF_NOTIFY_SERVICES,
     CONF_PATTERN,
-    CONF_SOURCE,
     CONF_URL,
     DOMAIN,
-    SOURCE_CUSTOM,
 )
 from .extract import InvalidPattern, VersionNotFound, compile_pattern
 from .fetch import FetchError, async_fetch_version
-from .sources import PRESETS
 
 _LOGGER = logging.getLogger(__name__)
 
@@ -77,41 +73,7 @@ class FirmwareWatchConfigFlow(ConfigFlow, domain=DOMAIN):
     async def async_step_user(
         self, user_input: dict[str, Any] | None = None
     ) -> ConfigFlowResult:
-        """Choose a preset or a custom page."""
-        errors: dict[str, str] = {}
-        if user_input is not None:
-            key = user_input[CONF_SOURCE]
-            if key == SOURCE_CUSTOM:
-                return await self.async_step_custom()
-            preset = PRESETS[key]
-            await self.async_set_unique_id(key)
-            self._abort_if_unique_id_configured()
-            error = await self._async_check(preset.url, preset.pattern)
-            if error is None:
-                self._title = preset.name
-                self._data = {CONF_SOURCE: key}
-                return await self.async_step_confirm()
-            errors["base"] = error
-
-        options = [
-            SelectOptionDict(value=p.key, label=p.name) for p in PRESETS.values()
-        ]
-        options.append(SelectOptionDict(value=SOURCE_CUSTOM, label="Custom page"))
-        schema = vol.Schema(
-            {
-                vol.Required(CONF_SOURCE): SelectSelector(
-                    SelectSelectorConfig(
-                        options=options, mode=SelectSelectorMode.DROPDOWN
-                    )
-                )
-            }
-        )
-        return self.async_show_form(step_id="user", data_schema=schema, errors=errors)
-
-    async def async_step_custom(
-        self, user_input: dict[str, Any] | None = None
-    ) -> ConfigFlowResult:
-        """Enter name, URL and pattern for a custom page."""
+        """Enter name, URL and pattern for a firmware page."""
         errors: dict[str, str] = {}
         if user_input is not None:
             name = user_input[CONF_NAME].strip()
@@ -125,14 +87,13 @@ class FirmwareWatchConfigFlow(ConfigFlow, domain=DOMAIN):
                 errors[CONF_PATTERN] = "invalid_pattern"
             if not errors:
                 await self.async_set_unique_id(
-                    "custom_" + sha256(f"{url}\n{pattern}".encode()).hexdigest()[:12]
+                    "source_" + sha256(f"{url}\n{pattern}".encode()).hexdigest()[:12]
                 )
                 self._abort_if_unique_id_configured()
                 error = await self._async_check(url, pattern)
                 if error is None:
                     self._title = name
                     self._data = {
-                        CONF_SOURCE: SOURCE_CUSTOM,
                         CONF_NAME: name,
                         CONF_URL: url,
                         CONF_PATTERN: pattern,
@@ -152,9 +113,7 @@ class FirmwareWatchConfigFlow(ConfigFlow, domain=DOMAIN):
                 ): TextSelector(),
             }
         )
-        return self.async_show_form(
-            step_id="custom", data_schema=schema, errors=errors
-        )
+        return self.async_show_form(step_id="user", data_schema=schema, errors=errors)
 
     async def async_step_confirm(
         self, user_input: dict[str, Any] | None = None

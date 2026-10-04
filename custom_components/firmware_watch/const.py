@@ -6,11 +6,8 @@ from homeassistant.const import CONF_NAME, CONF_URL
 
 DOMAIN = "firmware_watch"
 
-CONF_SOURCE = "source"
 CONF_PATTERN = "pattern"
 CONF_NOTIFY_SERVICES = "notify_services"
-
-SOURCE_CUSTOM = "custom"
 
 DEFAULT_SCAN_INTERVAL = timedelta(days=1)
 # After a failed check, retry sooner so one bad fetch doesn't leave the entity
@@ -23,12 +20,10 @@ __all__ = [
     "CONF_NAME",
     "CONF_NOTIFY_SERVICES",
     "CONF_PATTERN",
-    "CONF_SOURCE",
     "CONF_URL",
     "DEFAULT_SCAN_INTERVAL",
     "DOMAIN",
     "REQUEST_TIMEOUT",
     "RETRY_INTERVAL",
-    "SOURCE_CUSTOM",
     "USER_AGENT",
 ]

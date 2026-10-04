@@ -10,7 +10,10 @@ from homeassistant.core import HomeAssistant
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
 from .const import (
+    CONF_NAME,
     CONF_NOTIFY_SERVICES,
+    CONF_PATTERN,
+    CONF_URL,
     DEFAULT_SCAN_INTERVAL,
     DOMAIN,
     RETRY_INTERVAL,
@@ -18,7 +21,6 @@ from .const import (
 from .extract import VersionNotFound
 from .fetch import FetchError, async_fetch_version
 from .notify import async_send_alerts, notification_id
-from .sources import resolve_source
 from .store import FirmwareWatchStore
 
 if TYPE_CHECKING:
@@ -43,7 +45,9 @@ class FirmwareWatchCoordinator(DataUpdateCoordinator[str]):
             name=f"{DOMAIN} {entry.entry_id}",
             update_interval=DEFAULT_SCAN_INTERVAL,
         )
-        self.source_name, self.url, self.pattern = resolve_source(entry.data)
+        self.source_name = entry.data[CONF_NAME]
+        self.url = entry.data[CONF_URL]
+        self.pattern = entry.data[CONF_PATTERN]
         self.store = FirmwareWatchStore(hass, entry.entry_id)
 
     async def async_load_store(self) -> None:

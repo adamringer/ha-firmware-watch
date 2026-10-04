@@ -27,12 +27,12 @@ from custom_components.firmware_watch.const import (
     DOMAIN,
     RETRY_INTERVAL,
 )
-from custom_components.firmware_watch.sources import PRESETS
 
 from .conftest import load_fixture_text
 
-PRESET = PRESETS["carpodgo_t4_plus"]
-URL = PRESET.url
+NAME = "CarPodGo T4 Plus"
+URL = "https://www.carpodgo.com/pages/firmware-t4-plus"
+PATTERN = r"T4 Plus Firmware Update:\s*Version\s+([0-9][0-9A-Za-z._-]*)"
 OLD = load_fixture_text("carpodgo_t4plus.html")
 NEW = OLD.replace("0.0.22", "0.0.23")
 UPDATE = "update.carpodgo_t4_plus_firmware"
@@ -43,9 +43,9 @@ NOTIF_KEY = "persistent_notification"
 def _entry(options: dict | None = None) -> MockConfigEntry:
     return MockConfigEntry(
         domain=DOMAIN,
-        data={"source": "carpodgo_t4_plus"},
+        data={"name": NAME, "url": URL, "pattern": PATTERN},
         options=options or {},
-        title=PRESET.name,
+        title=NAME,
     )
 
 
@@ -86,7 +86,7 @@ def notify_calls(hass: HomeAssistant) -> list[ServiceCall]:
     return calls
 
 
-async def test_setup_preset(
+async def test_setup(
     hass: HomeAssistant, aioclient_mock: AiohttpClientMocker
 ) -> None:
     _serve(aioclient_mock, OLD)
@@ -99,8 +99,9 @@ async def test_setup_preset(
     assert state.attributes["installed_version"] == "0.0.22"
     assert state.attributes["latest_version"] == "0.0.22"
     assert state.attributes["release_url"] == URL
-    assert state.attributes["title"] == PRESET.name
+    assert state.attributes["title"] == NAME
     assert hass.states.get(BUTTON) is not None
+    assert er.async_get(hass).async_get(UPDATE).unique_id == f"{entry.entry_id}_firmware"
     assert await _stored(hass, entry) == {
         "baseline": "0.0.22",
         "latest": "0.0.22",
@@ -131,13 +132,13 @@ async def test_change_alerts_once_and_survives_reload(
         assert state.attributes["installed_version"] == "0.0.22"
         create.assert_called_once()
         assert create.call_args.kwargs["notification_id"] == f"{DOMAIN}_{entry.entry_id}"
-        assert create.call_args.args[2] == f"New firmware: {PRESET.name}"
+        assert create.call_args.args[2] == f"New firmware: {NAME}"
         assert f"{DOMAIN}_{entry.entry_id}" in _notifications(hass)
 
         assert len(notify_calls) == 1
         data = notify_calls[0].data
-        assert PRESET.name in data["title"]
-        for part in (PRESET.name, "0.0.23", "0.0.22", URL):
+        assert NAME in data["title"]
+        for part in (NAME, "0.0.23", "0.0.22", URL):
             assert part in data["message"]
 
         # Same page again: no new alert.
@@ -203,7 +204,7 @@ async def test_failures_leave_state_alone(
     assert await _stored(hass, entry) == before
     assert not notify_calls
     assert not _notifications(hass)
-    assert PRESET.name in caplog.text
+    assert NAME in caplog.text
 
     # Retries after RETRY_INTERVAL, not a full day.
     _serve(aioclient_mock, OLD)
@@ -287,37 +288,3 @@ async def test_remove_entry_removes_store(
     await hass.config_entries.async_remove(entry.entry_id)
     await hass.async_block_till_done()
     assert await _stored(hass, entry) is None
-
-
-async def test_custom_source(
-    hass: HomeAssistant,
-    aioclient_mock: AiohttpClientMocker,
-    freezer: FrozenDateTimeFactory,
-) -> None:
-    url = "https://example.com/fw"
-    aioclient_mock.get(url, text="<html><body><p>Gadget Firmware 1.2</p></body></html>")
-    entry = MockConfigEntry(
-        domain=DOMAIN,
-        data={
-            "source": "custom",
-            "name": "My Gadget",
-            "url": url,
-            "pattern": r"Gadget Firmware ([0-9.]+)",
-        },
-    )
-    await _setup(hass, entry)
-    state = hass.states.get("update.my_gadget_firmware")
-    assert state.state == "off"
-    assert state.attributes["installed_version"] == "1.2"
-
-    aioclient_mock.clear_requests()
-    aioclient_mock.get(url, text="<html><body><p>Gadget Firmware 1.3</p></body></html>")
-    await _tick(hass, freezer)
-    state = hass.states.get("update.my_gadget_firmware")
-    assert state.state == "on"
-    assert state.attributes["latest_version"] == "1.3"
-    assert er.async_get(hass).async_get("update.my_gadget_firmware").unique_id == (
-        f"{entry.entry_id}_firmware"
-    )
-
-
