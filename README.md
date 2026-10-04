@@ -4,6 +4,10 @@ A Home Assistant integration that checks vendor firmware web pages once a day
 and tells you when a new version appears. Many devices have no update
 integration; this gives them an `update` entity and an alert anyway.
 
+> **Disclaimer:** this project was 100% vibe coded by its author and Claude
+> (Anthropic's AI). It's provided as is, with no warranty: no promise that it
+> works, and no responsibility if it breaks anything. Use at your own risk.
+
 ## Install (HACS)
 
 1. In HACS, open the menu, choose **Custom repositories**, and add
