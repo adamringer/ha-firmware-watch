@@ -78,3 +78,13 @@ is in the Home Assistant log. It retries every hour until a check succeeds,
 and **Check now** stays available. Your baseline is kept, and no alert is sent while
 the entity is unavailable. Fix a pattern by removing and re-adding the
 source.
+
+## License
+
+Copyright (C) 2026 Adam Ringer
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version. It is distributed WITHOUT ANY WARRANTY; see [LICENSE](LICENSE) for the
+full terms.
