@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from collections.abc import Mapping
 from hashlib import sha256
 import logging
 from typing import Any
@@ -37,6 +38,43 @@ from .fetch import FetchError, async_fetch_version
 _LOGGER = logging.getLogger(__name__)
 
 EXCLUDED_NOTIFY_SERVICES = frozenset({"notify", "send_message", "persistent_notification"})
+
+
+def _source_schema(defaults: Mapping[str, Any]) -> vol.Schema:
+    """Build the source configuration form schema."""
+    return vol.Schema(
+        {
+            vol.Required(CONF_NAME, default=defaults.get(CONF_NAME, "")): TextSelector(),
+            vol.Required(CONF_URL, default=defaults.get(CONF_URL, "")): TextSelector(
+                TextSelectorConfig(type=TextSelectorType.URL)
+            ),
+            vol.Required(
+                CONF_PATTERN, default=defaults.get(CONF_PATTERN, "")
+            ): TextSelector(),
+        }
+    )
+
+
+def _source_unique_id(url: str, pattern: str) -> str:
+    """Return the entry unique ID for a url and pattern."""
+    return "source_" + sha256(f"{url}\n{pattern}".encode()).hexdigest()[:12]
+
+
+def _validate_source(
+    user_input: dict[str, Any],
+) -> tuple[dict[str, Any], dict[str, str]]:
+    """Normalize source inputs and validate URL and regex pattern."""
+    name = user_input[CONF_NAME].strip()
+    url = user_input[CONF_URL].strip()
+    pattern = user_input[CONF_PATTERN]
+    errors: dict[str, str] = {}
+    if not url.lower().startswith(("http://", "https://")):
+        errors[CONF_URL] = "invalid_url"
+    try:
+        compile_pattern(pattern)
+    except InvalidPattern:
+        errors[CONF_PATTERN] = "invalid_pattern"
+    return {CONF_NAME: name, CONF_URL: url, CONF_PATTERN: pattern}, errors
 
 
 class FirmwareWatchConfigFlow(ConfigFlow, domain=DOMAIN):
@@ -76,44 +114,60 @@ class FirmwareWatchConfigFlow(ConfigFlow, domain=DOMAIN):
         """Enter name, URL and pattern for a firmware page."""
         errors: dict[str, str] = {}
         if user_input is not None:
-            name = user_input[CONF_NAME].strip()
-            url = user_input[CONF_URL].strip()
-            pattern = user_input[CONF_PATTERN]
-            if not url.lower().startswith(("http://", "https://")):
-                errors[CONF_URL] = "invalid_url"
-            try:
-                compile_pattern(pattern)
-            except InvalidPattern:
-                errors[CONF_PATTERN] = "invalid_pattern"
+            cleaned, errors = _validate_source(user_input)
             if not errors:
-                await self.async_set_unique_id(
-                    "source_" + sha256(f"{url}\n{pattern}".encode()).hexdigest()[:12]
-                )
+                url = cleaned[CONF_URL]
+                pattern = cleaned[CONF_PATTERN]
+                await self.async_set_unique_id(_source_unique_id(url, pattern))
                 self._abort_if_unique_id_configured()
                 error = await self._async_check(url, pattern)
                 if error is None:
-                    self._title = name
-                    self._data = {
-                        CONF_NAME: name,
-                        CONF_URL: url,
-                        CONF_PATTERN: pattern,
-                    }
+                    self._title = cleaned[CONF_NAME]
+                    self._data = cleaned
                     return await self.async_step_confirm()
                 errors["base"] = error
 
-        defaults = user_input or {}
-        schema = vol.Schema(
-            {
-                vol.Required(CONF_NAME, default=defaults.get(CONF_NAME, "")): TextSelector(),
-                vol.Required(CONF_URL, default=defaults.get(CONF_URL, "")): TextSelector(
-                    TextSelectorConfig(type=TextSelectorType.URL)
-                ),
-                vol.Required(
-                    CONF_PATTERN, default=defaults.get(CONF_PATTERN, "")
-                ): TextSelector(),
-            }
+        return self.async_show_form(
+            step_id="user",
+            data_schema=_source_schema(user_input or {}),
+            errors=errors,
         )
-        return self.async_show_form(step_id="user", data_schema=schema, errors=errors)
+
+    async def async_step_reconfigure(
+        self, user_input: dict[str, Any] | None = None
+    ) -> ConfigFlowResult:
+        """Update name, URL and pattern for an existing firmware page."""
+        entry = self._get_reconfigure_entry()
+        errors: dict[str, str] = {}
+        if user_input is not None:
+            cleaned, errors = _validate_source(user_input)
+            if not errors:
+                url = cleaned[CONF_URL]
+                pattern = cleaned[CONF_PATTERN]
+                if any(
+                    other.entry_id != entry.entry_id
+                    and other.data.get(CONF_URL) == url
+                    and other.data.get(CONF_PATTERN) == pattern
+                    for other in self._async_current_entries()
+                ):
+                    errors["base"] = "already_configured"
+                else:
+                    error = await self._async_check(url, pattern)
+                    if error is None:
+                        return self.async_update_reload_and_abort(
+                            entry,
+                            unique_id=_source_unique_id(url, pattern),
+                            title=cleaned[CONF_NAME],
+                            data_updates=cleaned,
+                        )
+                    errors["base"] = error
+
+        defaults = user_input if user_input is not None else entry.data
+        return self.async_show_form(
+            step_id="reconfigure",
+            data_schema=_source_schema(defaults),
+            errors=errors,
+        )
 
     async def async_step_confirm(
         self, user_input: dict[str, Any] | None = None

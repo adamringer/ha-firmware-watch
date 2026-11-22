@@ -10,6 +10,7 @@ from homeassistant.core import HomeAssistant, ServiceCall
 from homeassistant.data_entry_flow import FlowResultType
 from pytest_homeassistant_custom_component.common import MockConfigEntry
 
+from custom_components.firmware_watch.config_flow import _source_unique_id
 from custom_components.firmware_watch.const import DOMAIN
 from custom_components.firmware_watch.extract import VersionNotFound
 from custom_components.firmware_watch.fetch import FetchError
@@ -156,3 +157,181 @@ async def test_options_flow(hass: HomeAssistant) -> None:
     )
     assert result["type"] is FlowResultType.CREATE_ENTRY
     assert entry.options == {"notify_services": ["mobile_app_phone"]}
+
+
+async def _start_reconfigure(hass: HomeAssistant, entry: MockConfigEntry):
+    return await hass.config_entries.flow.async_init(
+        DOMAIN,
+        context={
+            "source": config_entries.SOURCE_RECONFIGURE,
+            "entry_id": entry.entry_id,
+        },
+    )
+
+
+def _schema_defaults(result) -> dict:
+    return {str(key): key.default() for key in result["data_schema"].schema}
+
+
+async def test_reconfigure_happy_path(hass: HomeAssistant) -> None:
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        title=SOURCE["name"],
+        unique_id="source_test",
+        data=SOURCE,
+    )
+    entry.add_to_hass(hass)
+
+    result = await _start_reconfigure(hass, entry)
+    assert result["type"] is FlowResultType.FORM
+    assert result["step_id"] == "reconfigure"
+    assert _schema_defaults(result) == SOURCE
+
+    updated = {
+        "name": "Renamed Gadget",
+        "url": "https://example.com/new-fw",
+        "pattern": r"Release ([0-9.]+)",
+    }
+    with patch(FETCH, return_value="2.0.0"):
+        result = await _submit(hass, result["flow_id"], updated)
+    await hass.async_block_till_done()
+
+    assert result["type"] is FlowResultType.ABORT
+    assert result["reason"] == "reconfigure_successful"
+    assert entry.title == "Renamed Gadget"
+    assert entry.data == updated
+    # The unique ID follows the new url and pattern, so re-adding the old
+    # source is not wrongly refused.
+    assert entry.unique_id == _source_unique_id(updated["url"], updated["pattern"])
+    assert entry.unique_id != "source_test"
+
+
+async def test_reconfigure_invalid_url_keeps_input_and_entry(
+    hass: HomeAssistant,
+) -> None:
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        title=SOURCE["name"],
+        unique_id="source_test",
+        data=SOURCE,
+    )
+    entry.add_to_hass(hass)
+
+    result = await _start_reconfigure(hass, entry)
+    bad = {**SOURCE, "name": "New Name", "url": "ftp://example.com/fw"}
+    with patch(FETCH, return_value="1") as fetch:
+        result = await _submit(hass, result["flow_id"], bad)
+    assert result["type"] is FlowResultType.FORM
+    assert result["step_id"] == "reconfigure"
+    assert result["errors"] == {"url": "invalid_url"}
+    assert _schema_defaults(result) == bad
+    assert entry.data == SOURCE
+    assert entry.title == SOURCE["name"]
+    fetch.assert_not_called()
+
+
+@pytest.mark.parametrize("pattern", ["([", "no group", "(a)(b)"])
+async def test_reconfigure_invalid_pattern_keeps_input_and_entry(
+    hass: HomeAssistant, pattern: str
+) -> None:
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        title=SOURCE["name"],
+        unique_id="source_test",
+        data=SOURCE,
+    )
+    entry.add_to_hass(hass)
+
+    result = await _start_reconfigure(hass, entry)
+    bad = {**SOURCE, "name": "New Name", "pattern": pattern}
+    with patch(FETCH, return_value="1") as fetch:
+        result = await _submit(hass, result["flow_id"], bad)
+    assert result["type"] is FlowResultType.FORM
+    assert result["step_id"] == "reconfigure"
+    assert result["errors"] == {"pattern": "invalid_pattern"}
+    assert _schema_defaults(result) == bad
+    assert entry.data == SOURCE
+    assert entry.title == SOURCE["name"]
+    fetch.assert_not_called()
+
+
+@pytest.mark.parametrize(
+    ("exc", "error"),
+    [
+        (FetchError("x"), "cannot_connect"),
+        (VersionNotFound("x"), "version_not_found"),
+        (RuntimeError("boom"), "unknown"),
+    ],
+)
+async def test_reconfigure_fetch_errors_keep_input_and_entry(
+    hass: HomeAssistant, exc, error: str
+) -> None:
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        title=SOURCE["name"],
+        unique_id="source_test",
+        data=SOURCE,
+    )
+    entry.add_to_hass(hass)
+
+    result = await _start_reconfigure(hass, entry)
+    typed = {
+        "name": "New Name",
+        "url": "https://example.com/other",
+        "pattern": r"Ver ([0-9.]+)",
+    }
+    with patch(FETCH, side_effect=exc):
+        result = await _submit(hass, result["flow_id"], typed)
+    assert result["type"] is FlowResultType.FORM
+    assert result["step_id"] == "reconfigure"
+    assert result["errors"] == {"base": error}
+    assert _schema_defaults(result) == typed
+    assert entry.data == SOURCE
+    assert entry.title == SOURCE["name"]
+
+
+async def test_reconfigure_duplicate_and_same_entry_allowed(
+    hass: HomeAssistant,
+) -> None:
+    entry = MockConfigEntry(
+        domain=DOMAIN,
+        title=SOURCE["name"],
+        unique_id="source_test",
+        data=SOURCE,
+    )
+    other_data = {
+        "name": "Other Gadget",
+        "url": "https://example.com/other",
+        "pattern": r"Version ([0-9.]+)",
+    }
+    other = MockConfigEntry(
+        domain=DOMAIN,
+        title=other_data["name"],
+        unique_id="source_other",
+        data=other_data,
+    )
+    entry.add_to_hass(hass)
+    other.add_to_hass(hass)
+
+    result = await _start_reconfigure(hass, entry)
+    dup_input = {**other_data, "name": "Different Name"}
+    with patch(FETCH, return_value="1.0.0") as fetch:
+        result = await _submit(hass, result["flow_id"], dup_input)
+    assert result["type"] is FlowResultType.FORM
+    assert result["step_id"] == "reconfigure"
+    assert result["errors"] == {"base": "already_configured"}
+    assert _schema_defaults(result) == dup_input
+    assert entry.data == SOURCE
+    fetch.assert_not_called()
+
+    same_renamed = {**SOURCE, "name": "My Renamed Gadget"}
+    with patch(FETCH, return_value="1.2.3"):
+        result = await _submit(hass, result["flow_id"], same_renamed)
+    await hass.async_block_till_done()
+    assert result["type"] is FlowResultType.ABORT
+    assert result["reason"] == "reconfigure_successful"
+    assert entry.title == "My Renamed Gadget"
+    assert entry.data == same_renamed
+    assert entry.unique_id == _source_unique_id(
+        same_renamed["url"], same_renamed["pattern"]
+    )

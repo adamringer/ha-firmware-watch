@@ -52,6 +52,13 @@ Each watched page is one entry. Nothing is built in: you enter three things.
 When you add a source, the integration downloads the page once and shows the
 version it found, so you can check the pattern before saving.
 
+### Changing a source
+
+To change a source's name, URL, or pattern (for example, if the vendor moves
+the firmware page), open the entry's **⋮** menu and choose **Reconfigure**. Your
+stored baseline and entity IDs are kept; if the new page shows a different
+version than the baseline, you'll be alerted on the next check.
+
 ### Examples
 
 Patterns checked against the live pages on 2026-10-04.
@@ -111,8 +118,8 @@ If the update entity is **unavailable**, the page could not be downloaded or
 the pattern no longer matches (the vendor may have changed the page). The reason
 is in the Home Assistant log. It retries every hour until a check succeeds,
 and **Check now** stays available. Your baseline is kept, and no alert is sent while
-the entity is unavailable. Fix a pattern by removing and re-adding the
-source.
+the entity is unavailable. Fix a pattern using **⋮ > Reconfigure** on the
+integration entry.
 
 ## License
 
