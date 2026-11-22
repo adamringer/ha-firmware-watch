@@ -3,7 +3,7 @@
 import aiohttp
 import pytest
 
-from custom_components.firmware_watch.const import USER_AGENT
+from custom_components.firmware_watch.const import REQUEST_HEADERS, USER_AGENT
 from custom_components.firmware_watch.extract import VersionNotFound
 from custom_components.firmware_watch.fetch import FetchError, async_fetch_version
 
@@ -18,6 +18,9 @@ async def test_success(hass, aioclient_mock) -> None:
     assert await async_fetch_version(hass, URL, PATTERN) == "0.0.22"
     headers = aioclient_mock.mock_calls[0][3]
     assert headers["User-Agent"] == USER_AGENT
+    # Cloudflare-fronted sites answer 403 without browser-style headers.
+    assert headers["Accept-Language"] == REQUEST_HEADERS["Accept-Language"]
+    assert "Accept" in headers
 
 
 async def test_http_error(hass, aioclient_mock) -> None:

@@ -9,7 +9,7 @@ import aiohttp
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.aiohttp_client import async_get_clientsession
 
-from .const import REQUEST_TIMEOUT, USER_AGENT
+from .const import REQUEST_HEADERS, REQUEST_TIMEOUT
 from .extract import extract_version
 
 
@@ -29,7 +29,7 @@ async def async_fetch_version(
         async with session.get(
             url,
             timeout=aiohttp.ClientTimeout(total=REQUEST_TIMEOUT),
-            headers={"User-Agent": USER_AGENT},
+            headers=REQUEST_HEADERS,
         ) as resp:
             resp.raise_for_status()
             html = await resp.text(errors="replace")
