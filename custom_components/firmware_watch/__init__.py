@@ -18,7 +18,11 @@ async def async_setup_entry(hass: HomeAssistant, entry: FirmwareWatchConfigEntry
     """Set up a config entry."""
     coordinator = FirmwareWatchCoordinator(hass, entry)
     await coordinator.async_load_store()
-    await coordinator.async_config_entry_first_refresh()
+    # Not async_config_entry_first_refresh(): when the site is down or gone it
+    # raises ConfigEntryNotReady, and Home Assistant then retries the whole setup
+    # every few seconds. A failed first check just leaves the entities
+    # unavailable until the coordinator's own retry (RETRY_INTERVAL).
+    await coordinator.async_refresh()
     entry.runtime_data = coordinator
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
     return True

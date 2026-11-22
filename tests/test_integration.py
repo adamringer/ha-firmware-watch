@@ -234,14 +234,35 @@ async def test_failures_leave_state_alone(
     assert aioclient_mock.call_count == 0
 
 
-async def test_setup_retry_when_site_down(
-    hass: HomeAssistant, aioclient_mock: AiohttpClientMocker
+async def test_site_down_at_startup_does_not_retry_setup(
+    hass: HomeAssistant,
+    aioclient_mock: AiohttpClientMocker,
+    freezer: FrozenDateTimeFactory,
 ) -> None:
+    """A dead site must not make Home Assistant re-run setup every few seconds."""
     _serve(aioclient_mock, "", 503)
     entry = _entry()
     await _setup(hass, entry)
-    assert entry.state is ConfigEntryState.SETUP_RETRY
+    assert entry.state is ConfigEntryState.LOADED
+    assert aioclient_mock.call_count == 1
+    assert hass.states.get(UPDATE).state == "unavailable"
     assert await _stored(hass, entry) is None
+
+    # Well past HA's setup-retry backoff (max 80 s), still no new fetch.
+    aioclient_mock.clear_requests()
+    _serve(aioclient_mock, "", 503)
+    freezer.tick(timedelta(minutes=30))
+    async_fire_time_changed(hass)
+    await hass.async_block_till_done()
+    assert aioclient_mock.call_count == 0
+
+    # The coordinator retries after RETRY_INTERVAL and recovers.
+    _serve(aioclient_mock, OLD)
+    freezer.tick(RETRY_INTERVAL)
+    async_fire_time_changed(hass)
+    await hass.async_block_till_done()
+    assert aioclient_mock.call_count == 1
+    assert hass.states.get(UPDATE).state == "off"
 
 
 @pytest.mark.parametrize("mode", ["missing", "raising"])
