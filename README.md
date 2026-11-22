@@ -65,7 +65,7 @@ Patterns checked against the live pages on 2026-10-04.
 
 | Name | URL | Pattern | Version found |
 | --- | --- | --- | --- |
-| CarPodGo T4 Plus | `https://www.carpodgo.com/pages/firmware-t4-plus` | `T4 Plus Firmware Update:\s*Version\s+([0-9][0-9A-Za-z._-]*)` | 0.0.22 |
+| CarPodGo T4 Plus | `https://www.carpodgo.com/pages/firmware-t4-plus` | `T4 Plus Firmware Update(?: Available)?:\s*Version\s+([0-9][0-9A-Za-z._-]*)` | 0.0.27 |
 | Ambient Weather WS-2000/WS-4000/WS-5000 | `https://ambientweather.com/firmware-update-alerts` | `WS-2000/WS-4000/WS-5000 Firmware ver\.?\s*([0-9][0-9A-Za-z._-]*)` | 2.0.4 |
 | Ambient Weather ObserverIP | `https://ambientweather.com/firmware-update-alerts` | `ObserverIP Firmware ([0-9.]+)` | 4.6.2 |
 | Yamaha TSR-7850 | `https://usa.yamaha.com/products/audio_visual/av_receivers_amps/tsr-7850/downloads.html` | `TSR-7850\S* Firmware Update Ver\.?\s*([0-9][0-9A-Za-z._-]*)` | 2.17 |

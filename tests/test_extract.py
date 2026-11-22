@@ -15,7 +15,7 @@ from custom_components.firmware_watch.extract import (
 
 from .conftest import load_fixture_text
 
-CARPODGO = r"T4 Plus Firmware Update:\s*Version\s+([0-9][0-9A-Za-z._-]*)"
+CARPODGO = r"T4 Plus Firmware Update(?: Available)?:\s*Version\s+([0-9][0-9A-Za-z._-]*)"
 AMBIENT_WS = r"WS-2000/WS-4000/WS-5000 Firmware ver\.?\s*([0-9][0-9A-Za-z._-]*)"
 AMBIENT_OBSERVERIP = r"ObserverIP Firmware ([0-9.]+)"
 YAMAHA = r"TSR-7850\S* Firmware Update Ver\.?\s*([0-9][0-9A-Za-z._-]*)"
@@ -23,6 +23,8 @@ YAMAHA = r"TSR-7850\S* Firmware Update Ver\.?\s*([0-9][0-9A-Za-z._-]*)"
 # (fixture file, pattern, expected version): the examples listed in README.md.
 README_EXAMPLES = [
     ("carpodgo_t4plus.html", CARPODGO, "0.0.22"),
+    # 2026-11-22: the newest entry's heading became "Update Available: Version".
+    ("carpodgo_t4plus_v0027.html", CARPODGO, "0.0.27"),
     ("ambient_firmware.html", AMBIENT_WS, "2.0.4"),
     ("ambient_firmware.html", AMBIENT_OBSERVERIP, "4.6.2"),
     ("yamaha_tsr7850.html", YAMAHA, "2.17"),
